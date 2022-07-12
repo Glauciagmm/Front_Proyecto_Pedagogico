@@ -1,0 +1,18 @@
+
+img{
+    position: relative;
+    height: 200px;
+    right: 1100px;
+    top: -140px;
+
+}
+.card-title{
+    font-family: 'Montserrat', sans-serif;
+    text-justify:auto;
+}
+.btn-danger{
+    margin-right: 10px;
+}
+.card-body{
+    padding: 10px;
+}

@@ -1,0 +1,55 @@
+/* .fotografia{ */
+    /* display: flex; */
+    /* max-width: 1000%; */
+/* } */
+body{
+    background-image: url(/src/assets/img/foto.webp);
+}
+img{
+display: flex;
+width: 20%;
+    height: auto;
+    right: 1000px;
+    top: -140px;
+
+}
+.card-title{
+    font-family: 'Montserrat', sans-serif;
+    text-justify:auto;
+}
+.btn-danger{
+    margin-right: 10px;
+}
+.border-dark{
+    position: relative;
+
+}
+.border-dark{
+    border: 3px solid green;
+border-radius: 6px;
+margin: 100px;
+background-color: #EEEEEE;
+}
+
+.texto{
+    right: -100px;
+    text-align: center;
+    
+}
+.a{
+    background: darkblue;
+}
+.nav-link{
+    background: blue;
+}
+.navegador{
+color: black;
+background: greenyellow;
+}
+.fotografia{
+    position: relative;
+}
+.encabezado{
+    color: black;
+    display: flex;
+}
