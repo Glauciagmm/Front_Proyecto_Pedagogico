@@ -34,6 +34,12 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 17vw;
     padding: 2rem;
 }
+.card:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+.icon-card{
+    border-radius: 30% 0% 0% 30%;
+}
 .card-img-top{
     position: relative;
     object-fit: contain;
@@ -43,6 +49,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #EEEEEE;
     border: 1 solid black;
     margin-top: 4rem;
+    border-radius: 0.25rem;
 }
 .card-title{
     text-align: center;
@@ -64,7 +71,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .desktop-purple{
     background-color: #D9AEF4;
 }
-@media (min-width:372px) and (max-width:576px){
+@media (min-width:350px) and (max-width:576px){
     .text-container{
        margin:5vh auto;
        height:12vh;
@@ -87,6 +94,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     .title-container{
         margin-top: 0;
         width:45vw;
+        border-radius: 0rem 0.25rem 0.25rem 0rem;
     }
     .icon-card{
         background-color: rgba(148, 240, 218, 0.98);
