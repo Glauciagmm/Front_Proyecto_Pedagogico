@@ -1,10 +1,8 @@
 .home-page{
-    position: absolute;
-    top:0px;
-    left: 0px;
+    /*position: absolute;*/
     background-image: url(https://images.unsplash.com/photo-1564352969906-8b7f46ba4b8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80);
-    height: 100vh;
-    width:100vw;
+    /*height: 100vh;
+    width:100vw;*/
 }
 .text-container{
     position: relative;
@@ -14,13 +12,13 @@
     background: #103248;
     border: 1px solid #103248;
     border-radius: 20px;
-    margin:10vh auto;
+    margin:auto;
     justify-content: center;
 }
 .text-justify{ 
-position: relative;
+/*position: relative;*/
 font-family: 'Montserrat';
-padding-top: 3vh;
+padding: 3rem;
 font-style: normal;
 font-weight: 700;
 font-size: 1rem;
