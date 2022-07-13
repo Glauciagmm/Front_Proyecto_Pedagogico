@@ -1,0 +1,20 @@
+<div class="row">
+  
+    <div class="row">
+      <img class="img" src="{{assistant?.user?.photo}}" alt="...">
+      <h5 class="card-title">{{assistant?.title}}</h5>
+      <h5 class="card-title">Descripción: {{assistant?.description}}</h5>
+      <h5 class="card-title">Nombre: {{assistant?.user?.name}}</h5>
+      <h5 class="card-title">Ciudad:{{assistant?.user?.location}}</h5>
+      <h5 class="card-title">Precio por hora: {{assistant?.pricePerHour}}</h5>
+
+    </div>
+    <div class="btns">
+      <button class="button-addon2" routerLink="/assistant-edit/{{assistant?.id}}">
+        Edit
+      </button>
+      <button class="button-addon2" routerLink="/assistant-book/{{assistant?.id}}">
+        Book
+      </button>
+    </div>
+  </div>
