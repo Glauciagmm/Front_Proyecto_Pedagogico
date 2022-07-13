@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-lg bg-dark " aria-label="Fifth navbar example">
   <div class="container-fluid mx-4">
     <a class="navbar-brand" href="#"><img class="logo" src="/assets/img/LogoMain4 1logoProyectoFinal.png"></a>
@@ -16,12 +14,20 @@
       </ul>
       <div class="d-grid pe-5 d-md-flex justify-content-md-end">
         <li class="nav-item ms-5 text-dark fw-bolder ">
-          <a class="btn btn-lg  button " routerLink="/register">Registro</a>
+          <a class="btn btn-lg  button " routerLink="/register" s>Registro</a>
         </li>
         <li class="nav-item ms-2 text-dark fw-bolder">
           <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
-      </div>
+      </div><!--
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+      </ul>-->
     </div>
   </div>
 </nav>

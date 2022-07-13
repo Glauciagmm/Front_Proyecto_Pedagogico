@@ -5,7 +5,7 @@
     width:100vw;*/
 }
 .text-container{
-    position: relative;
+ 
     box-sizing: border-box;
     width: 80vw;
     height: 15vh;
@@ -71,11 +71,11 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (min-width:350px) and (max-width:576px){
     .text-container{
-       margin:5vh auto;
-       height:12vh;
+       margin:auto;
+       height:10rem;
     }
     .text-justify{
-        font-size:10px;
+        font-size:1rem;
     }
     .card{
       display:flex;
