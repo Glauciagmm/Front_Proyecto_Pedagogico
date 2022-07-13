@@ -1,0 +1,21 @@
+<div>
+    <h2>Editar Servicio</h2>
+    <div>
+      <label>Título:
+        <input [(ngModel)]="assistantData.title" class="form-control" placeholder="Título" />
+      </label><br>
+      <label>Descripción:
+        <input [(ngModel)]="assistantData.description" class="form-control" placeholder="Descripción" />
+      </label><br>
+      <label>Precio Por Hora:
+        <input [(ngModel)]="assistantData.pricePerHour" class="form-control" placeholder="Precio Por Hora" />
+      </label><br>
+      <label>Nombre:
+        <input [(ngModel)]="assistantData.user.name"  class="form-control" placeholder="Nombre" />
+      </label><br>
+      <label>Ciudad:
+        <input [(ngModel)]="assistantData.user.location" class="form-control" placeholder="Ciudad" />
+      </label><br>
+      
+    <button (click)="updateAssistant()">Actualisar</button>
+</div>
