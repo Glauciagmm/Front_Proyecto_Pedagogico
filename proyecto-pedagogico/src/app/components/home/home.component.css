@@ -1,0 +1,116 @@
+.home-page{
+    /*position: absolute;*/
+    background-image: url(https://images.unsplash.com/photo-1564352969906-8b7f46ba4b8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80);
+    /*height: 100vh;
+    width:100vw;*/
+}
+.text-container{
+    position: relative;
+    box-sizing: border-box;
+    width: 80vw;
+    height: 15vh;
+    background: #103248;
+    border: 1px solid #103248;
+    border-radius: 20px;
+    margin:auto;
+    justify-content: center;
+}
+.text-justify{ 
+/*position: relative;*/
+font-family: 'Montserrat';
+padding: 3rem;
+font-style: normal;
+font-weight: 700;
+font-size: 1rem;
+text-align: center;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card{
+    height:50vh;
+    width: 17vw;
+    padding: 2rem;
+}
+.card:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+.icon-card{
+    border-radius: 30% 0% 0% 30%;
+}
+.card-img-top{
+    position: relative;
+    object-fit: contain;
+}
+.title-container{
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+    border: 1 solid black;
+    margin-top: 4rem;
+    border-radius: 0.25rem;
+}
+.card-title{
+    text-align: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+.desktop-yellow{
+    background-color: #E3E579;
+}
+.desktop-blue{
+    background-color: rgba(148, 240, 218, 0.98);
+}
+.desktop-green{
+    background-color: #A9E579;
+}
+.desktop-red{
+    background-color: #E58679;
+}
+.desktop-purple{
+    background-color: #D9AEF4;
+}
+@media (min-width:350px) and (max-width:576px){
+    .text-container{
+       margin:5vh auto;
+       height:12vh;
+    }
+    .text-justify{
+        font-size:10px;
+    }
+    .card{
+      display:flex;
+      flex-direction: row;
+      width: 90vw;
+      height: 14vh;
+      background-color: none;
+      padding: 0%;
+    }
+    .card-img-top{
+        width:28%;
+        margin-top:0px;
+    }
+    .title-container{
+        margin-top: 0;
+        width:45vw;
+        border-radius: 0rem 0.25rem 0.25rem 0rem;
+    }
+    .icon-card{
+        background-color: rgba(148, 240, 218, 0.98);
+        width:100%;
+    }
+    .mobile-yellow{
+        background-color: #E3E579;
+    }
+    .mobile-blue{
+        background-color: rgba(148, 240, 218, 0.98);
+    }
+    .mobile-green{
+        background-color: #A9E579;
+    }
+    .mobile-red{
+        background-color: #E58679;
+    }
+    .mobile-purple{
+        background-color: #D9AEF4;
+    }
+ }
