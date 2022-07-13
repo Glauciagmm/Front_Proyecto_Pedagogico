@@ -4,12 +4,14 @@ import { RouterModule,Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'header', component: HeaderComponent},
-  { path: 'footer', component: FooterComponent}
+  { path: 'footer', component: FooterComponent},
+  { path: 'register', component: RegisterComponent}
 ]
 
 
