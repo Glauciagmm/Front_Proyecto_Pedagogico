@@ -7,7 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './components/register/register.component';
-
+import { FormsModule, NgForm } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { RegisterComponent } from './components/register/register.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
