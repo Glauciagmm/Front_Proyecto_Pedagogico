@@ -7,11 +7,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  //{ path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'register', component: RegisterComponent},
   { path: 'header', component: HeaderComponent},
-  { path: 'footer', component: FooterComponent},
-  { path: 'register', component: RegisterComponent}
+  { path: 'footer', component: FooterComponent}
 ]
 
 

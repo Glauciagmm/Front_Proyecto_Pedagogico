@@ -1,0 +1,12 @@
+.register-page{
+   height:100vh;
+}
+form{
+    width:55vw;
+    margin: auto;
+}
+.box{
+    width:60vw;
+    background-color: #EEEEEE80;
+    margin: auto;
+}
