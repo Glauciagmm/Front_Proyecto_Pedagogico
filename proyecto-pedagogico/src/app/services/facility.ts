@@ -1,4 +1,4 @@
-import { Assistant } from "../model/assitant"; 
+import { Facility } from "../model/facility"; 
 import { Injectable } from "@angular/core";
 
 // Import HttpClient and add it to constructor
@@ -10,7 +10,7 @@ import { catchError, map, Observable, throwError } from "rxjs";
 @Injectable({
   providedIn: "root",
 })
-export class AssistantService {
+export class FacilityService {
     private handleError(error: HttpErrorResponse): any {
         if (error.error instanceof ErrorEvent) {
         console.error("An error occurred:", error.error.message);
@@ -33,51 +33,51 @@ export class AssistantService {
         console.log("Oferred Services");
     }
 
-    getAssistants(): Observable<Assistant[]> {
-        return this.http.get<Assistant[]>(
-        `${this.apiServerUrl}/api/assistant`
+    getFacilities(): Observable<Facility[]> {
+        return this.http.get<Facility[]>(
+        `${this.apiServerUrl}/api/facility`
         );
         
         }
 
-    //this one and the next should do the same thing - Find assistant by Id
-    public idAssistant(id: number): Observable<Assistant> {
-    return this.http.get<Assistant>(
-        `${this.apiServerUrl}/api/assistant/${id}`
+    //this one and the next should do the same thing - Find facility by Id
+    public idFacility(id: number): Observable<Facility> {
+    return this.http.get<Facility>(
+        `${this.apiServerUrl}/api/facility/${id}`
     );
     }
 
-    getAssistant(id: number): Observable<any> {
+    getFacility(id: number): Observable<any> {
     return this.http
-        .get(`${this.apiServerUrl}/api/assistant/${id}`)
+        .get(`${this.apiServerUrl}/api/facility/${id}`)
         .pipe(catchError(this.handleError));
     }
 
-    //Edit assitant
-    updateAssistant(assitant: Assistant): Observable<any> {
-    console.log(assitant);
+    //Edit facility
+    updateFacility(facility: Facility): Observable<any> {
+    console.log(facility);
     
-    return this.http.put<Assistant>(
-        `${this.apiServerUrl}/api/assistant/edit`, assitant
+    return this.http.put<Facility>(
+        `${this.apiServerUrl}/api/facility/edit`, facility
         )
         .pipe(catchError(this.handleError));
     }
 
-    //Delete assitant
-    deleteAssistant(id: number): Observable<any> {
+    //Delete facility
+    deleteFacility(id: number): Observable<any> {
     return this.http
-        .delete<Assistant>(
-        `${this.apiServerUrl}/api/assistant/delete/${id}`
+        .delete<Facility>(
+        `${this.apiServerUrl}/api/facility/delete/${id}`
         )
         .pipe(catchError(this.handleError));
     }
 
-    public addAssistant(assitant: any): Observable<any> {
-    console.log(assitant)
+    public addFacility(facility: any): Observable<any> {
+    console.log(facility)
     return this.http
-        .post<Assistant>(
-        `${this.apiServerUrl}/api/assistant/create`,
-        assitant
+        .post<Facility>(
+        `${this.apiServerUrl}/api/facility/create`,
+        facility
         )
         .pipe(catchError(this.handleError));
     }

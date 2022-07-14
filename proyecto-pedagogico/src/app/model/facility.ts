@@ -1,6 +1,6 @@
 import { PathLocationStrategy } from "@angular/common";
 
-export interface Assistant {
+export interface Facility {
     id:number;
     title: string;
     description: string;

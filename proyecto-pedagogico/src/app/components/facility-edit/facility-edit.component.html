@@ -1,0 +1,21 @@
+<div>
+    <h2>Editar Servicio</h2>
+    <div>
+      <label>Título:
+        <input [(ngModel)]="facilityData.title" class="form-control" placeholder="Título" />
+      </label><br>
+      <label>Descripción:
+        <input [(ngModel)]="facilityData.description" class="form-control" placeholder="Descripción" />
+      </label><br>
+      <label>Precio Por Hora:
+        <input [(ngModel)]="facilityData.pricePerHour" class="form-control" placeholder="Precio Por Hora" />
+      </label><br>
+      <label>Nombre:
+        <input [(ngModel)]="facilityData.user.name"  class="form-control" placeholder="Nombre" />
+      </label><br>
+      <label>Ciudad:
+        <input [(ngModel)]="facilityData.user.location" class="form-control" placeholder="Ciudad" />
+      </label><br>
+      
+    <button (click)="updateFacility()">Actualisar</button>
+</div>
