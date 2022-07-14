@@ -1,12 +1,30 @@
 .register-page{
    height:100vh;
+   font-family: 'Montserrat';
 }
 form{
-    width:55vw;
+    width:40vw;
     margin: auto;
 }
+label, .btn{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+}
 .box{
-    width:60vw;
+    width:50vw;
     background-color: #EEEEEE80;
     margin: auto;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.btn{
+    color:black;
+    background-color: #76EAD750;
+    border: 1px solid black;
+}
+.assistant{
+    color:white;
+    background-color:  rgba(16, 50, 72, 0.82);;
 }
