@@ -15,9 +15,9 @@ export class FacilityDetailComponent implements OnInit {
   facility!: Facility;
   facilityID: string="0";
 
-  selecteFacility?: Facility;
+  selectedFacility?: Facility;
   onSelect(facility:Facility): void{
-    this.selecteFacility = facility;
+    this.selectedFacility = facility;
   }
 
 
