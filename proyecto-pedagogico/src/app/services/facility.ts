@@ -1,4 +1,4 @@
-import { Assistant } from "../model/assitant"; 
+import { Facility } from "../model/facility; 
 import { Injectable } from "@angular/core";
 
 // Import HttpClient and add it to constructor
@@ -10,7 +10,7 @@ import { catchError, map, Observable, throwError } from "rxjs";
 @Injectable({
   providedIn: "root",
 })
-export class AssistantService {
+export class FacilityService {
     private handleError(error: HttpErrorResponse): any {
         if (error.error instanceof ErrorEvent) {
         console.error("An error occurred:", error.error.message);
@@ -33,49 +33,49 @@ export class AssistantService {
         console.log("Oferred Services");
     }
 
-    getAssistants(): Observable<Assistant[]> {
-        return this.http.get<Assistant[]>(
+    getFacilities(): Observable<Facility[]> {
+        return this.http.get<Facility[]>(
         `${this.apiServerUrl}/api/assistant`
         );
         
         }
 
-    //this one and the next should do the same thing - Find assistant by Id
-    public idAssistant(id: number): Observable<Assistant> {
-    return this.http.get<Assistant>(
+    //this one and the next should do the same thing - Find Facility by Id
+    public idAssistant(id: number): Observable<Facility> {
+    return this.http.get<Facility>(
         `${this.apiServerUrl}/api/assistant/${id}`
     );
     }
 
-    getAssistant(id: number): Observable<any> {
+    getFacility(id: number): Observable<any> {
     return this.http
         .get(`${this.apiServerUrl}/api/assistant/${id}`)
         .pipe(catchError(this.handleError));
     }
 
     //Edit assitant
-    updateAssistant(assitant: Assistant): Observable<any> {
+    updateFacility(assitant: Facility): Observable<any> {
     console.log(assitant);
     
-    return this.http.put<Assistant>(
+    return this.http.put<Facility>(
         `${this.apiServerUrl}/api/assistant/edit`, assitant
         )
         .pipe(catchError(this.handleError));
     }
 
     //Delete assitant
-    deleteAssistant(id: number): Observable<any> {
+    deleteFacility(id: number): Observable<any> {
     return this.http
-        .delete<Assistant>(
+        .delete<Facility>(
         `${this.apiServerUrl}/api/assistant/delete/${id}`
         )
         .pipe(catchError(this.handleError));
     }
 
-    public addAssistant(assitant: any): Observable<any> {
+    public addFacility(assitant: any): Observable<any> {
     console.log(assitant)
     return this.http
-        .post<Assistant>(
+        .post<Facility>(
         `${this.apiServerUrl}/api/assistant/create`,
         assitant
         )

@@ -1,9 +1,9 @@
-import { Assistant } from './model/assitant';
+import { Facility } from './model/facility';
 import { NgModule } from "@angular/core";
-import { AssistantComponent } from "./components/assistant/assistant.component";
-import { ServiceDetailComponent} from"./components/services-detail/service-detail.component";
-import { ServicesAddComponent } from "./components/services-add/services-add.component";
-import { ServicesEditComponent } from "./components/services-edit/services-edit.component";
+import { FacilitiesComponent } from "./components/facilities/facilities.component";
+import { FacilityDetailComponent} from"./components/facility-detail/facility-detail.component";
+import { FacilityAddComponent } from "./components/facility-add/facility-add.component";
+import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
 
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
@@ -16,26 +16,26 @@ const routes: Routes = [
     
   
     {
-      path: "assistant",
-      component: AssistantComponent,  
+      path: "facility",
+      component: FacilitiesComponent,  
       data: { title: "services-List" },
     },
     {
-      path: "services-details",
-      component: ServiceDetailComponent,
+      path: "facility-details",
+      component: FacilityDetailComponent,
       data: { title: "services-Details" },
     },
     {
-      path: "services-add",
-      component: ServicesAddComponent,
+      path: "facility-add",
+      component: FacilityAddComponent,
       data: { title: "Services Add" },
     },
     {
-      path: "services-edit/:id",
-      component: ServicesEditComponent,
+      path: "facility-edit/:id",
+      component: FacilityEditComponent,
       data: { title: "services-Edit" },
     },
-    { path: "", redirectTo: "/assistance", pathMatch: "full" }
+    { path: "", redirectTo: "/facility", pathMatch: "full" }
   
   ];
   
