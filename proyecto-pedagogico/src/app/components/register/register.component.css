@@ -6,9 +6,6 @@ form{
     width:40vw;
     margin: auto;
 }
-h1{
-    font-weight: 700;
-}
 label, .btn{
     font-family: 'Montserrat';
 font-style: normal;
