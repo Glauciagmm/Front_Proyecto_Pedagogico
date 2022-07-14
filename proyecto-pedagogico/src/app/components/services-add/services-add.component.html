@@ -1,0 +1,31 @@
+<body>
+    <h1 style="text-align: center; color: #290981; font-family: 'Dancing Script', cursive;">Añade un nuevo servicio</h1>
+  
+    <div class="container d-grid gap-5 col-4 p-3 mb-3">
+      <form id="addForm">
+  
+        <div class="mb-3">Título:
+          <input [(ngModel)]="assistantData.title" class="form-control" placeholder="Title" />
+        </div>
+        <div class="mb-3">Descripción:
+            <input [(ngModel)]="assistantData.description" class="form-control" placeholder="Descripción" />
+        </div>
+        <div class="mb-3">Precio Por Hora:
+            <input [(ngModel)]="assistantData.pricePerHour" class="form-control" placeholder="Descripción" />€
+        </div>
+        <div>Nombre:
+            <input [(ngModel)]="assistantData.user.name" class="form-control" placeholder="Nombre" />
+          </div><br>
+        <div>Ciudad:
+          <input [(ngModel)]="assistantData.user.location" class="form-control" placeholder="Ciudad" />
+        </div><br>
+        <br>
+        <div class="button">
+          <div class="d-flex justify-content-center">
+            <button class="btn submit btn-md" (click)="addAssitant()" style="height: 2.5rem; width: 12rem;">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+  </body>

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+
+
+.card-body {
+    margin-top: 50px;
+}
+
+.card-title {
+    font-family: 'Oswald', sans-serif;
+}
+
+.card-text {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0px;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5em 1em;
+    margin-right: 80px;
+    margin-left: 80px;
+    cursor: pointer;
+    border-radius: 10px;  
+}
+.button-addon2 {
+    display: flex;
+    background-color: #D2BAFF;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 1px;
+}
+
+.img{
+    display: flex;
+    align-content: flex-start;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+}
