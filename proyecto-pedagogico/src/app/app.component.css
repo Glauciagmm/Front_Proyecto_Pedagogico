@@ -2,15 +2,15 @@
     /* display: flex; */
     /* max-width: 1000%; */
 /* } */
-body{
-    background-image: url(/src/assets/img/foto.webp);
+.body{
+    background-image: url();
 }
 img{
 display: flex;
 width: 20%;
-    height: auto;
-    right: 1000px;
-    top: -140px;
+    height: 260px;;
+    position: absolute;
+    top:6px;
 
 }
 .card-title{
@@ -40,7 +40,7 @@ background-color: #EEEEEE;
     background: darkblue;
 }
 .nav-link{
-    background: blue;
+    background: orange;
 }
 .navegador{
 color: black;
@@ -48,8 +48,13 @@ background: greenyellow;
 }
 .fotografia{
     position: relative;
+    height: 170px;
+    top:100px;
 }
 .encabezado{
     color: black;
+    display: flex;
+}
+.foto1{
     display: flex;
 }
