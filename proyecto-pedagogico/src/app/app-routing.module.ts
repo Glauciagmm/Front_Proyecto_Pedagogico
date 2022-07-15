@@ -12,8 +12,7 @@ import { FacilityEditComponent } from "./components/facility-edit/facility-edit.
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'header', component: HeaderComponent},
-  { path: 'footer', component: FooterComponent},
+
   {    path: "facility",
     component: FacilitiesComponent,  
     data: { title: "facility-List" },
