@@ -35,3 +35,14 @@ line-height: 22px;
     background-color:  #0e3d3550;
     color:black;
 }
+@media (min-width:350px) and (max-width:576px){
+    .box{
+        box-shadow: none;
+        background-color: transparent;
+        width:80vw;
+    }
+    form{
+        width:70vw;
+        margin-bottom: 0.5rem;
+    }
+}
