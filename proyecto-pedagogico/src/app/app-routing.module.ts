@@ -12,7 +12,7 @@ import { FacilityEditComponent } from "./components/facility-edit/facility-edit.
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-
+  
   {    path: "facility",
     component: FacilitiesComponent,  
     data: { title: "facility-List" },
