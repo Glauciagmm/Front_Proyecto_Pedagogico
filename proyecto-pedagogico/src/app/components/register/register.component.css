@@ -26,5 +26,12 @@ line-height: 22px;
 }
 .assistant{
     color:white;
-    background-color:  rgba(16, 50, 72, 0.82);;
+    background-color:  rgba(16, 50, 72, 0.82);
+}
+.assistant:hover{
+    background-color:  rgba(4, 23, 36, 0.82);
+}
+.signup:hover{
+    background-color:  #0e3d3550;
+    color:black;
 }
