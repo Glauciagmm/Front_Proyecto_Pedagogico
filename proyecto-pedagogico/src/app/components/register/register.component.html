@@ -45,9 +45,9 @@
             #email="ngModel"
           />
           <div class="alert-danger" *ngIf="email.errors && f.submitted">
-            <div *ngIf="email.errors['required']">Email is required</div>
+            <div *ngIf="email.errors['required']">El email es necesario</div>
             <div *ngIf="email.errors['email']">
-              Email must be a valid email address
+              El email debe ser válido
             </div>
           </div>
         </div>
@@ -85,12 +85,12 @@
           #username="ngModel"
         />
         <div class="alert-danger" *ngIf="username.errors && f.submitted">
-          <div *ngIf="username.errors['required']">Username is required</div>
+          <div *ngIf="username.errors['required']">El nombre de usuario es necesario</div>
           <div *ngIf="username.errors['minlength']">
-            Username must be at least 3 characters
+            El nombre de usuario debe tener por lo menos 3 carácteres
           </div>
           <div *ngIf="username.errors['maxlength']">
-            Username must be at most 20 characters
+            El nombre de usuario debe tener como máximo 20 carácteres
           </div>
         </div>
       </div>
@@ -106,9 +106,9 @@
           #password="ngModel"
         />
         <div class="alert-danger" *ngIf="password.errors && f.submitted">
-          <div *ngIf="password.errors['required']">Password is required</div>
+          <div *ngIf="password.errors['required']">La contraseña es necesaria</div>
           <div *ngIf="password.errors['minlength']">
-            Password must be at least 6 characters
+            La contraseña debe tener por lo menos 6 carácteres
           </div>
         </div>
       </div>
@@ -123,12 +123,6 @@
           minlength="6"
           #password="ngModel"
         />
-        <div class="alert-danger" *ngIf="password.errors && f.submitted">
-          <div *ngIf="password.errors['required']">La contraseña es necesaria</div>
-          <div *ngIf="password.errors['minlength']">
-            La contraseña debe tener por lo menos 6 carácteres
-          </div>
-        </div>
       </div>
       <div class="form-group my-3 text-center">
         <button class="btn btn-primary btn-block signup">Registrarse</button>
