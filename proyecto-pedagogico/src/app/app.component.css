@@ -8,7 +8,7 @@
 img{
 display: flex;
 width: 20%;
-    height: 260px;;
+    height: 200px;;
     position: absolute;
     top:6px;
 
@@ -27,7 +27,7 @@ width: 20%;
 .border-dark{
     border: 3px solid green;
 border-radius: 6px;
-margin: 100px;
+margin: 70px;
 background-color: #EEEEEE;
 }
 
@@ -51,10 +51,30 @@ background: greenyellow;
     height: 170px;
     top:100px;
 }
-.encabezado{
-    color: black;
-    display: flex;
-}
+
 .foto1{
     display: flex;
+}
+.textocentrado{
+    justify-content: center;
+    position: relative;
+}
+.img-fluid{
+    position: fixed;
+    height:500px;
+    right: 1px;
+   width: 2100px;
+   top:70px;
+}
+.nav-pills{
+    color: red;
+}
+footer{
+    position: absolute;
+    bottom: 0px;
+    background-color:black;
+    height: 175px;
+    width: 100%;
+    right: 1px;
+    margin: auto;
 }
