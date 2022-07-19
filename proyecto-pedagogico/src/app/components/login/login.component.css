@@ -1,0 +1,50 @@
+.login-page{
+    height:100vh;
+    font-family: 'Montserrat';
+ }
+ .card-container{
+    display: flex;
+ }
+form{
+    width:40vw;
+    margin: auto;
+}
+label, .btn{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+}
+.box{
+    width:50vw;
+    background-color: #EEEEEE80;
+    margin: auto;
+}
+.btn{
+    color:black;
+    background-color: #76EAD750;
+    border: 1px solid black;
+}
+.register{
+    color:white;
+    background-color:  rgba(16, 50, 72, 0.82);
+}
+.register:hover{
+    background-color:  rgba(4, 23, 36, 0.82);
+}
+.login:hover{
+    background-color:  #0e3d3550;
+    color:black;
+}
+@media (min-width:350px) and (max-width:576px){
+    .box{
+        box-shadow: none;
+        background-color: transparent;
+        width:80vw;
+    }
+    form{
+        width:70vw;
+        margin-bottom: 0.5rem;
+    }
+}

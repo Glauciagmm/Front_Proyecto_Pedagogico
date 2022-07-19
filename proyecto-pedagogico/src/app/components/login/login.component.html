@@ -1,6 +1,9 @@
+<section class="login-page pb-2">
 <div class="col-md-12">
-    <div class="card card-container">
-      <form
+    <h1 class="text-center font-weight-bold">Inicio de sesión</h1>
+    <div class="card-container bg-transparent pt-1">
+        <div class="box p-3">
+      <form class="pt-2"
         *ngIf="!isLoggedIn"
         name="form"
         (ngSubmit)="f.form.valid && onSubmit()"
@@ -47,9 +50,9 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <button class="btn btn-primary btn-block">
-            Login
+        <div class="form-group my-3 text-center">
+          <button class="btn btn-primary btn-block login">
+            Entrar
           </button>
         </div>
         <div class="form-group">
@@ -72,8 +75,13 @@
           </div>
         </div>
       </form>
+    </div>
       <div class="alert alert-success" *ngIf="isLoggedIn">
         Has iniciado sesión como {{ roles }}.
       </div>
     </div>
+    <div class="form-group my-3 text-center">
+        <button class="btn btn-primary btn-block register">Eres nuevo aquí? <br> Haz click para registrarte</button>
+      </div>
   </div>
+</section>
