@@ -1,5 +1,5 @@
 .register-page{
-   height:100vh;
+   height:fit-content;
    font-family: 'Montserrat';
 }
 form{

@@ -1,4 +1,4 @@
-<section class="register-page">
+<section class="register-page pb-2">
 <div class="col-md-12">
   <h1 class="text-center font-weight-bold">Registro</h1>
   <div class="card-container bg-transparent pt-1">
@@ -51,6 +51,17 @@
             </div>
           </div>
         </div>
+        <label class="mt-2" for="phone">Teléfono:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="phone"
+          [(ngModel)]="form.phone"
+          required
+          minlength="3"
+          maxlength="20"
+          #phone="ngModel"
+        />
         <label class="mt-2" for="city">Ciudad:</label>
         <input
           type="text"
@@ -107,15 +118,15 @@
           type="password"
           class="form-control"
           name="password"
-          [(ngModel)]="form.password"
+          [(ngModel)]="form.confirmPassword"
           required
           minlength="6"
           #password="ngModel"
         />
         <div class="alert-danger" *ngIf="password.errors && f.submitted">
-          <div *ngIf="password.errors['required']">Password is required</div>
+          <div *ngIf="password.errors['required']">La contraseña es necesaria</div>
           <div *ngIf="password.errors['minlength']">
-            Password must be at least 6 characters
+            La contraseña debe tener por lo menos 6 carácteres
           </div>
         </div>
       </div>
@@ -123,12 +134,12 @@
         <button class="btn btn-primary btn-block signup">Registrarse</button>
       </div>
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
-        Signup failed!<br />{{ errorMessage }}
+        Registro fallido!<br />{{ errorMessage }}
       </div>
     </form>
     </div>
     <div class="alert alert-success" *ngIf="isSuccessful">
-      Your registration is successful!
+      Registrado con éxito!
     </div>
   </div>
   <div class="form-group my-3 text-center btn-assistant">
