@@ -19,10 +19,17 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     HeaderComponent,
+<<<<<<< HEAD
 /*     FacilitiesComponent,
     FacilityAddComponent,
     FacilityDetailComponent,
     FacilityEditComponent */
+=======
+    FacilitiesComponent,
+    FacilityAddComponent,
+    FacilityDetailComponent,
+    FacilityEditComponent
+>>>>>>> 40256761abf193676b6603bb5d5665e36a0479a6
   ],
   imports: [
     BrowserModule,
