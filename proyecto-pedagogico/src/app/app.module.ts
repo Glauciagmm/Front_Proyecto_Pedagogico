@@ -1,7 +1,7 @@
-import { ServicesEditComponent } from './components/services-edit/services-edit.component';
-import { ServicesAddComponent } from './components/services-add/services-add.component';
-import { AssistantComponent } from './components/assistant/assistant.component';
-import { ServiceDetailComponent } from './components/services-detail/service-detail.component';
+import { FacilityEditComponent } from './components/facility-edit/facility-edit.component';
+import { FacilityAddComponent } from './components/facility-add/facility-add.component';
+import { FacilitiesComponent } from './components/facilities/facilities.component';
+import { FacilityDetailComponent } from './components/facility-detail/facility-detail.component';
 
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,10 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     HeaderComponent,
-    AssistantComponent,
-    ServicesAddComponent,
-    ServiceDetailComponent,
-    ServicesEditComponent
+/*     FacilitiesComponent,
+    FacilityAddComponent,
+    FacilityDetailComponent,
+    FacilityEditComponent */
   ],
   imports: [
     BrowserModule,
