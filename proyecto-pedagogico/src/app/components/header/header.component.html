@@ -1,27 +1,36 @@
-
-
 <nav class="navbar navbar-expand-lg bg-dark " aria-label="Fifth navbar example">
   <div class="container-fluid mx-4">
-    <a class="navbar-brand" href="#"><img class="logo" src="/assets/img/LogoMain4 1logoProyectoFinal.png"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarsExample05">
-      <ul class="navbar-nav me-auto mb-3 mb-lg-0 px-3"                                                                          >
+    <div class="navbar-collapse collapse" id="navbarsExample03" >
+      <ul class="pe-5 navbar-nav me-auto mb-2 mb-sm-0 mx-2">
         <li class="nav-item me-5">
           <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="#">Inicio</a>
         </li>
-
+        <select onchange="doGTranslate(this);">
+          <option value="">Select Language</option>
+          <option value="es|eu">Basque</option>
+          <option value="es|ca">Catalan</option>
+          <option value="es|en">English</option>
+          <option value="es|gl">Galician</option>
+          <option value="es|pt">Portuguese</option>
+          <option value="es|es">Spanish</option>
+        </select>
       </ul>
-      <div class="d-grid pe-5 d-md-flex justify-content-md-end">
-        <li class="nav-item ms-5 text-dark fw-bolder ">
+
+    <div id="google_translate_element2"></div>
+      <div class="d-sm-flex pe-5 mt-3 ">
+        <li class="nav-item mb-2 text-dark fw-bolder ">
           <a class="btn btn-lg  button " routerLink="/register">Registro</a>
         </li>
-        <li class="nav-item ms-2 text-dark fw-bolder">
+        <li class="nav-item mb-2 text-dark fw-bolder">
           <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
       </div>
+
     </div>
   </div>
 </nav>
