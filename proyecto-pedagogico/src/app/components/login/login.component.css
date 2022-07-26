@@ -1,10 +1,7 @@
 .login-page{
     height:100vh;
     font-family: 'Montserrat';
- }
- .card-container{
-    display: flex;
- }
+}
 form{
     width:40vw;
     margin: auto;
