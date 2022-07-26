@@ -117,3 +117,10 @@ vertical-align: middle;
         background-color: #D9AEF4;
     }
  }
+ @media only screen and (min-width: 768px) {
+    .card{
+        display: table;
+        max-height: 50vh;
+        max-width: 17vw;
+    }
+ } 
