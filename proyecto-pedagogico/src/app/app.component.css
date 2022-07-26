@@ -5,14 +5,9 @@
 .body{
     background-image: url();
 }
-img{
-display: flex;
-width: 20%;
-    height: 200px;;
-    position: absolute;
-    top:6px;
-
-}
+ img{
+max-width: 100%;
+ }
 .card-title{
     font-family: 'Montserrat', sans-serif;
     text-justify:auto;
@@ -22,12 +17,16 @@ width: 20%;
 }
 .border-dark{
     position: relative;
+    right: -10px;
+    margin-top: 100px;
 
 }
 .border-dark{
     border: 3px solid green;
 border-radius: 6px;
-margin: 70px;
+margin: 110px;
+top:-88px;
+position: relative;
 background-color: #EEEEEE;
 }
 
@@ -39,18 +38,6 @@ background-color: #EEEEEE;
 .a{
     background: darkblue;
 }
-.nav-link{
-    background: orange;
-}
-.navegador{
-color: black;
-background: greenyellow;
-}
-.fotografia{
-    position: relative;
-    height: 170px;
-    top:100px;
-}
 
 .foto1{
     display: flex;
@@ -61,7 +48,7 @@ background: greenyellow;
 }
 .img-fluid{
     position: fixed;
-    height:500px;
+    height:700px;
     right: 1px;
    width: 2100px;
    top:70px;
@@ -72,9 +59,20 @@ background: greenyellow;
 footer{
     position: absolute;
     bottom: 0px;
-    background-color:black;
     height: 175px;
     width: 100%;
     right: 1px;
     margin: auto;
+}
+.imagencarta{
+    height: 240px;
+    position: absolute;
+    border-radius: 7px;
+    left: 0px;
+    top:0px;
+    max-width: 50%;
+}
+.col-sm-1{
+position: absolute;
+width: 100px;
 }
