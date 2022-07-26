@@ -48,9 +48,18 @@ vertical-align: middle;
 .title-container{
     box-sizing: border-box;
     background-color: #EEEEEE;
-    border: 1 solid black;
+    border-left: 1px;
+    border-right: 1px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+    border-color: black;
     margin-top: 4rem;
-    border-radius: 0.25rem;
+    position: absolute;
+    width: 96%;
+    margin-left: 0;
+    left: 0px;
+    overflow: hidden;
 }
 .card-title{
     text-align: center;
