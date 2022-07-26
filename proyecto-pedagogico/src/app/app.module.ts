@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { CategoryComponent } from './category/category.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { CategoryComponent } from './category/category.component';
     FacilityAddComponent,
     FacilityDetailComponent,
     FacilityEditComponent,
-    CategoryComponent
+   
   ],
   imports: [
     BrowserModule,

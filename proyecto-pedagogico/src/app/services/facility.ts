@@ -32,7 +32,7 @@ export class FacilityService {
     constructor(private http: HttpClient) {
         console.log("Oferred Services");
     }
-
+    //Busca la funcionalidad de encontar todos los servicios el backend 
     getFacilities(): Observable<Facility[]> {
         return this.http.get<Facility[]>(
         `${this.apiServerUrl}/api/facility`
@@ -40,20 +40,21 @@ export class FacilityService {
         
         }
 
-    //this one and the next should do the same thing - Find facility by Id
+    //Busca la funcionalidad de encontar un servico por su id en el backend 
     public idFacility(id: number): Observable<Facility> {
     return this.http.get<Facility>(
         `${this.apiServerUrl}/api/facility/${id}`
     );
     }
 
+    //Busca la funcionalidad de encontar un servico por su id en el backend 
     getFacility(id: number): Observable<any> {
     return this.http
         .get(`${this.apiServerUrl}/api/facility/${id}`)
         .pipe(catchError(this.handleError));
     }
 
-    //Edit facility
+    //Busca la funcionalidad de actualisar un servicio en el backend 
     updateFacility(facility: Facility): Observable<any> {
     console.log(facility);
     
@@ -63,7 +64,7 @@ export class FacilityService {
         .pipe(catchError(this.handleError));
     }
 
-    //Delete facility
+    //Busca la funcionalidad de borrar un servicio en el backend 
     deleteFacility(id: number): Observable<any> {
     return this.http
         .delete<Facility>(
@@ -72,6 +73,7 @@ export class FacilityService {
         .pipe(catchError(this.handleError));
     }
 
+    //Busca la funcionalidad de añadir un nuevo servicio en el backend 
     public addFacility(facility: any): Observable<any> {
     console.log(facility)
     return this.http
