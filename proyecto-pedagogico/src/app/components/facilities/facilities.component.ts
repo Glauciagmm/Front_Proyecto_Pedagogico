@@ -9,15 +9,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./facilities.component.css']
 })
 export class FacilitiesComponent implements OnInit {
+<<<<<<< HEAD
 public assistant: Facility[] = []; 
 constructor(public facilityService: FacilityService, private router: Router) {}
+=======
+  public facility: Facility[] = [];
+
+  selectedFacility?: Facility;
+  onSelect(facility: Facility): void {
+  this.selectedFacility = facility;
+  }
+
+  constructor(public facilityService: FacilityService, private router: Router) {}
+
+
+>>>>>>> 5c4f774936bf93909f52743b4185af8fc6802405
   ngOnInit(): void {
     this.getFacilities();
   }
   getFacilities(): void {
     this.facilityService.getFacilities().subscribe((resp: any) => {
-      this.assistant = resp;
-      console.log(this.assistant);
+      this.facility = resp;
+      console.log(this.facility);
     });
   }
 
