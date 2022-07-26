@@ -8,22 +8,22 @@
     position: relative;
     box-sizing: border-box;
     width: 80vw;
-    height: 15vh;
+    height: 10vh;
     background: #103248;
     border: 1px solid #103248;
     border-radius: 20px;
     margin:auto;
     justify-content: center;
 }
-.text-justify{ 
+.textcss{ 
 /*position: relative;*/
 font-family: 'Montserrat';
-padding: 3rem;
+/*padding: 3rem;*/
 font-style: normal;
 font-weight: 700;
 font-size: 1rem;
 text-align: center;
-letter-spacing: 0.04em;
+letter-spacing: 0.04rem;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -72,10 +72,13 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 @media (min-width:350px) and (max-width:576px){
     .text-container{
        margin:5vh auto;
-       height:12vh;
+       height: 21vh;
+       width: 90vw;
     }
-    .text-justify{
-        font-size:10px;
+    .textcss{
+        font-size:15px;
+        
+        
     }
     .card{
       display:flex;
