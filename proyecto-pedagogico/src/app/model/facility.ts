@@ -4,7 +4,7 @@ export interface Facility {
     id:number;
     title: string;
     description: string;
-    pricePerHour: number;
+    price: number;
     user:{
         id: number;
         photo:string;
