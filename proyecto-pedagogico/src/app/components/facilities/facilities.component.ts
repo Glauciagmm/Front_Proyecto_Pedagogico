@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./facilities.component.css']
 })
 export class FacilitiesComponent implements OnInit {
-  public assistant: Facility[] = [];
+  public facility: Facility[] = [];
 
   selectedFacility?: Facility;
-  onSelect(assistant: Facility): void {
-  this.selectedFacility = assistant;
+  onSelect(facility: Facility): void {
+  this.selectedFacility = facility;
   }
 
   constructor(public facilityService: FacilityService, private router: Router) {}
@@ -24,8 +24,8 @@ export class FacilitiesComponent implements OnInit {
   }
   getFacilities(): void {
     this.facilityService.getFacilities().subscribe((resp: any) => {
-      this.assistant = resp;
-      console.log(this.assistant);
+      this.facility = resp;
+      console.log(this.facility);
     });
   }
 
