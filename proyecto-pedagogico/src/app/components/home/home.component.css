@@ -87,7 +87,7 @@ vertical-align: middle;
        height:12vh;
     }
     .text-justify{
-        font-size:10px;
+        font-size:0.70rem;
     }
     .card{
       display:flex;
@@ -100,11 +100,15 @@ vertical-align: middle;
     .card-img-top{
         width:28%;
         margin-top:0px;
+        position: absolute;
+        right: 25px;
     }
     .title-container{
         margin-top: 0;
+        bottom:0px;
         width:45vw;
-        border-radius: 0rem 0.25rem 0.25rem 0rem;
+        height:100%;
+        border-radius: 0rem 0.25rem 0rem 0.25rem;
     }
     .icon-card{
         background-color: rgba(148, 240, 218, 0.98);
@@ -132,4 +136,5 @@ vertical-align: middle;
         max-height: 50vh;
         max-width: 17vw;
     }
+
  } 
