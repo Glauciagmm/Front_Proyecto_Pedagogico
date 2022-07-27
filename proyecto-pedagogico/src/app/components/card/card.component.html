@@ -1,0 +1,18 @@
+<div class="card-body border border-dark">
+  <div class="texto " *ngFor="let facility of facility">
+    <a href="/facility-details?id={{facility?.id}}"> <img src="../../../assets/img/chica.png" alt="photo del assistente"
+        class="imagencarta" ></a>
+        <!-- {{facility?.user?.photo}} -->
+    <p class="card-text">Servicio: {{facility?.title}}</p>
+    <p>Descripción:{{facility?.description}}</p>
+    <p>{{facility?.pricePerHour}}€(Precio por hora)</p>
+    <p>{{facility?.user?.name}}</p>
+    <p>{{facility?.user?.city}}</p>
+
+  </div>
+  <div class="button">
+    <div class="d-flex justify-content-center">
+      <button class="btn submit btn-md" (click)="add()" style="height: 2.5rem; width: 12rem;">Añadir</button>
+    </div>
+  </div>
+</div>

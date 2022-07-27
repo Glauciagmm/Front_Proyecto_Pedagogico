@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule,Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { FacilitiesComponent } from "./components/facilities/facilities.component";
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 import { FacilityDetailComponent} from"./components/facility-detail/facility-detail.component";
 import { FacilityAddComponent } from "./components/facility-add/facility-add.component";
 import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
+import { CardComponent } from './components/card/card.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent},
   
   {    path: "facility",
-    component: FacilitiesComponent,  
+    component: CardComponent,  
     data: { title: "facility-List" },
   },
   {
@@ -30,7 +35,6 @@ const routes: Routes = [
     component: FacilityEditComponent,
     data: { title: "facility-Edit" },
   },
-  { path: "", redirectTo: "/facility", pathMatch: "full" }
 ]
 
 

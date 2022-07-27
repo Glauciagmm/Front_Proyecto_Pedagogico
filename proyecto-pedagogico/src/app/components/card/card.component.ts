@@ -1,26 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { Facility } from 'src/app/model/facility';
-import { FacilityService } from 'src/app/services/facility';
+import { Facility } from '../../model/facility';
+import { FacilityService } from '../../services/facility';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-facilities',
-  templateUrl: './facilities.component.html',
-  styleUrls: ['./facilities.component.css']
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css']
 })
-export class FacilitiesComponent implements OnInit {
+export class CardComponent implements OnInit {
   public facility: Facility[] = [];
 
   selectedFacility?: Facility;
   onSelect(facility: Facility): void {
-  this.selectedFacility = facility;
+    this.selectedFacility = facility;
   }
 
-  constructor(public facilityService: FacilityService, private router: Router) {}
-
+  constructor(
+    public facilityService: FacilityService, private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getFacilities();
+
   }
   getFacilities(): void {
     this.facilityService.getFacilities().subscribe((resp: any) => {
@@ -28,12 +30,6 @@ export class FacilitiesComponent implements OnInit {
       console.log(this.facility);
     });
   }
-
-
-
-
-
-
 
   add(): void {
     this.router.navigate(["/facility-add"]);
@@ -48,6 +44,6 @@ export class FacilitiesComponent implements OnInit {
         console.log(err);
       }
     );
-  } 
+  }
 
 }

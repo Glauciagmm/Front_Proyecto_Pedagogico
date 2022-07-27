@@ -13,12 +13,12 @@ export class FacilityAddComponent implements OnInit {
     id:0,
     title: "",
     description: "",
-    price: 0,
+    pricePerHour: 0,
     user: {
       id: 0,
       photo:"",
       name: "",
-      location: "",
+      city: "",
     }
   };
 

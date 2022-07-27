@@ -5,27 +5,30 @@
     width:100vw;*/
 }
 .text-container{
+    display: table;
     position: relative;
     box-sizing: border-box;
     width: 80vw;
-    height: 15vh;
+    height: 10vh;
     background: #103248;
     border: 1px solid #103248;
     border-radius: 20px;
     margin:auto;
     justify-content: center;
+    vertical-align: middle;
 }
-.text-justify{ 
+.textcss{ 
 /*position: relative;*/
 font-family: 'Montserrat';
-padding: 3rem;
+/*padding: 3rem;*/
 font-style: normal;
 font-weight: 700;
 font-size: 1rem;
 text-align: center;
-letter-spacing: 0.04em;
+letter-spacing: 0.04rem;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+vertical-align: middle;
 }
 .card{
     height:50vh;
@@ -45,9 +48,18 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .title-container{
     box-sizing: border-box;
     background-color: #EEEEEE;
-    border: 1 solid black;
-    margin-top: 4rem;
-    border-radius: 0.25rem;
+    border-top: 1px;
+    border-bottom: 1px; 
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: black; 
+    margin-top: 20%;
+    position: absolute;
+    width: 100%;
+    margin-left: 0;
+    left: 0px;
+    overflow: hidden;
 }
 .card-title{
     text-align: center;
@@ -72,10 +84,13 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 @media (min-width:350px) and (max-width:576px){
     .text-container{
        margin:5vh auto;
-       height:12vh;
+       height: 21vh;
+       width: 90vw;
     }
-    .text-justify{
-        font-size:10px;
+    .textcss{
+        font-size:15px;
+        
+        
     }
     .card{
       display:flex;
@@ -88,11 +103,19 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     .card-img-top{
         width:28%;
         margin-top:0px;
+        position: absolute;
+        right: 25px;
     }
     .title-container{
         margin-top: 0;
+        bottom:0px;
         width:45vw;
-        border-radius: 0rem 0.25rem 0.25rem 0rem;
+        height:100%;
+        border-radius: 0rem 0.25rem 0rem 0.25rem;
+        border-top: 1px;
+        border-bottom: 1px; 
+        border-left: 0px;
+        border-right: 1px;
     }
     .icon-card{
         background-color: rgba(148, 240, 218, 0.98);
@@ -114,3 +137,20 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background-color: #D9AEF4;
     }
  }
+ @media only screen and (min-width: 768px) {
+    .card{
+        display: table;
+        max-height: 50vh;
+        max-width: 17vw;
+    }
+
+ } 
+
+ @media only screen and (min-width:576px) and (max-width:700px){
+    .card{
+        display: table;
+        max-height: 50vh;
+        max-width: 17vw;
+    }
+
+ } 
