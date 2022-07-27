@@ -1,0 +1,149 @@
+<section class="register-page pb-2">
+<div class="col-md-12">
+  <h1 class="text-center font-weight-bold">Registro</h1>
+  <div class="card-container bg-transparent pt-1">
+    <div class="box p-3">
+    <form class="pt-2"
+      *ngIf="!isSuccessful"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+      <div class="form-group">
+        <label class="text-left" for="name">Nombre:</label>
+        <input
+          type="text"
+          class="form-control text-center"
+          name="name"
+          [(ngModel)]="form.name"
+          required
+          minlength="3"
+          maxlength="20"
+          #name="ngModel"
+        />
+        <label class="mt-2" for="surname">Apellido:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="surname"
+          [(ngModel)]="form.surname"
+          required
+          minlength="3"
+          maxlength="20"
+          #surname="ngModel"
+        />
+        <div class="form-group">
+          <label class="mt-2" for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+          />
+          <div class="alert-danger" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors['required']">Email is required</div>
+            <div *ngIf="email.errors['email']">
+              Email must be a valid email address
+            </div>
+          </div>
+        </div>
+        <label class="mt-2" for="phone">Teléfono:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="phone"
+          [(ngModel)]="form.phone"
+          required
+          minlength="3"
+          maxlength="20"
+          #phone="ngModel"
+        />
+        <label class="mt-2" for="city">Ciudad:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="city"
+          [(ngModel)]="form.city"
+          required
+          minlength="3"
+          maxlength="20"
+          #city="ngModel"
+        />
+        <label class="mt-2" for="username">Nombre de usuario:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          minlength="3"
+          maxlength="20"
+          #username="ngModel"
+        />
+        <div class="alert-danger" *ngIf="username.errors && f.submitted">
+          <div *ngIf="username.errors['required']">Username is required</div>
+          <div *ngIf="username.errors['minlength']">
+            Username must be at least 3 characters
+          </div>
+          <div *ngIf="username.errors['maxlength']">
+            Username must be at most 20 characters
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="mt-2" for="password">Contraseña:</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors['required']">Password is required</div>
+          <div *ngIf="password.errors['minlength']">
+            Password must be at least 6 characters
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="mt-2" for="password">Repetir contraseña:</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="form.confirmPassword"
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors['required']">La contraseña es necesaria</div>
+          <div *ngIf="password.errors['minlength']">
+            La contraseña debe tener por lo menos 6 carácteres
+          </div>
+        </div>
+      </div>
+      <div class="form-group my-3 text-center">
+        <button class="btn btn-primary btn-block signup">Registrarse</button>
+      </div>
+      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+        Registro fallido!<br />{{ errorMessage }}
+      </div>
+    </form>
+    </div>
+    <div class="alert alert-success" *ngIf="isSuccessful">
+      Registrado con éxito!
+    </div>
+  </div>
+  <div class="form-group my-3 text-center btn-assistant">
+  <button class="btn btn-primary btn-block assistant">Hazte asistente</button>
+</div>
+</div>
+</section>
