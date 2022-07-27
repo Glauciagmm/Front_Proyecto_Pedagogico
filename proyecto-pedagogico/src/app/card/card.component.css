@@ -1,10 +1,13 @@
-
-/* img{
-    height: 200px;
-    right: 100px;
-    top: -140px;
-
-} */
+/* .fotografia{ */
+    /* display: flex; */
+    /* max-width: 1000%; */
+/* } */
+.body{
+    background-image: url();
+}
+ img{
+max-width: 100%;
+ }
 .card-title{
     font-family: 'Montserrat', sans-serif;
     text-justify:auto;
@@ -12,15 +15,64 @@
 .btn-danger{
     margin-right: 10px;
 }
-.card-body{
-    padding: 10px;
+.border-dark{
+    position: relative;
+    right: -10px;
+    margin-top: 100px;
+
 }
-.rounded{
+.border-dark{
+    border: 3px solid green;
+border-radius: 6px;
+margin: 110px;
+top:-88px;
+position: relative;
+background-color: #EEEEEE;
+}
+
+.texto{
+    right: -100px;
+    text-align: center;
+    
+}
+.a{
+    background: darkblue;
+}
+
+.foto1{
+    display: flex;
+}
+.textocentrado{
+    justify-content: center;
+    position: relative;
+}
+.img-fluid{
+    position: fixed;
+    height:700px;
+    right: 1px;
+   width: 2100px;
+   top:70px;
+}
+.nav-pills{
+    color: red;
+}
+footer{
     position: absolute;
+    bottom: 0px;
+    height: 175px;
+    width: 100%;
+    right: 1px;
+    margin: auto;
 }
 .imagencarta{
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 10000px;
+    height: 240px;
+    position: absolute;
+    border-radius: 7px;
+    left: 0px;
+    top:0px;
+    max-width: 50%;
+}
+.col-sm-1{
+position: absolute;
+width: 100px;
 }

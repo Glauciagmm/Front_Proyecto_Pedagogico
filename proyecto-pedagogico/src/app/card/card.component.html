@@ -1,15 +1,18 @@
 <div class="card-body border border-dark">
-      <div class="texto " *ngFor="let facility of facility"> 
-        <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.user?.photo}}" alt="photo del assistente" class="imagencarta"></a>
-        
-        <p class="card-text">JOHN DOE</p>
-        <p>Barcelona</p>
-        <p>4 años de experencia</p>
-        <p>Curriculum</p>
-        <p>Ayuda a domicilio</p>
-        <div>
-        </div>
-      </div>
-      <div class="container-fluid">
-      </div>
+  <div class="texto " *ngFor="let facility of facility">
+    <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.user?.photo}}" alt="photo del assistente"
+        class="imagencarta"></a>
+
+    <p class="card-text">Servicio: {{facility.title}}</p>
+    <p>Descripción:{{facility.description}}</p>
+    <p>{{facility.pricePerHour}}€(Precio por hora)</p>
+    <p>{{facility?.user?.name}}</p>
+    <p>{{facility?.user?.city}}</p>
+
+  </div>
+  <div class="button">
+    <div class="d-flex justify-content-center">
+      <button class="btn submit btn-md" (click)="add()" style="height: 2.5rem; width: 12rem;">Añadir</button>
     </div>
+  </div>
+</div>
