@@ -1,15 +1,15 @@
 <body>  
     <div class="container">
-      <div class="col" id="assistant" *ngFor="let assistant of assistant">
+      <div class="col" id="facility" *ngFor="let facility of facility">
         <ul>
-          <a href="/assitant-details?id={{assistant?.id}}"> <img src="{{assistant?.user?.photo}}" alt="photo del assistente" class="img"></a>
+          <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.user?.photo}}" alt="photo del assistente" class="img"></a>
           <p class="details">
-            Servicio: {{assistant.title}} / Descripción:{{assistant.description}}
+            Servicio: {{facility.title}} / Descripción:{{facility.description}}
           </p>
           <p class="details">
-            {{assistant.pricePerHour}}€ (Precio por hora)
+            {{facility.price}}€ (Precio por hora)
           </p>
-          <p>"{{assistant?.user?.name}}" / Ciudad "{{assistant?.user?.location}}"</p>
+          <p>"{{facility?.user?.name}}" / Ciudad "{{facility?.user?.location}}"</p>
         </ul>
       </div>
     </div>
