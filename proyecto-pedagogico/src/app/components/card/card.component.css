@@ -30,13 +30,11 @@ position: relative;
 background-color: #EEEEEE;
 }
 
-.texto{
+/* .texto{
     height: 25vh;
-    right: -100px;
     text-align: center;
-    overflow: hidden;
     
-}
+} */
 .a{
     background: darkblue;
 }
@@ -67,7 +65,7 @@ footer{
     margin: auto;
 }
 .imagencarta{
-    height: 240px;
+    height: 100%;
     position: absolute;
     border-radius: 7px;
     left: 0px;
@@ -77,4 +75,9 @@ footer{
 .col-sm-1{
 position: absolute;
 width: 100px;
+}
+.sendBtn{
+    border-color: #393E46;
+    border-width: 0.15rem;
+    background-color: #76EAD7;
 }
