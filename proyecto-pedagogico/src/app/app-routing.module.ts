@@ -4,12 +4,37 @@ import { RouterModule,Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { FacilitiesComponent } from "./components/facilities/facilities.component";
+import { FacilityDetailComponent} from"./components/facility-detail/facility-detail.component";
+import { FacilityAddComponent } from "./components/facility-add/facility-add.component";
+import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
 
 const routes: Routes = [
   //{ path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  
+  {    path: "facility",
+    component: FacilitiesComponent,  
+    data: { title: "facility-List" },
+  },
+  {
+    path: "facility-details",
+    component: FacilityDetailComponent,
+    data: { title: "services-Details" },
+  },
+  {
+    path: "facilitys-add",
+    component: FacilityAddComponent,
+    data: { title: "Services Add" },
+  },
+  {
+    path: "facility-edit/:id",
+    component: FacilityEditComponent,
+    data: { title: "facility-Edit" },
+  },
+  { path: "", redirectTo: "/facility", pathMatch: "full" }
 ]
 
 
@@ -25,3 +50,7 @@ const routes: Routes = [
 
 })
 export class AppRoutingModule { }
+
+
+
+  

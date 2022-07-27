@@ -1,6 +1,10 @@
+import { FacilityEditComponent } from './components/facility-edit/facility-edit.component';
+import { FacilityAddComponent } from './components/facility-add/facility-add.component';
+import { FacilitiesComponent } from './components/facilities/facilities.component';
+import { FacilityDetailComponent } from './components/facility-detail/facility-detail.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -11,6 +15,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +23,11 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     HeaderComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    FacilitiesComponent,
+    FacilityAddComponent,
+    FacilityDetailComponent,
+    FacilityEditComponent
   ],
   imports: [
     BrowserModule,
