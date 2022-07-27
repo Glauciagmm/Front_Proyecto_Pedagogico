@@ -4,11 +4,11 @@ export interface Facility {
     id:number;
     title: string;
     description: string;
-    price: number;
+    pricePerHour: number;
     user:{
         id: number;
         photo:string;
         name: string;
-        location: string;
+        city: string;
     }
 }

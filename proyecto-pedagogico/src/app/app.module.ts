@@ -1,3 +1,4 @@
+import { CardComponent } from './components/card/card.component';
 import { FacilityEditComponent } from './components/facility-edit/facility-edit.component';
 import { FacilityAddComponent } from './components/facility-add/facility-add.component';
 import { FacilitiesComponent } from './components/facilities/facilities.component';
@@ -15,9 +16,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 
+import { ClientComponent } from './components/client/client.component';
 
-import { CardComponent } from './card/card.component';
-import { ClientComponent } from './client/client.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,8 @@ import { ClientComponent } from './client/client.component';
     FacilityAddComponent,
     FacilityDetailComponent,
     FacilityEditComponent,
+    CardComponent, 
+    ClientComponent
    
   ],
   imports: [
@@ -38,8 +40,6 @@ import { ClientComponent } from './client/client.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CardComponent,
-    ClientComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

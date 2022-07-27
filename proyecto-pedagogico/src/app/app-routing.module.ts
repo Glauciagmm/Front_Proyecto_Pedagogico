@@ -7,7 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { FacilityDetailComponent} from"./components/facility-detail/facility-detail.component";
 import { FacilityAddComponent } from "./components/facility-add/facility-add.component";
 import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './components/card/card.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

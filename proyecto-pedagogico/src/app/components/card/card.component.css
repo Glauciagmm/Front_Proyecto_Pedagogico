@@ -31,8 +31,10 @@ background-color: #EEEEEE;
 }
 
 .texto{
+    height: 25vh;
     right: -100px;
     text-align: center;
+    overflow: hidden;
     
 }
 .a{

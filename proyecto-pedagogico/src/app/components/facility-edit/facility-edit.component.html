@@ -8,13 +8,13 @@
         <input [(ngModel)]="facilityData.description" class="form-control" placeholder="Descripción" />
       </label><br>
       <label>Precio Por Hora:
-        <input [(ngModel)]="facilityData.price" class="form-control" placeholder="Precio Por Hora" />
+        <input [(ngModel)]="facilityData.pricePerHour" class="form-control" placeholder="Precio Por Hora" />
       </label><br>
       <label>Nombre:
         <input [(ngModel)]="facilityData.user.name"  class="form-control" placeholder="Nombre" />
       </label><br>
       <label>Ciudad:
-        <input [(ngModel)]="facilityData.user.location" class="form-control" placeholder="Ciudad" />
+        <input [(ngModel)]="facilityData.user.city" class="form-control" placeholder="Ciudad" />
       </label><br>
       
     <button (click)="updateFacility()">Actualisar</button>
