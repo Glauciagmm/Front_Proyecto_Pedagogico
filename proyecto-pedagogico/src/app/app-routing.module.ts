@@ -8,6 +8,7 @@ import { FacilityDetailComponent} from"./components/facility-detail/facility-det
 import { FacilityAddComponent } from "./components/facility-add/facility-add.component";
 import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
 import { CardComponent } from './components/card/card.component';
+import { ContractsComponent } from './components/contracts/contracts.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,11 @@ const routes: Routes = [
     component: FacilityEditComponent,
     data: { title: "facility-Edit" },
   },
+  {
+    path: "contract",
+    component: ContractsComponent,
+    data: {title: "contract-Details"}
+  }
 ]
 
 

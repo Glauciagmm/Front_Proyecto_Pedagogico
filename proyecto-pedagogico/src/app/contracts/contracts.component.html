@@ -1,0 +1,21 @@
+<body>  
+    <div class="container">
+      <div class="col" id="contract" *ngFor="let contract of contracts">
+        <ul>
+          <a href="/contract-details?id={{contract?.id}}"> <img src="{{contract?.user?.photo}}" alt="photo del assistente" class="img"></a>
+          <p class="details">
+            Servicio: {{contract.title}} / Descripción:{{contract.description}}
+          </p>
+          <p class="details">
+            {{contract.pricePerHour}}€ (Precio por hora)
+          </p>
+          <p>"{{contract?.user?.name}}" / Ciudad "{{contract?.user?.city}}"</p>
+        </ul>
+      </div>
+    </div>
+    <div class="button">
+      <div class="d-flex justify-content-center">
+        <button class="btn submit btn-md" (click)="add()" style="height: 2.5rem; width: 12rem;">Añadir</button>
+      </div>
+    </div>
+  </body>
