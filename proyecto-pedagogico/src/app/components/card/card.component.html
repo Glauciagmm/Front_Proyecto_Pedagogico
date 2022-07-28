@@ -1,8 +1,9 @@
 <div class="card-body border border-dark">
   <div class="texto " *ngFor="let facility of facility">
-    <a href="/facility-details?id={{facility?.id}}"> <img src="../../../assets/img/chica.png" alt="photo del assistente"
+    <a href="/facility-details?id={{facility?.id}}"> 
+      <img src="{{facility?.user?.photo}}" alt="photo del assistente"
         class="imagencarta" ></a>
-        <!-- {{facility?.user?.photo}} -->
+       
     <p class="card-text">Servicio: {{facility?.title}}</p>
     <p>Descripción:{{facility?.description}}</p>
     <p>{{facility?.pricePerHour}}€(Precio por hora)</p>
