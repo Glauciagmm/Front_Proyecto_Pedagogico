@@ -26,7 +26,7 @@ const routes: Routes = [
     data: { title: "services-Details" },
   },
   {
-    path: "facilitys-add",
+    path: "facility-add",
     component: FacilityAddComponent,
     data: { title: "Services Add" },
   },

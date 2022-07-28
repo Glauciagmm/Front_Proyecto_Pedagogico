@@ -31,7 +31,7 @@ export class CardComponent implements OnInit {
     });
   }
 
-  add(): void {
+  addFacility(): void {
     this.router.navigate(["/facility-add"]);
   }
 

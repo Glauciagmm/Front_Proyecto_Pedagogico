@@ -1,0 +1,27 @@
+*{
+    background-color: #b6f9ed;
+    font-family: 'Oswald', sans-serif;
+}
+h1{
+    font-size: px;
+}
+
+.form-control{
+    background-color: #f4f3f7;
+    border: 1px;
+}
+
+.btn.submit.btn-md {
+    background-color: #f8f6fa;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+}
+
+
+#addForm{
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-group{
+  padding: 0.6em;
+}
