@@ -11,7 +11,7 @@ import {BoardAdminComponent} from './components/board-admin-component/board-admi
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+ { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   { path: 'profile', component: ProfileComponent},
