@@ -1,14 +1,10 @@
+import { User } from 'src/app/models/user';
 import { PathLocationStrategy } from "@angular/common";
 
 export interface Facility {
-    id:number;
+    id?:number;
     title: string;
     description: string;
     pricePerHour: number;
-    user:{
-        id: number;
-        photo:string;
-        name: string;
-        city: string;
-    }
+    user: User;   
 }

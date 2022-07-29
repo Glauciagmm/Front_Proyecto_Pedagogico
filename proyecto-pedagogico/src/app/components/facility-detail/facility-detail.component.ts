@@ -1,7 +1,7 @@
 import { FacilityService } from '../../services/facility';
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Facility } from '../../model/facility';
+import { Facility } from '../../models/facility';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 

@@ -6,14 +6,13 @@
       <h5 class="card-title">Nombre: {{facility?.user?.name}}</h5>
       <h5 class="card-title">Ciudad:{{facility?.user?.city}}</h5>
       <h5 class="card-title">Precio por hora: {{facility?.pricePerHour}}</h5>
-
-    </div>
+    </div>  
     <div class="btns">
-      <button class="button-addon2" routerLink="/facility-edit/{{facility?.id}}">
+      <button class="btn btn-lg button"  routerLink="/facility-edit/{{facility.id}}">
         Edit
       </button>
-      <!-- <button class="button-addon2" routerLink="/facility-book/{{facility?.id}}">
-        Book
-      </button> -->
+      <button class="btn btn-lg button"  routerLink="/facility-contract/{{facility?.id}}">
+        Enviar Solicitud
+      </button>
     </div>
-  </div>
+</div>

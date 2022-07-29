@@ -1,13 +1,9 @@
-*{
-    background-color: #b6f9ed;
-    font-family: 'Oswald', sans-serif;
-}
 h1{
     font-size: px;
 }
 
 .form-control{
-    background-color: #f4f3f7;
+    background-color: #ffffff;
     border: 1px;
 }
 
@@ -24,4 +20,7 @@ h1{
 
 .form-group{
   padding: 0.6em;
+}
+.btn{
+    background-color: #76EAD7;
 }

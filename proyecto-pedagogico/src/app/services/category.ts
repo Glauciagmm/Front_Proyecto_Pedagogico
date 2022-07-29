@@ -1,10 +1,10 @@
-import { Facility} from "../model/facility"; 
+import { Facility} from "../models/facility"; 
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { catchError, map, Observable, throwError } from "rxjs";
-import { Categories } from "../model/categories";
+import { Categories } from "../models/categories";
 
 export class CategoryServices{
 
