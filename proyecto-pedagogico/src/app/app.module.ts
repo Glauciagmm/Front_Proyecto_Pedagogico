@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -8,12 +8,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BoardUserComponent } from './components/board-user-component/board-user-component';
 import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
+import { ErrorIntercept } from './helpers/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,13 @@ import { BoardAdminComponent } from './components/board-admin-component/board-ad
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorIntercept,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
