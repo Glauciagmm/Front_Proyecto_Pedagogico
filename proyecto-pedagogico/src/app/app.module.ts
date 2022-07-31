@@ -14,7 +14,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { BoardUserComponent } from './components/board-user-component/board-user-component';
 import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
+import { GlobalErrorHandler } from './helpers/globlal.error.handling';
 import { ErrorIntercept } from './helpers/error.interceptor';
+import { AdminBoardComponent } from './components/admin-board/admin-board.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { ErrorIntercept } from './helpers/error.interceptor';
     ProfileComponent,
     BoardUserComponent,
     BoardFacilityComponent,
-    BoardAdminComponent
+    BoardAdminComponent,
+    AdminBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -36,11 +39,10 @@ import { ErrorIntercept } from './helpers/error.interceptor';
     HttpClientModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorIntercept,
-      multi: true
-    }
+    
+      { provide: ErrorHandler, useClass: GlobalErrorHandler },
+   
+      { provide: HTTP_INTERCEPTORS, useClass: ErrorIntercept, multi: true }
   ],
   bootstrap: [AppComponent]
 })

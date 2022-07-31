@@ -6,27 +6,32 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, map, retry } from 'rxjs/operators';
 export class ErrorIntercept implements HttpInterceptor {
-  intercept(
-      request: HttpRequest<any>,
-      next: HttpHandler
-  ): Observable<HttpEvent<any>> {
-      return next.handle(request)
-          .pipe(
-              retry(1),
-              catchError((error: HttpErrorResponse) => {
-                  let errorMessage = '';
-                  if (error.error instanceof ErrorEvent) {
-                      // client-side error
-                      errorMessage = `Error: ${error.error.message}`;
-                  } else {
-                      // server-side error
-                      errorMessage = `Error Status: ${error.status}\nMessage: ${error.message}`;
-                  }
-                  console.log(errorMessage);
-                  return throwError(errorMessage);
-              })
-          )
-  }
+    constructor() {
+    }
+
+    intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+        console.log("Passed through the interceptor in request");
+
+        return next.handle(request)
+            .pipe(
+                map(res => {
+                    console.log("Passed through the interceptor in response");
+                    return res
+                }),
+                catchError((error: HttpErrorResponse) => {
+                    let errorMsg = '';
+                    if (error.error instanceof ErrorEvent) {
+                        console.log('This is client side error');
+                        errorMsg = `Error: ${error.error.message}`;
+                    } else {
+                        console.log('This is server side error');
+                        errorMsg = `Error Code: ${error.status},  Message: ${error.message}`;
+                    }
+                    console.log(errorMsg);
+                    return throwError(errorMsg);
+                })
+            )
+    }
 }
