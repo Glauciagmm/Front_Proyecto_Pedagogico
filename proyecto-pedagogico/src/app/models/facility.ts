@@ -6,5 +6,14 @@ export interface Facility {
     title: string;
     description: string;
     pricePerHour: number;
-    user: User;   
+    assistant:{
+      id?: number,
+      name?: string,
+      surname?: string,
+      photo?: string,
+      email?: string,
+      username?: string,
+      city?: string,
+      phone?: number
+    }
 }

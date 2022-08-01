@@ -2,14 +2,14 @@
     <div class="container">
       <div class="col" id="facility" *ngFor="let facility of facility">
         <ul>
-          <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.user?.photo}}" alt="photo del assistente" class="img"></a>
+          <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.assistant?.photo}}" alt="photo del assistente" class="img"></a>
           <p class="details">
             Servicio: {{facility.title}} / Descripción:{{facility.description}}
           </p>
           <p class="details">
             {{facility.pricePerHour}}€ (Precio por hora)
           </p>
-          <p>"{{facility?.user?.name}}" / Ciudad "{{facility?.user?.city}}"</p>
+          <p>"{{facility?.assistant?.name}}" / Ciudad "{{facility?.assistant?.city}}"</p>
         </ul>
       </div>
     </div>

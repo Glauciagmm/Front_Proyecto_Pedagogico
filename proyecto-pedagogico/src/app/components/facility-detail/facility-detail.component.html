@@ -1,17 +1,17 @@
 <div class="row">
       <div class="row">
-      <img class="img" src="{{facility?.user?.photo}}" alt="...">
-      <h5 class="card-title">{{facility?.title}}</h5>
-      <h5 class="card-title">Descripción: {{facility?.description}}</h5>
-      <h5 class="card-title">Nombre: {{facility?.user?.name}}</h5>
-      <h5 class="card-title">Ciudad:{{facility?.user?.city}}</h5>
-      <h5 class="card-title">Precio por hora: {{facility?.pricePerHour}}</h5>
+      <img class="img" src="{{facility.assistant.photo}}" alt="...">
+      <h5 class="card-title">{{facility.title}}</h5>
+      <h5 class="card-title">Descripción: {{facility.description}}</h5>
+      <h5 class="card-title">Nombre: {{facility.assistant.name}}</h5>
+      <h5 class="card-title">Ciudad:{{facility.assistant.city}}</h5>
+      <h5 class="card-title">Precio por hora: {{facility.pricePerHour}}</h5>
     </div>  
     <div class="btns">
       <button class="btn btn-lg button"  routerLink="/facility-edit/{{facility.id}}">
         Edit
       </button>
-      <button class="btn btn-lg button"  routerLink="/facility-contract/{{facility?.id}}">
+      <button class="btn btn-lg button"  routerLink="/facility-contract/{{facility.id}}">
         Enviar Solicitud
       </button>
     </div>

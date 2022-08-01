@@ -1,14 +1,16 @@
-<div class="card-body border border-dark">
-  <div class="texto " *ngFor="let facility of facility">
-    <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.user?.photo}}" alt="photo del assistente"
+<div class="card mb-3">
+  <div class="row g-0" *ngFor="let facility of facility">
+    <div class="col-md-8">
+    <a href="/facility-details?id={{facility?.id}}"> <img class="img-fluid rounded-start" src="{{facility?.assistant?.photo}}" alt="photo del assistente"
         class="imagencarta" ></a>
-        <!-- {{facility?.user?.photo}} -->
+    </div>
+    <div class="card-body">
     <p class="card-text">Servicio: {{facility?.title}}</p>
     <p>Descripción:{{facility?.description}}</p>
     <p>{{facility?.pricePerHour}}€(Precio por hora)</p>
-    <p>{{facility?.user?.name}}</p>
-    <p>{{facility?.user?.city}}</p>
-
+    <p>{{facility?.assistant?.name}}</p>
+    <p>{{facility?.assistant?.city}}</p>
+    </div>
   </div>
   <div class="button">
     <div class="d-flex justify-content-center">

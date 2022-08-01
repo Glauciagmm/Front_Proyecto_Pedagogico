@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 
 import { ClientComponent } from './components/client/client.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { ClientComponent } from './components/client/client.component';
     FacilityDetailComponent,
     FacilityEditComponent,
     CardComponent, 
-    ClientComponent
+    ClientComponent, TestComponent
    
   ],
   imports: [

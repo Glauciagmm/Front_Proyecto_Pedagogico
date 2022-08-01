@@ -36,7 +36,7 @@ export class FacilityService {
     //Busca la funcionalidad de encontar todos los servicios el backend 
     getFacilities(): Observable<Facility[]> {
         return this.http.get<Facility[]>(
-        `${this.apiServerUrl}/api/facility/list1`
+        `${this.apiServerUrl}/api/facility/list`
         );
         
         }

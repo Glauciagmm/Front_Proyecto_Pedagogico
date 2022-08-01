@@ -11,3 +11,4 @@ export interface User {
   photo: string;
   confirmPassword: string;
 }
+
