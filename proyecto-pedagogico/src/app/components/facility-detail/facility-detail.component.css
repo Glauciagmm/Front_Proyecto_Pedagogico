@@ -27,8 +27,8 @@
 .img{
     display: flex;
     align-content: flex-start;
-    width: 300px;
-    height: 250px;
+    width: 90%;
+    height: 90%;
     border-radius: 10%;
  
 }
@@ -38,7 +38,12 @@
 }
 
 .card-title{
+    font-family: 'Montserrat', sans-serif;
     margin: 1%;
+}
+.grey{
+    color: rgba(39, 39, 39, 0.54);
+    line-height: 1.6;
 }
 .details{
     background: rgba(238, 238, 238, 0.5);
