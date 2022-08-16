@@ -27,6 +27,7 @@
 }
 .button-addon2 {
     display: flex;
+    position: relative;
     background-color: #D2BAFF;
     font-family: 'Oswald', sans-serif;
     border-radius: 1px;
