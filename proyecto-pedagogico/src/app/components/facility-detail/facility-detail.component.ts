@@ -1,4 +1,4 @@
-import { FacilityService } from '../../services/facility';
+import { FacilityService } from 'src/app/services/facility.service'; 
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Facility } from '../../models/facility';
@@ -13,10 +13,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class FacilityDetailComponent implements OnInit {
 
   facility!: Facility;
-  facilityID: string="0";
+  facilityId: string="0";
 
   selectedFacility?: Facility;
-  onSelect(facility:Facility): void{
+  onSelect(facility: Facility): void{
     this.selectedFacility = facility;
   }
 
@@ -25,18 +25,23 @@ export class FacilityDetailComponent implements OnInit {
     public facilityService: FacilityService,
     private route: ActivatedRoute,
     private router: Router,
-    private location: Location
-  ) { }
+    private Location: Location
+  ) {}
 
   ngOnInit(): void {
-    this.facilityService.getFacility(Number(this.facilityID)).subscribe({
+    this.facilityId=(this.Location.path().toString().replace("/facility-details?id=",""))
+    this.getFacility();
+  }
+
+  getFacility():void{
+    this.facilityService.getFacility(Number(this.facilityId)).subscribe({
       next: (resp: Facility)=>{
         this.facility = resp;
       },
-      error:(error: HttpErrorResponse)=>{
+      error: (error: HttpErrorResponse) => {
         alert(error.message);
       },
-    })
+    });
   }
 
 }

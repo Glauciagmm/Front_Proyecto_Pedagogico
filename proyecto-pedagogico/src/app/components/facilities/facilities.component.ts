@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FacilityService } from 'src/app/services/facility';
+import { FacilityService } from 'src/app/services/facility.service'; 
 import { Router } from '@angular/router';
 import { Facility } from 'src/app/models/facility';
 

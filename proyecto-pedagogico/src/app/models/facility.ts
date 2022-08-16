@@ -6,6 +6,7 @@ export interface Facility {
     title: string;
     description: string;
     pricePerHour: number;
+    category: null;
     assistant:{
       id?: number,
       name?: string,
@@ -14,6 +15,6 @@ export interface Facility {
       email?: string,
       username?: string,
       city?: string,
-      phone?: number
-    }
+      phone?: string,
+    };
 }

@@ -5,7 +5,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { catchError, map, Observable, throwError } from "rxjs";
-import { User } from './../models/user';
+import { User } from '../models/user';
 
 const API_URL= 'http://localhost:8080/uniquecare';
 @Injectable({providedIn:"root"})

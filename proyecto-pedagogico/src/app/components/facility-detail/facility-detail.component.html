@@ -1,18 +1,23 @@
 <div class="row">
-      <div class="row">
-      <img class="img" src="{{facility.assistant.photo}}" alt="...">
-      <h5 class="card-title">{{facility.title}}</h5>
-      <h5 class="card-title">Descripción: {{facility.description}}</h5>
-      <h5 class="card-title">Nombre: {{facility.assistant.name}}</h5>
-      <h5 class="card-title">Ciudad:{{facility.assistant.city}}</h5>
-      <h5 class="card-title">Precio por hora: {{facility.pricePerHour}}</h5>
-    </div>  
-    <div class="btns">
+  <div class="col md-2">
+    <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
+  </div>
+  <div class="col">
+     <h5 class="card-title">Titulo: {{facility?.title}}</h5>
+    <h5 class="card-title">Descripción: {{facility?.description}}</h5>
+    <h5 class="card-title">Precio por hora: {{facility?.pricePerHour}}</h5>
+    <h5 class="card-title">Nombre: {{facility?.assistant?.name}}</h5>
+    <h5 class="card-title">Email: {{facility?.assistant?.email}}</h5>
+    <h5 class="card-title">Ciudad: {{facility?.assistant?.city}}</h5>
+    <h5 class="card-title">Telefono: {{facility?.assistant?.phone}}</h5>
+  </div>
+  <div class="btns">
       <button class="btn btn-lg button"  routerLink="/facility-edit/{{facility.id}}">
         Edit
       </button>
       <button class="btn btn-lg button"  routerLink="/facility-contract/{{facility.id}}">
         Enviar Solicitud
-      </button>
+      </button> 
     </div>
 </div>
+
