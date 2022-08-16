@@ -13,11 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
-
 import { ClientComponent } from './components/client/client.component';
-import { TestComponent } from './test/test.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,7 +31,7 @@ import { TestComponent } from './test/test.component';
     FacilityDetailComponent,
     FacilityEditComponent,
     CardComponent, 
-    ClientComponent, TestComponent
+    ClientComponent
    
   ],
   imports: [
@@ -41,7 +39,6 @@ import { TestComponent } from './test/test.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

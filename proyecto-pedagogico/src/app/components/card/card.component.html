@@ -1,10 +1,10 @@
-<div class="card mb-3">
-  <div class="row g-0" *ngFor="let facility of facility">
-    <div class="col-md-8">
+<div class="row mb-3">
+  <div class="row g-0 mx-5 my-3" *ngFor="let facility of facility">
+    <div class="col-md-4">
     <a href="/facility-details?id={{facility?.id}}"> <img class="img-fluid rounded-start" src="{{facility?.assistant?.photo}}" alt="photo del assistente"
         class="imagencarta" ></a>
     </div>
-    <div class="card-body">
+    <div class="col-md-5 ps-5 pt-4 details">
     <p class="card-text">Servicio: {{facility?.title}}</p>
     <p>Descripción:{{facility?.description}}</p>
     <p>{{facility?.pricePerHour}}€(Precio por hora)</p>
