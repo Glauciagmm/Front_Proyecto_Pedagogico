@@ -54,7 +54,19 @@
     .img{
         margin:auto;
     }
+    .description{
+        margin-top: 0;
+    }
     .card-title{
         font-size: 16px;
+    }
+    .grey{
+        margin-left: 2rem;
+    }
+    .btns{
+        padding: 2em 1em 2em;
+    }
+    .btn{
+        font-size: 17px;
     }
 }
