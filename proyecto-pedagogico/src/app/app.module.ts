@@ -14,13 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
-<<<<<<< HEAD
 
-=======
->>>>>>> 66625052f2b2b15c4f52d437e915e3a72c9a65b4
 import { LoginComponent } from './components/login/login.component';
 import { ClientComponent } from './components/client/client.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
