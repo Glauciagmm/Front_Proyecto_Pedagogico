@@ -16,8 +16,15 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
 
 import { LoginComponent } from './components/login/login.component';
+
 import { ClientComponent } from './components/client/client.component';
 
+
+
+import { ProfileComponent } from './components/profile/profile.component';
+import { BoardUserComponent } from './components/board-user-component/board-user-component';
+import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
+import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
 
 
 @NgModule({
@@ -34,8 +41,12 @@ import { ClientComponent } from './components/client/client.component';
     FacilityAddComponent,
     FacilityEditComponent,
     CardComponent, 
-    ClientComponent
-   
+    ClientComponent,
+   ProfileComponent,
+    BoardUserComponent,
+    BoardFacilityComponent,
+    BoardAdminComponent,
+
   ],
   imports: [
     BrowserModule,

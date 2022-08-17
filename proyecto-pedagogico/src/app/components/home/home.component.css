@@ -35,6 +35,11 @@ vertical-align: middle;
     width: 17vw;
     padding: 2rem;
 }
+.card-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 .card:hover{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
