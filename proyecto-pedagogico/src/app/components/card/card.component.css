@@ -63,6 +63,7 @@ footer{
     left: 0px;
     top:0px;
     max-width: 100%;
+    width:95%;
 }
 .details{
     background: rgba(238, 238, 238, 0.5);
