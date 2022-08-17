@@ -1,20 +1,21 @@
-<div class="row mb-3">
-  <div class="row justify-content-center g-0 mx-5 my-3 card-mobile" *ngFor="let facility of facility">
-    <div class="col-md-2">
-    <a href="/facility-details?id={{facility?.id}}"> <img class="img-fluid rounded-start" src="{{facility?.assistant?.photo}}" alt="photo del assistente"
-        class="imagencarta" ></a>
+
+    <div class="row mb-3">
+      <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile" *ngFor="let facility of facility">
+        <div class="col-md-2">
+        <a href="/facility-details?id={{facility?.id}}"> <img class="img-fluid rounded-start" src="{{facility?.assistant?.photo}}" alt="photo del assistente"
+            class="imagencarta" ></a>
+        </div>
+        <div class="col-md-5 ps-5 pt-4 details">
+        <p class="card-title fw-bold text-center">{{facility?.title}}</p>
+        <p class="card-title text-center grey">{{facility?.description}}</p>
+        <p class="card-title text-center grey">{{facility?.pricePerHour}}€(Precio por hora)</p>
+        <p class="card-title text-center grey">{{facility?.assistant?.name}}</p>
+        <p class="card-title text-center grey">{{facility?.assistant?.city}}</p>
+        </div>
+      </div>
+      <!-- <div class="button">
+        <div class="d-flex justify-content-center">
+          <button class="btn submit btn-md" (click)="addFacility()" style="height: 2.5rem; width: 12rem;">Añadir</button>
+        </div>
+      </div> -->
     </div>
-    <div class="col-md-5 ps-5 pt-4 details">
-    <p class="card-title fw-bold text-center">{{facility?.title}}</p>
-    <p class="card-title text-center grey">{{facility?.description}}</p>
-    <p class="card-title text-center grey">{{facility?.pricePerHour}}€(Precio por hora)</p>
-    <p class="card-title text-center grey">{{facility?.assistant?.name}}</p>
-    <p class="card-title text-center grey">{{facility?.assistant?.city}}</p>
-    </div>
-  </div>
-  <!-- <div class="button">
-    <div class="d-flex justify-content-center">
-      <button class="btn submit btn-md" (click)="addFacility()" style="height: 2.5rem; width: 12rem;">Añadir</button>
-    </div>
-  </div> -->
-</div>
