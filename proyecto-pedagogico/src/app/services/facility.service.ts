@@ -1,9 +1,9 @@
-import { Facility } from "../model/facility"; 
+import { Facility } from "../models/facility"; 
 
 import { Injectable } from "@angular/core";
 
 // Import HttpClient and add it to constructor
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { catchError, map, Observable, throwError } from "rxjs";
@@ -11,6 +11,7 @@ import { catchError, map, Observable, throwError } from "rxjs";
 @Injectable({
   providedIn: "root",
 })
+
 export class FacilityService {
     private handleError(error: HttpErrorResponse): any {
         if (error.error instanceof ErrorEvent) {
@@ -36,29 +37,34 @@ export class FacilityService {
     //Busca la funcionalidad de encontar todos los servicios el backend 
     getFacilities(): Observable<Facility[]> {
         return this.http.get<Facility[]>(
-        `${this.apiServerUrl}/api/facility/facilit`
+        `${this.apiServerUrl}/api/facility/list`
         );
         
         }
 
     //Busca la funcionalidad de encontar un servico por su id en el backend 
-    public idFacility(id: number): Observable<Facility> {
-    return this.http.get<Facility>(
-        `${this.apiServerUrl}/api/facility/${id}`
-    );
-    }
+    // public getFacility(id: number): Observable<Facility> {
+    // return this.http.get<Facility>(
+    //     `${this.apiServerUrl}/api/facility/${id}`
+    // );
+    // }
 
     //Busca la funcionalidad de encontar un servico por su id en el backend 
     getFacility(id: number): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            })
+        }
     return this.http
         .get(`${this.apiServerUrl}/api/facility/${id}`)
-        .pipe(catchError(this.handleError));
-    }
+        .pipe((catchError(this.handleError)));
+    }     
 
     //Busca la funcionalidad de actualisar un servicio en el backend 
     updateFacility(facility: Facility): Observable<any> {
     console.log(facility);
-    
     return this.http.put<Facility>(
         `${this.apiServerUrl}/api/facility/edit`, facility
         )
@@ -84,6 +90,4 @@ export class FacilityService {
         )
         .pipe(catchError(this.handleError));
     }
-
-
 }

@@ -1,12 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy,  } from '@angular/core';
-import { FacilityService } from 'src/app/services/facility';
+import { FacilityService } from 'src/app/services/facility.service';
 import { Router } from '@angular/router';
 
 
 import { HttpErrorResponse } from '@angular/common/http';
 
-import { Categories } from 'src/app/model/categories';
-import { Facility } from 'src/app/model/facility';
+import { Categories } from 'src/app/models/categories';
+import { Facility } from 'src/app/models/facility';
 import { CategoryServices } from 'src/app/services/category';
 
 

@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
     city:null,
     email: null,
     phone: null,
+    photo:null,
     password: null,
     confirmPassword: null
   };
@@ -36,6 +37,7 @@ export class RegisterComponent implements OnInit {
       username: data.value.username,
       city: data.value.city,
       phone: data.value.phone,
+      photo: data.value.photo,
       password: data.value.password,
       email: data.value.email,
       confirmPassword: ""
@@ -45,7 +47,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, email, password , city, name, surname, phone} = this.form;
+    const { username, email, password , city, name, surname, phone, photo} = this.form;
 
     this.authService.register(username, email, password, city, name, surname, phone).subscribe({
       next: data => {
@@ -67,6 +69,7 @@ export class RegisterComponent implements OnInit {
       username: data.value.username,
       city: data.value.city,
       phone: data.value.phone,
+      photo: data.value.photo,
       password: data.value.password,
       email: data.value.email,
       confirmPassword: ""};
