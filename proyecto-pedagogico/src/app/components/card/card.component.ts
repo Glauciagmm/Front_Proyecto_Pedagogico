@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Facility } from '../../model/facility';
-import { FacilityService } from '../../services/facility';
+import { Facility } from '../../models/facility';
+import { FacilityService } from 'src/app/services/facility.service'; 
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,7 +31,7 @@ export class CardComponent implements OnInit {
     });
   }
 
-  add(): void {
+  addFacility(): void {
     this.router.navigate(["/facility-add"]);
   }
 

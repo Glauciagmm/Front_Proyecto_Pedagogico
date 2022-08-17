@@ -18,22 +18,22 @@ const routes: Routes = [
   
   {    path: "facility",
     component: CardComponent,  
-    data: { title: "facility-List" },
+    data: { title: "Facility List" },
   },
   {
     path: "facility-details",
     component: FacilityDetailComponent,
-    data: { title: "services-Details" },
+    data: { title: "Facility Details" },
   },
   {
-    path: "facilitys-add",
+    path: "facility-add",
     component: FacilityAddComponent,
-    data: { title: "Services Add" },
+    data: { title: "Facility Add" },
   },
   {
     path: "facility-edit/:id",
     component: FacilityEditComponent,
-    data: { title: "facility-Edit" },
+    data: { title: "Facility Edit" },
   },
 ]
 
@@ -41,7 +41,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes,{
+      paramsInheritanceStrategy: 'always'
+    }),
     CommonModule
   ],
   exports: [
