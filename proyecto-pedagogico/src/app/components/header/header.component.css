@@ -12,3 +12,7 @@ font-family: 'Montserrat', sans-serif;
 .logo{
     width: 4rem;
 }
+
+.pe5{
+    justify-content: space-around;
+}

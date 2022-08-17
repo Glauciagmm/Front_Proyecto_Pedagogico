@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FacilityService } from 'src/app/services/facility';
+import { FacilityService } from 'src/app/services/facility.service'; 
 
 @Component({
   selector: 'app-facility-add',
