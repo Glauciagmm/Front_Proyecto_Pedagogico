@@ -24,11 +24,15 @@ line-height: 22px;
     border: 1px solid black;
 }
 .register{
+    width:fit-content;
     color:white;
     background-color:  rgba(16, 50, 72, 0.82);
 }
 .register:hover{
     background-color:  rgba(4, 23, 36, 0.82);
+}
+.login{
+    width: fit-content;
 }
 .login:hover{
     background-color:  #0e3d3550;

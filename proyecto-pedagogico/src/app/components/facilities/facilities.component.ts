@@ -30,6 +30,12 @@ export class FacilitiesComponent implements OnInit {
     });
   }
 
+
+
+
+
+
+
   add(): void {
     this.router.navigate(["/facility-add"]);
   }
@@ -43,6 +49,6 @@ export class FacilitiesComponent implements OnInit {
         console.log(err);
       }
     );
-  }
+  } 
 
 }
