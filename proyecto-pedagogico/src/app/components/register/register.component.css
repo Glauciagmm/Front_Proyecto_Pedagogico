@@ -27,9 +27,13 @@ line-height: 22px;
 .assistant{
     color:white;
     background-color:  rgba(16, 50, 72, 0.82);
+    width:fit-content;
 }
 .assistant:hover{
     background-color:  rgba(4, 23, 36, 0.82);
+}
+.signup{
+    width:fit-content;
 }
 .signup:hover{
     background-color:  #0e3d3550;
