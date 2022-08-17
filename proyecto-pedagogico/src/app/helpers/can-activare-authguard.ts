@@ -5,7 +5,7 @@ import { TokenStorageService } from '../services/token-storage.service';
 export class CanActivateAuthGuard implements CanActivate {
   constructor(private router: Router, private tokenStorageService: TokenStorageService) {}
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-        if (this.tokenStorageService.isLoggedIn()) {
+        if (this.tokenStorageService.getUser()) {
             // logged in so return true
             return true;
         }

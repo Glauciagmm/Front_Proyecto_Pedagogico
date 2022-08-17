@@ -26,7 +26,7 @@ import { AdminBoardComponent } from './components/admin-board/admin-board.compon
     HeaderComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent,
+   
     BoardUserComponent,
     BoardFacilityComponent,
     BoardAdminComponent,
