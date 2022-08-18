@@ -9,6 +9,7 @@
       (ngSubmit)="f.form.valid && onSubmit()"
       #f="ngForm"
       novalidate
+      enctype="multipart/form-data"
     >
       <div class="form-group">
         <label class="text-left" for="name">Nombre:</label>
@@ -62,6 +63,12 @@
           maxlength="20"
           #phone="ngModel"
         />
+        <label class="mt-2" for="city">Photo:</label>
+        <p>
+          Upload a file:
+          <input type="file" name="uploadedfile">
+          <!-- <input type="submit" value="Send data"> -->
+        </p>
         <label class="mt-2" for="city">Ciudad:</label>
         <input
           type="text"
