@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     const { username, email, password , city, name, surname, phone, photo} = this.form;
 
-    this.authService.register(username, email, password, city, name, surname, phone).subscribe({
+    this.authService.register(username, email, password, city, name, surname, phone, photo, ["ROLE_USER"]).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
@@ -62,26 +62,27 @@ export class RegisterComponent implements OnInit {
     });
     this.router.navigate(['/login']);
   }
-  public createUser(data:NgForm): void{
-    const user : User = {
-      name: data.value.name,
-      surname: data.value.surname,
-      username: data.value.username,
-      city: data.value.city,
-      phone: data.value.phone,
-      photo: data.value.photo,
-      password: data.value.password,
-      email: data.value.email,
-      confirmPassword: ""};
-        console.log(data)
-    this.userService.registerUser(user).subscribe({
-      next: (response: User) => {
-        console.log(user);
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    })
-  }
+
+  // public createUser(data:NgForm): void{
+  //   const user : User = {
+  //     name: data.value.name,
+  //     surname: data.value.surname,
+  //     username: data.value.username,
+  //     city: data.value.city,
+  //     phone: data.value.phone,
+  //     photo: data.value.photo,
+  //     password: data.value.password,
+  //     email: data.value.email,
+  //     confirmPassword: ""};
+  //       console.log(data)
+  //   this.userService.registerUser(user).subscribe({
+  //     next: (response: User) => {
+  //       console.log(user);
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   })
+  // }
 
 }
