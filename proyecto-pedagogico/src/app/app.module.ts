@@ -12,19 +12,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
-
 import { LoginComponent } from './components/login/login.component';
-
 import { ClientComponent } from './components/client/client.component';
-
-
-
 import { ProfileComponent } from './components/profile/profile.component';
-import { BoardUserComponent } from './components/board-user-component/board-user-component';
-import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
-import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
+import { BoardUserComponent } from './components/board-user-component/board-user-component'; 
+import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component'; 
+import { BoardAdminComponent } from './components/board-admin-component/board-admin-component'; 
+import { authInterceptorProviders } from './helpers/helpers';
 
 
 @NgModule({
@@ -42,7 +38,7 @@ import { BoardAdminComponent } from './components/board-admin-component/board-ad
     FacilityEditComponent,
     CardComponent, 
     ClientComponent,
-   ProfileComponent,
+    ProfileComponent,
     BoardUserComponent,
     BoardFacilityComponent,
     BoardAdminComponent,
@@ -53,8 +49,10 @@ import { BoardAdminComponent } from './components/board-admin-component/board-ad
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ authInterceptorProviders ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

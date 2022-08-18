@@ -5,9 +5,9 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { catchError, map, Observable, throwError } from "rxjs";
-import { User } from '../models/user';
+import { User } from './../models/user';
 
-const API_URL= 'http://localhost:8080/uniquecare';
+const API_URL= 'http://localhost:8080/api';
 @Injectable({providedIn:"root"})
 export class UserService{
 private handleError(error: HttpErrorResponse): any {
@@ -32,7 +32,7 @@ private handleError(error: HttpErrorResponse): any {
     console.log("User Services");
   }
   getUser(): Observable<User[]> {
-    return this.http.get<User[]>('${this.apiServerUrl}/uniquecare/user');
+    return this.http.get<User[]>('${this.apiServerUrl}/api/user');
     /*let header = new HttpHeaders()
         .set('Type-content', 'aplication/json')
       return this.http.get(this.apiServerUrl, {
@@ -42,38 +42,38 @@ private handleError(error: HttpErrorResponse): any {
   //this one and the next should do the same thing - Create a new user
   public registerUser(user: User): Observable<User> {
     return this.http.post<User>(
-      `${this.apiServerUrl}/uniquecare/user/save`,
+      `${this.apiServerUrl}/api/user/save`,
       user
     );
   }
 
   public createUser(user: any): Observable<any> {
     return this.http
-      .post<User>(`${this.apiServerUrl}/uniquecare/user/save`, user)
+      .post<User>(`${this.apiServerUrl}/api/user/save`, user)
       .pipe(catchError(this.handleError));
   }
 
   //this one and the next should do the same thing - Find user by Id
   public idUser(): Observable<User> {
-    return this.http.get<User>(`${this.apiServerUrl}/uniquecare/user/`);
+    return this.http.get<User>(`${this.apiServerUrl}/api/user/`);
   }
   getuser(id: number): Observable<any> {
     return this.http
-      .get(`${this.apiServerUrl}/uniquecare/user/${id}`)
+      .get(`${this.apiServerUrl}/api/user/${id}`)
       .pipe(catchError(this.handleError));
   }
 
   //Edit user
   updateUser(id: number, user: User): Observable<any> {
     return this.http
-      .put<User>(`${this.apiServerUrl}/uniquecare/user/${id}`, user)
+      .put<User>(`${this.apiServerUrl}/api/user/${id}`, user)
       .pipe(catchError(this.handleError));
   }
 
   //Delete user
   deleteUser(id: number): Observable<any> {
     return this.http
-      .delete<User>(`${this.apiServerUrl}/uniquecare/user/delete/${id}`)
+      .delete<User>(`${this.apiServerUrl}/api/user/delete/${id}`)
       .pipe(catchError(this.handleError));
   }
 
@@ -83,7 +83,7 @@ private handleError(error: HttpErrorResponse): any {
 
   public removeUser(user: User): Observable<User> {
     return this.http.post<User>(
-      `${this.apiServerUrl}/uniquecare/user/delete/username`,
+      `${this.apiServerUrl}/api/user/delete/username`,
       user
     );
   }
