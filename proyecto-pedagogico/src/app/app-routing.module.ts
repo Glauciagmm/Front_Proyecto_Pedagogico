@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
@@ -9,9 +9,9 @@ import { FacilityAddComponent } from "./components/facility-add/facility-add.com
 import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
 import { CardComponent } from './components/card/card.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import {BoardUserComponent} from './components/board-user-component/board-user-component';
-import {BoardFacilityComponent} from './components/board-facility-component/board-facility-component';
-import {BoardAdminComponent} from './components/board-admin-component/board-admin-component';
+import { BoardUserComponent } from './components/board-user-component/board-user-component';
+import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
+import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
 
 
 const routes: Routes = [
