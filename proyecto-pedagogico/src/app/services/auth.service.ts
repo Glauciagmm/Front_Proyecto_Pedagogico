@@ -27,15 +27,17 @@ export class AuthService {
     );
   }
 
-  register(username: string, email: string, password: string, name: string, surname: string, city:string, phone: number): Observable<any> {
+  register(username: string, email: string, password: string, name: string, surname: string, city:string, phone: number, photo: String, role: String[]): Observable<any> {
     return this.http.post(AUTH_API + 'signup', {
       username,
       email,
       password,
       name,
       surname,
-      city, 
-      phone
+      city,
+      photo, 
+      phone,
+      role
     }, httpOptions).pipe(
       catchError(this.handleError)
     );

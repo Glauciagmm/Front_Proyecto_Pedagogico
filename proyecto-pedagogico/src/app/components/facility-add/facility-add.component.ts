@@ -1,6 +1,9 @@
+import { TokenStorageService } from './../../services/token-storage.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FacilityService } from 'src/app/services/facility.service'; 
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-facility-add',
@@ -9,33 +12,34 @@ import { FacilityService } from 'src/app/services/facility.service';
 })
 export class FacilityAddComponent implements OnInit {
 
-  @Input() facilityData = {
-    id:0,
-    title: "",
-    description: "",
-    pricePerHour: 0,
-    user: {
-      id: 0,
-      photo:"",
-      name: "",
-      city: "",
-    }
-  };
+  currentUser: any;
 
+ formFacility: FormGroup | any;
   
-
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+  
   constructor(
-    public facilityService: FacilityService,
+    private facilityService: FacilityService,
     private route: ActivatedRoute,
+    private token : TokenStorageService,
     private router: Router) {}
 
   ngOnInit(): void {
+    this.formFacility = new FormGroup({
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      pricePerHour: new FormControl('', [Validators.required]),
+    });
+
+    this.currentUser = this.token.getUser();
+    console.log(this.currentUser);
   }
 
-  addFacility(): void{
-    console.log(this.facilityData)
-    this.facilityService.addFacility(this.facilityData).subscribe((result)=>{
-      this.router.navigate([`/facility-detail`, result._id]);
+  createFacility(): void{
+    this.facilityService.addFacility(this.formFacility.value).subscribe((result)=>{
+    this.router.navigate(['facility-details/' + result._id]);
     },
     (err)=>{
       console.log(err);
@@ -44,3 +48,4 @@ export class FacilityAddComponent implements OnInit {
   }
 
 }
+

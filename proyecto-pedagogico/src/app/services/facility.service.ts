@@ -36,11 +36,8 @@ export class FacilityService {
     }
     //Busca la funcionalidad de encontar todos los servicios el backend 
     getFacilities(): Observable<Facility[]> {
-        return this.http.get<Facility[]>(
-        `${this.apiServerUrl}/api/facility/list`
-        );
-        
-        }
+        return this.http.get<Facility[]>(`${this.apiServerUrl}/api/facility/list`);
+    }
 
     //Busca la funcionalidad de encontar un servico por su id en el backend 
     // public getFacility(id: number): Observable<Facility> {
