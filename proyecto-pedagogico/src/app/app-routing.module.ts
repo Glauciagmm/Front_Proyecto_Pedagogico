@@ -7,11 +7,12 @@ import { LoginComponent } from './components/login/login.component';
 import { FacilityDetailComponent} from"./components/facility-detail/facility-detail.component";
 import { FacilityAddComponent } from "./components/facility-add/facility-add.component";
 import { FacilityEditComponent } from "./components/facility-edit/facility-edit.component";
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from './components/facility-card/card.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BoardUserComponent } from './components/board-user-component/board-user-component';
 import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
+
 
 
 const routes: Routes = [
