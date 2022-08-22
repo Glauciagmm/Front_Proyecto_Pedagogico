@@ -1,4 +1,4 @@
-import { CardComponent } from './components/facility-card/card.component';
+import { CardComponent } from './components/card/card.component';
 import { FacilityEditComponent } from './components/facility-edit/facility-edit.component';
 import { FacilityAddComponent } from './components/facility-add/facility-add.component';
 import { FacilitiesComponent } from './components/facilities/facilities.component';
