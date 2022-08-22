@@ -24,7 +24,7 @@ private extractData(res: Response): any {
     return body || {};
 }
 
-private apiServerUrl = environment.apiBaseUrl;
+public apiServerUrl = environment.apiBaseUrl;
 
 constructor(private http: HttpClient) {
     console.log("Oferred Services");
