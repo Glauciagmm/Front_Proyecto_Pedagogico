@@ -38,5 +38,15 @@ let router: Router;
     expect(el).toBeTruthy();
     expect(el.nativeElement.getAttribute('for')).toEqual('username');
   });
+  it ('should display Nombre de usuario on the label for the username field', ()=>{
+    const el = fixture.debugElement.query(By.css('.username-label'));
+    expect(el.nativeElement.innerText).toEqual('Nombre de usuario');
+  })
+  it ('should have an input element with class form-control for the username field', ()=>{
+    const el = fixture.debugElement.query(By.css('input.form-control'));
+    expect(el).toBeTruthy();
+    expect(el.nativeElement.getAttribute('type')).toEqual('text');
+    expect(el.nativeElement.getAttribute('name')).toEqual('username');
+  })
 
 });
