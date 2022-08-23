@@ -1,5 +1,5 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Contract } from '../models/contract';

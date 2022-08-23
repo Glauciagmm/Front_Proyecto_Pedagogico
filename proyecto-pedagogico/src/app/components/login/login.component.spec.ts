@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
 
 import { LoginComponent } from './login.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -18,7 +19,7 @@ let router: Router;
     await TestBed.configureTestingModule({
       declarations: [ LoginComponent ],
       imports:[RouterTestingModule, FormsModule, ReactiveFormsModule],
-      providers: [{provide: AuthService, useClass: mockAuthService}],
+      providers: [{provide: AuthService, useValue: mockAuthService}],
       schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
 
     })
@@ -32,9 +33,10 @@ let router: Router;
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it ('should create a form with two controls', ()=>{
-    expect(component.form.contains('username')).toBeTruthy();
-    expect(component.form.contains('password')).toBeTruthy();
+  it ('should have a label with class username for the username field', ()=>{
+    const el = fixture.debugElement.query(By.css('.username-label'));
+    expect(el).toBeTruthy();
+    expect(el.nativeElement.getAttribute('for')).toEqual('username');
   });
 
 });
