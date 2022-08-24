@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyecto-pedagogico';
+  //User setting/preference
+  isDarkTheme = true;
 }
