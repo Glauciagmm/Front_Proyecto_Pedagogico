@@ -10,7 +10,7 @@ import { ContractService } from 'src/app/services/contract.service';
 @Component({
   selector: 'app-facility-detail',
   templateUrl: './facility-detail.component.html',
-  styleUrls: ['./facility-detail.component.css']
+  styleUrls: ['./facility-detail.component.scss']
 })
 export class FacilityDetailComponent implements OnInit {
 

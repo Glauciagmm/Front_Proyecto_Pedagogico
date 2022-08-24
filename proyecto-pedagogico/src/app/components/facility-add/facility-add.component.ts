@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-facility-add',
   templateUrl: './facility-add.component.html',
-  styleUrls: ['./facility-add.component.css']
+  styleUrls: ['./facility-add.component.scss']
 })
 export class FacilityAddComponent implements OnInit {
 

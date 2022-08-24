@@ -21,8 +21,10 @@ import { BoardUserComponent } from './components/board-user-component/board-user
 import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component'; 
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component'; 
 import { authInterceptorProviders } from './helpers/helpers';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material-module';
+import { MatCardModule } from '@angular/material/card';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,10 @@ import { authInterceptorProviders } from './helpers/helpers';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatSlideToggleModule
   ],
   providers: [ authInterceptorProviders ],
   bootstrap: [AppComponent]

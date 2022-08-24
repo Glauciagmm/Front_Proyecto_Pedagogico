@@ -7,7 +7,7 @@ import { Facility } from 'src/app/models/facility';
 @Component({
   selector: 'app-facilities',
   templateUrl: './facilities.component.html',
-  styleUrls: ['./facilities.component.css']
+  styleUrls: ['./facilities.component.scss']
 })
 export class FacilitiesComponent implements OnInit {
   public facility: Facility[] = [];
