@@ -10,32 +10,7 @@
     <h5 class="card-title grey">Email: {{facility?.assistant?.email}}</h5>
     <h5 class="card-title grey">Ciudad: {{facility?.assistant?.city}}</h5>
     <h5 class="card-title grey">Telefono: {{facility?.assistant?.phone}}</h5>
-    <form class="d-flex flex-column justify-content-center ms-2" style="width: 60rem;">
-      <div class="row form-group ">
-          <label for="date" class="col-sm-1 col-form-label">Fecha inicio</label>
-          <div class="col-sm-4">
-            <div class='input-group date' id='datetimepicker1'>
-              <input type='text' class="form-control" />
-              <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-              </span>
-            </div>
-          </div>
-      </div>
-    </form>
-    <form class="d-flex flex-column justify-content-center ms-2" style="width: 60rem;">
-      <div class="row form-group ">
-          <label for="datetime" class="col-sm-1 col-form-label">Fecha fin</label>
-          <div class="col-sm-4">
-            <div class='input-group date' id='datetimepicker2'>
-              <input type='text' class="form-control" />
-              <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-              </span>
-            </div>
-          </div>
-      </div>
-    </form>
+    <app-datetimepicker></app-datetimepicker>
   </div>
   <div class="btns">
       <button class="btn btn-lg button"  routerLink="/facility-edit/{{facility.id}}">
