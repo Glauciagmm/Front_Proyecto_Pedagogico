@@ -1,11 +1,10 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark " aria-label="Fifth navbar example">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark sticky-top " aria-label="Fifth navbar example">
   <div class="container-fluid mx-4">
     <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="navbar-collapse collapse" id="navbarsExample03" >
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="pe-5 navbar-nav me-auto mb-2 mb-sm-0 mx-2">
         <li class="nav-item me-5">
           <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="#">Inicio</a>
@@ -29,8 +28,6 @@
         </select>
         <div id="google_translate_element2"></div>
       </ul>
-
-      <div id="google_translate_element2"></div>
       <div class="d-sm-flex pe-5 mt-3 ">
         <li class="nav-item mb-2 text-dark fw-bolder ">
 
@@ -46,24 +43,24 @@
             routerLink="user">User</a>
         </li> 
 
-        <div class="d-grid pe-5 d-md-flex justify-content-end " *ngIf="!isLoggedIn">
-          <li class="nav-item ms-5 text-dark fw-bolder ">
-
+        <div class="d-grid pe-5 d-md-flex justify-content-end ">
+          <li class="nav-item ms-5 text-dark fw-bolder " *ngIf="!isLoggedIn">
             <a class="btn btn-lg  button " routerLink="/register">Registro</a>
           </li>
-          <li class="nav-item mb-2 text-dark fw-bolder">
+          <li class="nav-item mb-2 text-dark fw-bolder" *ngIf="!isLoggedIn">
             <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
           </li>
+          <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+            <li class="nav-item ms-2 text-dark fw-bolder">
+              <a href="/profile" class="btn btn-lg text-center  button" routerLink="profile">{{ username }}</a>
+            </li>
+            <li class="nav-item ms-2 text-dark fw-bolder">
+              <a href class="btn btn-lg  button" (click)="logout()">LogOut</a>
+            </li>
+          </ul>
         </div>
 
-        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-          <li class="nav-item ms-2 text-dark fw-bolder">
-            <a href="/profile" class="btn btn-lg  button" routerLink="profile">{{ username }}</a>
-          </li>
-          <li class="nav-item ms-2 text-dark fw-bolder">
-            <a href class="btn btn-lg  button" (click)="logout()">LogOut</a>
-          </li>
-        </ul>
+        
       </div>
     </div>
   </div>
