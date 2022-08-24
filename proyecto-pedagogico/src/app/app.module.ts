@@ -21,6 +21,7 @@ import { BoardUserComponent } from './components/board-user-component/board-user
 import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component'; 
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component'; 
 import { authInterceptorProviders } from './helpers/helpers';
+import { DatetimepickerComponent } from './datetimepicker/datetimepicker.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { authInterceptorProviders } from './helpers/helpers';
     BoardUserComponent,
     BoardFacilityComponent,
     BoardAdminComponent,
+    DatetimepickerComponent,
 
   ],
   imports: [
