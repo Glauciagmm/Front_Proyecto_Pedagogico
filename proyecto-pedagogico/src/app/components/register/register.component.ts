@@ -12,13 +12,13 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegisterComponent implements OnInit {
   form: any = {
-    username: null,
     name: null,
     surname:null,
-    city:null,
+    username: null,
     email: null,
-    phone: null,
-    photo:null,
+    city:null,
+    telephone: null,
+    picture:null,
     password: null,
     confirmPassword: null
   };
@@ -35,11 +35,11 @@ export class RegisterComponent implements OnInit {
       name: data.value.name,
       surname: data.value.surname,
       username: data.value.username,
-      city: data.value.city,
-      phone: data.value.phone,
-      photo: data.value.photo,
-      password: data.value.password,
       email: data.value.email,
+      city: data.value.city,
+      telephone: data.value.telephone,
+      picture: data.value.picture,
+      password: data.value.password,
       confirmPassword: ""
     };
 
@@ -47,13 +47,14 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, email, password , city, name, surname, phone, photo} = this.form;
+    const {name, surname, username, email,city,  telephone, picture, password } = this.form;
 
-    this.authService.register(username, email, password, city, name, surname, phone, photo, ["ROLE_USER"]).subscribe({
+    this.authService.register(name,surname,username, email,city, telephone, picture,password,["ROLE_FACILITY"]).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+       
       },
       error: err => {
         this.errorMessage = err.error.message;

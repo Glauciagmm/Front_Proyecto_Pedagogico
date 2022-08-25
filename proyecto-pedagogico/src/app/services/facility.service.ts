@@ -28,6 +28,7 @@ export class FacilityService {
         const body = res;
         return body || {};
     }
+    private categoryId:any;
 
     private apiServerUrl = environment.apiBaseUrl;
 
@@ -36,7 +37,18 @@ export class FacilityService {
     }
     //Busca la funcionalidad de encontar todos los servicios el backend 
     getFacilities(): Observable<Facility[]> {
-        return this.http.get<Facility[]>(`${this.apiServerUrl}/api/facility/list`);
+        return this.http.get<Facility[]>(`${this.apiServerUrl}/facility/list`);
+    }
+
+    getFacilitiesByCategory(categoryId:Number):Observable<Facility[]>{
+        return this.http.get<Facility[]>(`${this.apiServerUrl}/category/${categoryId}/facilities`)
+    }
+
+    getFacilitiesByUbication(city:String):Observable<Facility[]>{
+        return this.http.get<Facility[]>(`${this.apiServerUrl}/facility/${city}`)
+    }
+    getFacilitiesByAssistantId(assistantId:Number):Observable<Facility[]>{
+        return this.http.get<Facility[]>(`${this.apiServerUrl}/facility/${assistantId}`)
     }
 
     //Busca la funcionalidad de encontar un servico por su id en el backend 
@@ -47,15 +59,8 @@ export class FacilityService {
     // }
 
     //Busca la funcionalidad de encontar un servico por su id en el backend 
-    getFacility(id: number): Observable<any> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            })
-        }
-    return this.http
-        .get(`${this.apiServerUrl}/api/facility/${id}`)
+    getFacility(facilityId: number): Observable<any> {
+      return this.http.get(`${this.apiServerUrl}/facility/single/${facilityId}`)
         .pipe((catchError(this.handleError)));
     }     
 
@@ -82,7 +87,7 @@ export class FacilityService {
     console.log(facility)
     return this.http
         .post<Facility>(
-        `${this.apiServerUrl}/api/facility/create`,
+        `${this.apiServerUrl}/facility/create`,
         facility
         )
         .pipe(catchError(this.handleError));
