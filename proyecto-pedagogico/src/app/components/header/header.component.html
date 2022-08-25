@@ -5,17 +5,25 @@
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    <!-- 
+      CONDITIONAL AND TERNARYS
+      <div class="row" *ngIf="teamMembers?.length > 0"></div> 
+     <span> {{selectedSport.key === 'walking' ? 'steps' : 'km'}} </span>
+    -->
     <div class="navbar-collapse collapse" id="navbarsExample03">
       <ul class="pe-5 navbar-nav me-auto mb-2 mb-sm-0 mx-2">
         <li class="nav-item me-5">
           <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="#">Inicio</a>
-
-
-        </li>
+         </li>
+         <li class="nav-item me-5">
         <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility">Servicios</a>
-        <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility-add">Añadir un
-          Servicio</a>
+         </li>
+          <li class="nav-item me-5">
+            <a href="/facility-add" class="nav-link active text-white me-md-2 fw-bolder" *ngIf="isLoggedIn"
+              routerLink="facility-add">Añadir un
+              Servicio</a>
+          </li>
+        
 
         <select onchange="doGTranslate(this);">
           <option value="">Select Language</option>
@@ -30,7 +38,7 @@
       </ul>
 
       <div id="google_translate_element2"></div>
-      <div class="d-sm-flex pe-5 mt-3 ">
+      <div class="d-sm-flex pe-5 mt-3 list-none" >
         <li class="nav-item mb-2 text-dark fw-bolder ">
 
         </li>
@@ -45,19 +53,21 @@
             routerLink="user">User</a>
         </li>
 
-        <div class="d-grid pe-5 d-md-flex justify-content-md-end" *ngIf="!isLoggedIn">
-          <li class="nav-item ms-5 text-dark fw-bolder ">
+        <div class="d-grid pe-5 d-md-flex justify-content-md-end pos-abs" *ngIf="!isLoggedIn">
+          <ul class="navbar-nav ml-auto" >
+          <li class="nav-item ms-5 text-dark fw-bolder pad1 ">
 
             <a class="btn btn-lg  button " routerLink="/register">Registro</a>
           </li>
-          <li class="nav-item mb-2 text-dark fw-bolder">
+          <li class="nav-item mb-2 text-dark fw-bolder pad1">
             <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
           </li>
-        </div>
+          </ul>
+         </div>
 
 
 
-        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <ul class="navbar-nav ml-auto pos-abs" *ngIf="isLoggedIn">
           <li class="nav-item ms-2 text-dark fw-bolder">
             <a href="/profile" class="btn btn-lg  button" routerLink="profile">{{ username }}</a>
           </li>
@@ -65,6 +75,7 @@
             <a href class="btn btn-lg  button" (click)="logout()">LogOut</a>
           </li>
         </ul>
+     
       </div>
     </div>
   </div>

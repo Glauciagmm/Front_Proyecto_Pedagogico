@@ -1,6 +1,6 @@
 <section class="register-page pb-2">
 <div class="col-md-12">
-  <h1 class="text-center font-weight-bold">Registro</h1>
+  <h1 class="text-left font-weight-bold">Registro</h1>
   <div class="card-container bg-transparent pt-1">
     <div class="box p-3">
     <form class="pt-2"
@@ -34,52 +34,6 @@
           maxlength="20"
           #surname="ngModel"
         />
-        <div class="form-group">
-          <label class="mt-2" for="email">Email:</label>
-          <input
-            type="email"
-            class="form-control"
-            name="email"
-            [(ngModel)]="form.email"
-            required
-            email
-            #email="ngModel"
-          />
-          <div class="alert-danger" *ngIf="email.errors && f.submitted">
-            <div *ngIf="email.errors['required']">Email is required</div>
-            <div *ngIf="email.errors['email']">
-              Email must be a valid email address
-            </div>
-          </div>
-        </div>
-        <label class="mt-2" for="phone">Teléfono:</label>
-        <input
-          type="text"
-          class="form-control"
-          name="phone"
-          [(ngModel)]="form.phone"
-          required
-          minlength="3"
-          maxlength="20"
-          #phone="ngModel"
-        />
-        <label class="mt-2" for="city">Photo:</label>
-        <p>
-          Upload a file:
-          <input type="file" name="uploadedfile">
-          <!-- <input type="submit" value="Send data"> -->
-        </p>
-        <label class="mt-2" for="city">Ciudad:</label>
-        <input
-          type="text"
-          class="form-control"
-          name="city"
-          [(ngModel)]="form.city"
-          required
-          minlength="3"
-          maxlength="20"
-          #city="ngModel"
-        />
         <label class="mt-2" for="username">Nombre de usuario:</label>
         <input
           type="text"
@@ -100,6 +54,61 @@
             Username must be at most 20 characters
           </div>
         </div>
+        <div class="form-group">
+          <label class="mt-2" for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+          />
+          <div class="alert-danger" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors['required']">Email is required</div>
+            <div *ngIf="email.errors['email']">
+              Email must be a valid email address
+            </div>
+          </div>
+        
+        <label class="mt-2" for="city">Ciudad:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="city"
+          [(ngModel)]="form.city"
+          required
+          minlength="3"
+          maxlength="20"
+          #city="ngModel"
+        />
+        <label class="mt-2" for="phone">Teléfono:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="telephone"
+          [(ngModel)]="form.telephone"
+          required
+          minlength="3"
+          maxlength="20"
+          #telephone="ngModel"
+        />
+     
+        <p>
+          Upload a file:
+          <input type="text" 
+          name="picture" 
+          value="https://thispersondoesnotexist.com/image"
+          name="picture"
+          [(ngModel)]="form.picture">
+
+          <!-- <input type="submit" value="Send data"> -->
+        </p>
+     
+       
+       
+</div>
       </div>
       <div class="form-group">
         <label class="mt-2" for="password">Contraseña:</label>

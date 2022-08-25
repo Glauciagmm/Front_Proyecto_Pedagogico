@@ -12,6 +12,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { BoardUserComponent } from './components/board-user-component/board-user-component';
 import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
+import { FacilitiesComponent } from './components/facilities/facilities.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,15 @@ const routes: Routes = [
     component: CardComponent,  
     data: { title: "Facility List" },
   },
+  { path: 'facilityfilter', component: FacilitiesComponent},
+/*   {    path: "facility/:categoryId",
+  component: FacilitiesComponent,  
+  data: { title: "Facility List filter by category" },
+}, */
+{    path: "facility/:city",
+component: FacilitiesComponent,  
+data: { title: "Facility List filter by city" },
+},
   {
     path: "facility-details",
     component: FacilityDetailComponent,

@@ -1,21 +1,20 @@
-<body>  
-    <div class="container">
-      <div class="col" id="facility" *ngFor="let facility of facility">
-        <ul>
-          <a href="/facility-details?id={{facility?.id}}"> <img src="{{facility?.assistant?.photo}}" alt="photo del assistente" class="img"></a>
-          <p class="details">
-            Servicio: {{facility.title}} / Descripción:{{facility.description}}
-          </p>
-          <p class="details">
-            {{facility.pricePerHour}}€ (Precio por hora)
-          </p>
-          <p>"{{facility?.assistant?.name}}" / Ciudad "{{facility?.assistant?.city}}"</p>
-        </ul>
-      </div>
+<div class="row mb-3">
+  <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile" *ngFor="let facilities of facility">
+    <div class="col-md-2">
+    <a href="/facility-details?id={{facilities.id}}"> <img class="img-fluid rounded-start" src="https://thispersondoesnotexist.com/image"alt="photo del assistente"
+        class="imagencarta" ></a>
     </div>
-    <div class="button">
-      <div class="d-flex justify-content-center">
-        <button class="btn submit btn-md" (click)="add()" style="height: 2.5rem; width: 12rem;">Añadir</button>
-      </div>
+    <div class="col-md-5 ps-5 pt-4 details">
+    <p class="card-title fw-bold text-center">{{facilities?.title}}</p>
+    <p class="card-title text-center grey">{{facilities?.description}}</p>
+    <p class="card-title text-center grey">{{facilities?.pricePerHour}}€(Precio por hora)</p>
+    <p class="card-title text-center grey">{{facilities?.assistant?.name}}</p>
+    <p class="card-title text-center grey">{{facilities?.assistant?.city}}</p>
     </div>
-  </body>
+  </div>
+  <!-- <div class="button">
+    <div class="d-flex justify-content-center">
+      <button class="btn submit btn-md" (click)="addFacility()" style="height: 2.5rem; width: 12rem;">Añadir</button>
+    </div>
+  </div> -->
+</div>

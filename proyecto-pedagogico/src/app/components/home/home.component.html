@@ -5,8 +5,10 @@
       </p>
     </div>
     <div class="card-group justify-content-center">
-
+      <a  [routerLink]="['/facilityfilter']" [state]="{categoryId:1}">
+       
         <div class="card desktop-blue mx-3 my-5 border border-dark rounded" >
+         
         <div class="icon-card mobile-blue justify-content-center d-flex align-items-center">
         <img src="./assets/img/CategoryIcons/channelHome.png" class="card-img-top" alt="...">
         </div>
@@ -14,6 +16,8 @@
             <h5 class="card-title fw-bold">Limpieza</h5>
         </div>
         </div>
+      </a>
+      <a [routerLink]="['/facilityfilter']" [state]="{categoryId:2}">
         <div class="card desktop-yellow mx-3 my-5 border border-dark rounded">
             <div class="icon-card mobile-yellow justify-content-center d-flex align-items-center">
           <img src="./assets/img/CategoryIcons/image 17.png" class="card-img-top" alt="...">
@@ -22,6 +26,8 @@
             <h5 class="card-title fw-bold">Recados</h5>
           </div>
         </div>
+      </a>
+      <a [routerLink]="['/facilityfilter']" [state]="{categoryId:3}">
         <div class="card desktop-green mx-3 my-5  border border-dark rounded">
         <div class="icon-card mobile-green justify-content-center d-flex align-items-center">
           <img src="./assets/img/CategoryIcons/Shopping-cart.png" class="card-img-top" alt="...">
@@ -30,6 +36,8 @@
             <h5 class="card-title fw-bold">Movilidad</h5>
         </div>
         </div>
+        </a>
+        <a [routerLink]="['/facilityfilter']" [state]="{categoryId:4}">
         <div class="card desktop-red mx-3 my-5 border border-dark rounded">
             <div class="icon-card mobile-red justify-content-center d-flex align-items-center">
             <img src="./assets/img/CategoryIcons/stethoscope_light.png" class="card-img-top" alt="...">
@@ -38,6 +46,8 @@
               <h5 class="card-title fw-bold">Viajes</h5>
             </div>
           </div>
+        </a>
+        <a [routerLink]="['/facilityfilter']" [state]="{categoryId:5}">
           <div class="card desktop-purple mx-3 my-5 border border-dark rounded">
             <div class="icon-card mobile-purple justify-content-center d-flex align-items-center">
             <img src="./assets/img/CategoryIcons/suitcase_light.png" class="card-img-top" alt="...">
@@ -46,6 +56,7 @@
               <h5 class="card-title fw-bold">Cuidados</h5>
             </div>
           </div>
+        </a>
       </div>
 </section>
 
