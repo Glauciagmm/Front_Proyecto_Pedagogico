@@ -1,21 +1,22 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark sticky-top" aria-label="Fifth navbar example">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark " aria-label="Fifth navbar example">
   <div class="container-fluid mx-4">
     <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
-      aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse collapse" id="navbarsExample03">
+    <div class="navbar-collapse collapse" id="navbarsExample03" >
       <ul class="pe-5 navbar-nav me-auto mb-2 mb-sm-0 mx-2">
         <li class="nav-item me-5">
           <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="#">Inicio</a>
-
-
         </li>
-        <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility">Servicios</a>
-        <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility-add">Añadir un
-          Servicio</a>
+        <li>
+          <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility">Servicios</a>
+        </li>
+        <li>
+          <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility-add">Añadir un
+            Servicio</a>
+        </li>
 
         <select onchange="doGTranslate(this);">
           <option value="">Select Language</option>
@@ -43,9 +44,9 @@
         <li class="nav-item">
           <a href="/user" class="nav-link active text-white me-md-2 fw-bolder" *ngIf="isLoggedIn"
             routerLink="user">User</a>
-        </li>
+        </li> 
 
-        <div class="d-grid pe-5 d-md-flex justify-content-md-end" *ngIf="!isLoggedIn">
+        <div class="d-grid pe-5 d-md-flex justify-content-end " *ngIf="!isLoggedIn">
           <li class="nav-item ms-5 text-dark fw-bolder ">
 
             <a class="btn btn-lg  button " routerLink="/register">Registro</a>
@@ -54,8 +55,6 @@
             <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
           </li>
         </div>
-
-
 
         <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
           <li class="nav-item ms-2 text-dark fw-bolder">

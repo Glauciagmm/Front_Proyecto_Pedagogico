@@ -14,6 +14,7 @@ import { BoardFacilityComponent } from './components/board-facility-component/bo
 import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
