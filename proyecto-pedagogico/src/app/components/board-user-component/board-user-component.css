@@ -12,6 +12,9 @@
     background-color: rgba(234, 52, 52, 0.871);
     color: antiquewhite;
 }
+.imagencarta{
+    height: 20rem;
+}
 
 @media (min-width: 992px) {
     .btns{
