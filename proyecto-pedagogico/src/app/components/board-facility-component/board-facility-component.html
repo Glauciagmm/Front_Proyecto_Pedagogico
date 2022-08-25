@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs">
+<!-- <ul class="nav nav-tabs">
   <li class="nav-item">
     <a
       class="nav-link"
@@ -15,7 +15,7 @@
       >Child B</a
     >
   </li>
-</ul>
+</ul> -->
 
 <div class="row mb-3">
     <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile" *ngFor="let facilities of facility">
@@ -31,10 +31,59 @@
       <p class="card-title text-center grey">{{facilities?.assistant?.city}}</p>
       </div>
     </div>
+  </div>
     <!-- <div class="button">
       <div class="d-flex justify-content-center">
         <button class="btn submit btn-md" (click)="addFacility()" style="height: 2.5rem; width: 12rem;">Añadir</button>
       </div>
     </div> -->
-  </div>
+<p>board-facility-component works!</p>
+<table class="table currentFacility my-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Cliente :</th>
+        <th scope="col">Servicio Contratado:</th>
+        <th scope="col">Inicia:</th>
+        <th scope="col">Termina:</th>
+        <th scope="col">Precio Total:</th>
+        <th scope="col">Aceptar:</th>
+        <th scope="col">Rechazar:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <th scope="row">1</th>
+        <td class="clientcell" >Mark</td>
+        <td>@twitter</td>
+        <td class="clientcell">DATETIME_START</td>
+        <td>DATETIME_FINISH</td>
+        <td class="clientcell">Price €</td>
+        <td>
+            <button class="btn btn-yes submit btn-md"  >
+            Aceptar</button> <!--(click)="agree()"-->
+        </td>
+        <td>
+            <button class="btn btn-no submit btn-md" >
+                Rechazar</button><!--(click)="refuse()"-->
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td class="clientcell">Jacob</td>
+        <td>@fat</td>
+        <td class="clientcell">DATETIME_START</td>
+        <td>DATETIME_FINISH</td>
+        <td class="clientcell">Price €</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td class="clientcell">Larry the Bird</td>
+        <td>@twitter</td>
+        <td class="clientcell">DATETIME_START</td>
+        <td>DATETIME_FINISH</td>
+        <td class="clientcell">Price €</td>
+      </tr>
+    </tbody>
+  </table>
 
