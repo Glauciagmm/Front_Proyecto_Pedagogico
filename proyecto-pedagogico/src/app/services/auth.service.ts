@@ -26,17 +26,16 @@ export class AuthService {
       catchError(this.handleError)
     );
   }
-
-  register(username: string, email: string, password: string, name: string, surname: string, city:string, phone: number, photo: String, role: String[]): Observable<any> {
+ register(name: string, surname: string,username: string, email: string,city:string, telephone: number, picture: String, password: string,   role: String[]): Observable<any> {
     return this.http.post(AUTH_API + 'signup', {
-      username,
-      email,
-      password,
       name,
       surname,
-      city,
-      photo, 
-      phone,
+      username,
+      email,
+      city, 
+      telephone,
+      picture,
+      password,
       role
     }, httpOptions).pipe(
       catchError(this.handleError)
@@ -54,7 +53,7 @@ export class AuthService {
       // The response body may contain clues as to what went wrong.
       // console.error(
       //   `Backend returned code ${error.status}, body was: `, error.error);
-        serverError=  `Backend returned code ${error.status}, body was:${error.error}`;
+        serverError=  `Backend returned code ${error.status}, body was:${error.error.message}`;
     }
     serverError+='\n The backend returned an unsuccessful response code.';
     // Return an observable with a user-facing error message.

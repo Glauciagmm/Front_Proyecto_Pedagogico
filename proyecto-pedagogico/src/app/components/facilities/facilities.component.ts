@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
-import { FacilityService } from 'src/app/services/facility.service'; 
-import { Router } from '@angular/router';
+import { CategoryServices } from '../../services/category.service'; 
+import { ActivatedRoute,Router } from '@angular/router';
+import { FacilityService } from '../../services/facility.service'; 
 import { Facility } from 'src/app/models/facility';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-facilities',
@@ -11,44 +13,75 @@ import { Facility } from 'src/app/models/facility';
 })
 export class FacilitiesComponent implements OnInit {
   public facility: Facility[] = [];
+  private facility_assistant=Facility;
+  private user? : User;
+/*   city?:String;
+  categoryId?:Number; */
 
   selectedFacility?: Facility;
   onSelect(facility: Facility): void {
   this.selectedFacility = facility;
   }
 
-  constructor(public facilityService: FacilityService, private router: Router) {}
-
-
+  constructor(public facilityService: FacilityService,private router: Router, public userService:UserService) {} 
   ngOnInit(): void {
-    this.getFacilities();
+    const categoryId= history.state.categoryId;
+    const assistanId=history.state.assistantId;
+    if(categoryId){
+      this.getFacilitiesByCategory(categoryId);
+    }else{
+   this.getFacilitiesByAssistantId(assistanId);
+    console.log(assistanId)
   }
-  getFacilities(): void {
-    this.facilityService.getFacilities().subscribe((resp: any) => {
+ }
+
+  
+
+  getFacilitiesByCategory(categoryId:any): void {
+    this.facilityService.getFacilitiesByCategory(categoryId).subscribe((resp: any) => {
       this.facility = resp;
       console.log(this.facility);
     });
   }
-
-
-
-
-
-
-
-  add(): void {
-    this.router.navigate(["/facility-add"]);
+  getFacilitiesByAssistantId(assistantId:any): void {
+    this.facilityService.getFacilitiesByAssistantId(assistantId).subscribe((resp: any) => {
+      this.user = resp;
+      console.log(this.user);
+    });
   }
 
-  delete(id: number): void {
+
+/* 
+  getFacilitiesByCategory(categoryId:any): void {
+   
+    this.facilityService.getFacilitiesByCategory(categoryId).subscribe((facil) => {
+     /*  this.facil.push(...facil.filter(facilit=>facilit.category===categoryId)); 
+     this.facil=facil;
+    });
+ } */
+  
+
+
+delete(id: number): void {
     this.facilityService.deleteFacility(id).subscribe(
-      () => {
-        this.getFacilities();
-      },
-      (err) => {
-        console.log(err);
-      }
+    
     );
   } 
+  // if(!categoryId||!city){
+  //   this.facilityService.getFacilities().subscribe((resp: any) => {
+  //     this.facility = resp;
+  //     console.log(this.facility);
+  //   });
+  // }  else if(categoryId){
+  //   this.facilityService.getFacilitiesByCategory(categoryId).subscribe((resp: any) => {
+  //     this.facility = resp;
+  //   });
+  // }  else if(city){
+      
+  //   this.facilityService.getFacilitiesByUbication(city).subscribe((resp: any) => {
+  //     this.facility = resp;
+  //   });
+  // }
+  // }
 
 }
