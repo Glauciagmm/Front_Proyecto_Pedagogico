@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   public serverErrorMessage:String|undefined=undefined;
   roles: string[] = [];
+  router: any;
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
@@ -32,7 +33,13 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        this.reloadPage();
+       
+        if (this.roles == ["ROLE_ADMIN"]){
+          this.router.navigate(['/admin']);
+        } else {
+            this.router.navigate(['/userdashboard']);
+        }
+       this.reloadPage();  
       },
       error:(error) => {
       /*  
