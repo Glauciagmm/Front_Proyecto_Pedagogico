@@ -1,5 +1,6 @@
 h1{
     font-size: px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-control{
@@ -9,13 +10,13 @@ h1{
 
 .btn.submit.btn-md {
     background-color: #f8f6fa;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
 }
 
 
 #addForm{
-    font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-group{

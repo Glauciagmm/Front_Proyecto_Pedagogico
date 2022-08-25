@@ -1,9 +1,17 @@
-<h1 style="text-align: center; color: #183116; font-family: 'Dancing Script', cursive;">Añade un nuevo servicio</h1>
-
+<h1 style="text-align: center; color: #183116; font-family: 'Montserrat', sans-serif;">Añade un nuevo servicio</h1>
 <div class="container d-grid gap-5 col-4 p-3 mb-3">
   <form id="addForm" [formGroup]="formFacility">
     <div class="mb-3">Título:
       <input formControlName="title" class="form-control" placeholder="Título" />
+    </div>
+    <div class="mb-3">Categoria:
+      <select formControlName="pricePerHour" class="form-control" placeholder="Categoria" >
+        <option value="1">Cuidados</option>
+        <option value="2">Limpieza</option>
+        <option value="3">Recados</option>
+        <option value="5">Movilidad</option>
+        <option value="4">Viajes</option>
+      </select>
     </div>
     <div class="mb-3">Descripción:
       <textarea formControlName="description" class="form-control" placeholder="Descripción"> </textarea>

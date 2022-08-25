@@ -1,3 +1,4 @@
+import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -43,6 +44,12 @@ const routes: Routes = [
   {path: 'user', component: BoardUserComponent},
   { path: 'mod', component: BoardFacilityComponent},
   { path: 'admin', component: BoardAdminComponent},
+  {
+    path: "nav",
+    component:NavbarComponent,
+    data: { title: "nav" },
+  },
+
 ]
 
 

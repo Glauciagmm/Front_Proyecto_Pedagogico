@@ -44,4 +44,15 @@ export class FacilityDetailComponent implements OnInit {
     });
   }
 
+  removeFacility(id: number) {
+    this.facilityService.deleteFacility(id).subscribe(
+      () => {
+        this.getFacility();
+      },
+      (error) => {
+        console.log(error);
+      },
+    );
+  }
+
 }

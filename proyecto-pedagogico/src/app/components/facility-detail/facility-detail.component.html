@@ -11,6 +11,9 @@
     <h5 class="card-title grey">Ciudad: {{facility?.assistant?.city}}</h5>
     <h5 class="card-title grey">Telefono: {{facility?.assistant?.phone}}</h5>
   </div>
+  <div class="col-md-1 btn-sm">
+    <button type="button" class="btn btn-danger" style="height: 2.5rem; width: 12rem;" onclick="removeFacility()" routerLink="/facility">X</button>
+  </div>
   <div class="btns">
       <button class="btn btn-lg button"  routerLink="/facility-edit/{{facility.id}}">
         Edit
