@@ -1,1 +1,49 @@
 <p>board-facility-component works!</p>
+<table class="table currentFacility my-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Cliente :</th>
+        <th scope="col">Servicio Contratado:</th>
+        <th scope="col">Inicia:</th>
+        <th scope="col">Termina:</th>
+        <th scope="col">Precio Total:</th>
+        <th scope="col">Aceptar:</th>
+        <th scope="col">Rechazar:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <th scope="row">1</th>
+        <td class="clientcell" >Mark</td>
+        <td>@twitter</td>
+        <td class="clientcell">DATETIME_START</td>
+        <td>DATETIME_FINISH</td>
+        <td class="clientcell">Price €</td>
+        <td>
+            <button class="btn btn-yes submit btn-md"  >
+            Aceptar</button> <!--(click)="agree()"-->
+        </td>
+        <td>
+            <button class="btn btn-no submit btn-md" >
+                Rechazar</button><!--(click)="refuse()"-->
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td class="clientcell">Jacob</td>
+        <td>@fat</td>
+        <td class="clientcell">DATETIME_START</td>
+        <td>DATETIME_FINISH</td>
+        <td class="clientcell">Price €</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td class="clientcell">Larry the Bird</td>
+        <td>@twitter</td>
+        <td class="clientcell">DATETIME_START</td>
+        <td>DATETIME_FINISH</td>
+        <td class="clientcell">Price €</td>
+      </tr>
+    </tbody>
+  </table>
