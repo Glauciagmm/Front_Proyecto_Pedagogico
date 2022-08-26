@@ -31,17 +31,4 @@ describe('CardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  // it('should get facilities', () => {
-  //   const response : string  = 'testing';
-  //   service.getFacilities().subscribe((res) => {
-  //   expect(res).toEqual(response);
-  //   });
-
-  //   const req = httpMock.expectOne('http://localhost:8080/api/facility/list');
-  //   expect(req.request.method).toEqual("GET");
-  //   req.flush(response);
-
-  //   httpMock.verify();
-  // });
 });
