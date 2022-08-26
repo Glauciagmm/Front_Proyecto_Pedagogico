@@ -1,10 +1,9 @@
-import { FacilityService } from 'src/app/services/facility.service'; 
+import { FacilityService } from '../../services/facility.service'; 
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Facility } from '../../models/facility';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { ContractService } from 'src/app/services/contract.service';
 
 @Component({
@@ -15,13 +14,13 @@ import { ContractService } from 'src/app/services/contract.service';
 export class FacilityDetailComponent implements OnInit {
 
   facility!: Facility;
-  facilityId: String="0";
+  //facilityId: String="0";
+  facilityId: any=null;
 
   selectedFacility?: Facility;
   onSelect(facility: Facility): void{
     this.selectedFacility = facility;
   }
-
   @Input() contractData = {
     id: 0,
     start: "",
@@ -41,7 +40,7 @@ export class FacilityDetailComponent implements OnInit {
       }
     }
   }
-  constructor(
+    constructor(
     public facilityService: FacilityService,
     private route: ActivatedRoute,
     private router: Router,
@@ -49,13 +48,15 @@ export class FacilityDetailComponent implements OnInit {
     private contractService: ContractService
   ) {}
 
+
+
   ngOnInit(): void {
     this.facilityId=(this.Location.path().toString().replace("/facility-details?id=",""))
-    this.getFacility();
+    this.getFacility(this.facilityId);
   }
 
-  getFacility():void{
-    this.facilityService.getFacility(Number(this.facilityId)).subscribe({
+  getFacility(facilityId:any):void{
+    this.facilityService.getFacility(facilityId).subscribe({
       next: (resp: Facility)=>{
         this.facility = resp;
       },

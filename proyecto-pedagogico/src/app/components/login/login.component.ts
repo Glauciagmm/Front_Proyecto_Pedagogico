@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
-import { TokenStorageService } from 'src/app/services/token-storage.service';
+import { AuthService } from '../../services/auth.service';
+import { TokenStorageService } from '../../services/token-storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,8 +14,9 @@ export class LoginComponent implements OnInit {
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
-  public serverErrorMessage:string|undefined=undefined;
+  public serverErrorMessage:String|undefined=undefined;
   roles: string[] = [];
+  router: any;
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
@@ -32,7 +33,13 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        this.reloadPage();
+       
+        if (this.roles == ["ROLE_ADMIN"]){
+          this.router.navigate(['/admin']);
+        } else {
+            this.router.navigate(['/userdashboard']);
+        }
+       this.reloadPage();  
       },
       error:(error) => {
       /*  
