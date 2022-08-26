@@ -1,6 +1,6 @@
 h1{
     font-size: px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 }
 
 .form-control{
@@ -20,7 +20,7 @@ h1{
 }
 
 .form-group{
-  padding: 0.6em;
+  padding: 0.2em;
 }
 .btn{
     background-color: #76EAD7;

@@ -40,7 +40,7 @@ component: FacilitiesComponent,
 data: { title: "Facility List filter by city" },
 },
   {
-    path: "facility-details",
+    path: "facility-details/:id",
     component: FacilityDetailComponent,
     data: { title: "Facility Details" },
   },

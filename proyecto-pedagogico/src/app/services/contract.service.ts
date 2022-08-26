@@ -1,8 +1,8 @@
+import { Contract } from './../models/contract';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Contract } from '../models/contract';
 
 @Injectable({
   providedIn: 'root'
@@ -32,16 +32,16 @@ constructor(private http: HttpClient) {
 //Busca la funcionalidad de encontar todos los servicios el backend 
 getContracts(): Observable<Contract[]> {
   return this.http.get<Contract[]>(
-  `${this.apiServerUrl}/api/contract`
+  `${this.apiServerUrl}/api/contract/list`
   );
   
   }
-getContrac(): Observable<Contract[]> {
-    return this.http.get<Contract[]>(
-    `${this.apiServerUrl}/api/contract/list`
-    );
+// getContrac(): Observable<Contract[]> {
+//     return this.http.get<Contract[]>(
+//     `${this.apiServerUrl}/api/contract/list`
+//     );
     
-    }
+// }
 
 //Busca la funcionalidad de encontar un servico por su id en el backend 
 public idContract(id: number): Observable<Contract> {
@@ -79,11 +79,34 @@ getContract(id: number): Observable<any> {
     console.log(Contract)
     return this.http
         .post<Contract>(
-        `${this.apiServerUrl}/api/contract/add`,
+        `${this.apiServerUrl}/api/requestcontract`,
         Contract
         )
         .pipe(catchError(this.handleError));
     }
+
+    acceptContract(id: number): Observable<any> {
+      console.log(id);
+      return this.http
+           .put<Contract>(
+          `${this.apiServerUrl}/api/acceptcontract/${id}`, id)
+          .pipe(catchError(this.handleError));
+      }
+
+    declineContract(id: number): Observable<any> {
+      console.log(id);
+      return this.http
+        .put<Contract>(
+        `${this.apiServerUrl}/api/acceptcontract/${id}`, id)
+       .pipe(catchError(this.handleError));
+    } 
+      // acceptContract(Contract: Contract): Observable<Contract> {
+      //   console.log(Contract);
+      //   return this.http
+      //        .put<Contract>(
+      //       `${this.apiServerUrl}/api/acceptcontract/${id}`, Contract)
+      //       .pipe(catchError(this.handleError));
+      //   }
 
 
 }

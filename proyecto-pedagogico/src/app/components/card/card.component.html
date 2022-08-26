@@ -1,9 +1,13 @@
 <div class="row mb-3">
   <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile" *ngFor="let facility of facility">
     <div class="col-md-2">
-    <a href="/facility-details?id={{facility?.id}}"> <img class="img-fluid rounded-start" src="https://thispersondoesnotexist.com/image" alt="photo del assistente"
+    <a href="/facility-details/={{facility?.id}}"> <img class="img-fluid rounded-start" src="{{facility?.assistant?.photo}}" alt="photo del assistente"
         class="imagencarta" ></a>
     </div>
+    <!-- <div class="col-md-2">
+      <a href="/facility-details?id={{facility?.id}}"> <img class="img-fluid rounded-start" src="{{facility?.assistant?.photo}}" alt="photo del assistente"
+          class="imagencarta" ></a>
+      </div> -->
    <!-- <span> {{selectedSport.key === 'walking' ? 'steps' : 'km'}} </span> -->
     <div class="col-md-5 ps-5 pt-4 details">
     <p class="card-title fw-bold text-center">{{facility?.title}}</p>

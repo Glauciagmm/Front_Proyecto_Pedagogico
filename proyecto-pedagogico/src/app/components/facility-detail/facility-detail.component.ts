@@ -14,8 +14,8 @@ import { ContractService } from 'src/app/services/contract.service';
 export class FacilityDetailComponent implements OnInit {
 
   facility!: Facility;
-  //facilityId: String="0";
-  facilityId: any=null;
+  facilityId: String="0";
+  //facilityId: any=null;
 
   selectedFacility?: Facility;
   onSelect(facility: Facility): void{
@@ -67,7 +67,7 @@ export class FacilityDetailComponent implements OnInit {
   }
   addContract():void{
     this.contractService.addContract(this.contractData).subscribe((result)=>{
-      this.router.navigate([`/facility-detail`, result._id]);
+      this.router.navigate(["/facility-detail/", result._id]);
     },
     (err)=>{
       console.log(err);

@@ -1,12 +1,32 @@
 <h1 style="text-align: center; color: #183116; font-family: 'Montserrat', sans-serif;">Añade un nuevo servicio</h1>
 <div class="container d-grid gap-5 col-4 p-3 mb-3">
-  <form id="addForm">
+<div class="mb-3"> Título:
+  <input [(ngModel)]="facility.title" class="form-control" placeholder="Título" >
+</div>
+<div class="mb-3">Categoria:
+  <select [(ngModel)]="facility.categoryId" class="form-control" placeholder="Categoria" >
+    <option value="1">Cuidados</option>
+    <option value="2">Limpieza</option>
+    <option value="3">Recados</option>
+    <option value="5">Movilidad</option>
+    <option value="4">Viajes</option>
+  </select>
+</div>
+<div class="mb-3">Descripción:
+  <textarea [(ngModel)]="facility.description" class="form-control" placeholder="Descripción"> </textarea>
+</div>
+<div class="mb-3">Precio Por Hora:
+  <input [(ngModel)]="facility.pricePerHour" class="form-control" placeholder="Precio por hora" />
+</div>
+
+
+  <!-- <form id="addForm">
 
     <div class="mb-3">Título:
       <input [(ngModel)]="facility.title" class="form-control" placeholder="Título" />
     </div>
     <div class="mb-3">Categoria:
-      <select formControlName="pricePerHour" class="form-control" placeholder="Categoria" >
+      <select formControlName="category" class="form-control" placeholder="Categoria" >
         <option value="1">Cuidados</option>
         <option value="2">Limpieza</option>
         <option value="3">Recados</option>
@@ -19,18 +39,19 @@
     </div>
     <div class="mb-3">Precio Por Hora:
       <input [(ngModel)]="facility.pricePerHour" class="form-control" placeholder="Precio por hora" />
-    </div>
-    <div class="mb-3">Selecciona la categoria:
+    </div> -->
+    <!-- <div class="mb-3">Selecciona la categoria:
       <select class="form-control" id="category" formControlName="category"[(ngModel)]="facility.category.id">
         <option value="1"  >--Select a category_one--</option>
         <option value="2" >--Select a category_two-- </option>
     </select>
-    </div>
+    </form>-->
+    <!-- </div> -->
     <div class="button">
       <div class="d-flex justify-content-center">
-        <button class="btn btn-lg button" (click)="createFacility()" style="height: 2.5rem; width: 12rem;">Añadir</button>
+        <button class="btn btn-lg button" (click)="createFacility()" style="height: 2.5rem; width: 12rem;" >Añadir</button>
       </div>
     </div>
-  </form>
+
 </div>
 

@@ -6,7 +6,7 @@ export class Facility {
     title?: string;
     description?: string;
     pricePerHour?: number;
-    category: any;
+    categoryId: any;
     assistant?:{
       id?: number,
       name?: string,
