@@ -1,0 +1,30 @@
+@import "../card/card.component.css";
+
+.btn-req{
+    background-color: cornflowerblue;
+    color: antiquewhite;
+}
+.btn-yes {
+    background-color: rgba(36, 180, 36, 0.886);
+    color: antiquewhite;
+}
+.btn-no{
+    background-color: rgba(234, 52, 52, 0.871);
+    color: antiquewhite;
+}
+.imagencarta{
+    height: 20rem;
+}
+
+@media (min-width: 992px) {
+    .btns{
+        margin-left: 18%;
+        gap: 5rem;
+    }
+}
+
+@media (min-width:350px) and (max-width:576px) {
+    .btns{
+        gap: 3%;
+    }
+}

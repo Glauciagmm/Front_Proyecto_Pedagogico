@@ -11,7 +11,7 @@ export class Facility {
       id?: number,
       name?: string,
       surname?: string,
-      picture?: string,
+      photo?: string,
       email?: string,
       username?: string,
       city?: string,

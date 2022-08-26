@@ -6,8 +6,8 @@ export interface User {
   username: string;
   email: string;
   city: string;
-  telephone: number;
-  picture: string;
+  phone: number;
+  photo: string;
   password: string;
   confirmPassword: string;
 }
