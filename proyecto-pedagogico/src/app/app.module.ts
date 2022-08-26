@@ -3,26 +3,27 @@ import { FacilityEditComponent } from './components/facility-edit/facility-edit.
 import { FacilityAddComponent } from './components/facility-add/facility-add.component';
 import { FacilitiesComponent } from './components/facilities/facilities.component';
 import { FacilityDetailComponent } from './components/facility-detail/facility-detail.component';
-
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ClientComponent } from './components/client/client.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { BoardUserComponent } from './components/board-user-component/board-user-component'; 
-import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component'; 
-import { BoardAdminComponent } from './components/board-admin-component/board-admin-component'; 
+import { BoardUserComponent } from './components/board-user-component/board-user-component';
+import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
+import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
 import { authInterceptorProviders } from './helpers/helpers';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { GlobalErrorHandler } from './helpers/globlal.error.handling';
+import { ErrorIntercept } from './helpers/error.interceptor';
+import { AdminBoardComponent } from './components/admin-board/admin-board.component';
 
 @NgModule({
   declarations: [
@@ -37,24 +38,32 @@ import { NavbarComponent } from './navbar/navbar.component';
     FacilityDetailComponent,
     FacilityAddComponent,
     FacilityEditComponent,
-    CardComponent, 
+    CardComponent,
     ClientComponent,
     ProfileComponent,
     BoardUserComponent,
     BoardFacilityComponent,
     BoardAdminComponent,
     NavbarComponent,
-
+    AdminBoardComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [ authInterceptorProviders ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
 
+  providers: [
+    authInterceptorProviders,
+
+    { provide: ErrorHandler, useClass: GlobalErrorHandler },
+
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorIntercept, multi: true },
+  ],
+
+  bootstrap: [AppComponent],
+})
+export class AppModule {}

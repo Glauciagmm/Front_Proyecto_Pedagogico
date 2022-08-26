@@ -3,12 +3,12 @@ export interface User {
   id?: number;
   name: string;
   surname: string;
-  email: string;
   username: string;
-  password: string;
+  email: string;
   city: string;
   phone: number;
   photo: string;
+  password: string;
   confirmPassword: string;
 }
 

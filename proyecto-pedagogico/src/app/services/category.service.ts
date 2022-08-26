@@ -1,11 +1,11 @@
-import { Facility} from "../models/facility"; 
+
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { catchError, map, Observable, throwError } from "rxjs";
-import { Categories } from "../models/categories";
-
+import { Categories } from "..//models/categories";
+import { Facility} from "..//models/facility"; 
 export class CategoryServices{
 
     private handleError(error: HttpErrorResponse): any {
@@ -30,17 +30,23 @@ export class CategoryServices{
         console.log("Oferred Services");
     }
 
-    public getCategory(id: number): Observable<Categories> {
-        return this.http.get<Categories>(
-            `${this.apiServerUrl}/api/category/${id}`
+    public getAllFacilitiesByCategoryName(name: String): Observable<Facility> {
+        return this.http.get<Facility>(
+            `${this.apiServerUrl}/api/category/${name}/facilities`
         );
     }
     
-    public getCategoryById(id: number): Observable<any> {
+    public getAllFacilitiesByCategoryId(id: number): Observable<any> {
         return this.http
         .get<Categories>(
-            `${this.apiServerUrl}/api/category/${id}`)
+            `${this.apiServerUrl}/api/category/${id}/facilities`)
         .pipe(catchError(this.handleError));
+    }
+
+    public getAllFacilitiesByUbication(city:String):Observable<any>{
+        return this.http.get<Facility>(`
+        ${this.apiServerUrl}/api/category/${city}/facilities`)
+        .pipe(catchError(this.handleError))
     }
     
 

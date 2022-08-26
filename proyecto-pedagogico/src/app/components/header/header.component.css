@@ -16,3 +16,14 @@ font-family: 'Montserrat', sans-serif;
 .pe5{
     justify-content: space-around;
 }
+.pos-abs{
+    position: absolute;
+    right: 15px;
+    top:20px;
+}
+.pad1{
+    margin-right: 1rem;
+}
+.list-none{
+    list-style: none;
+}

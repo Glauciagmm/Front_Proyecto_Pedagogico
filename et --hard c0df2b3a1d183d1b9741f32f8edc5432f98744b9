@@ -1,0 +1,273 @@
+[33mcommit 2b7048989d0fc12f3c1512e3b4ee6fc6d7d1954e[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Merge: a70e748 c0df2b3
+Author: aoliverasd <aoliverasdelso@gmail.com>
+Date:   Fri Aug 19 10:17:11 2022 +0200
+
+    Merge branch 'develop' of https://github.com/Glauciagmm/Front_Proyecto_Pedagogico into develop
+
+[33mcommit a70e748fa7c85c812589906145046a385e72c33c[m
+Merge: 93796b8 1be50b1
+Author: aoliverasd <aoliverasdelso@gmail.com>
+Date:   Fri Aug 19 10:16:52 2022 +0200
+
+    Merge branch 'feature/datetimepicker' into develop
+
+[33mcommit a1d183d1b9741f32f8edc5432f98744b9[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Thu Aug 18 14:45:35 2022 +0200
+
+    add facility fixed
+
+[33mcommit 081b60a049700b93d8e95faca4c2e82af9f51830[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Thu Aug 18 11:13:02 2022 +0200
+
+    login register fixed
+
+[33mcommit 7e151fb5f7fef0d9974bafbcb0d07ee6f9bd5c8d[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Thu Aug 18 09:54:35 2022 +0200
+
+    services conflicts fixed
+
+[33mcommit de08142956eaf7be61c5af450221448b28cca7a5[m
+Merge: ddc333b 93796b8
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Wed Aug 17 14:33:32 2022 +0200
+
+    Merge branch 'develop' of https://github.com/Glauciagmm/Front_Proyecto_Pedagogico into develop
+
+[33mcommit 93796b8ca282dcbbda47271cd8e4a4b9adf8d306[m
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Aug 17 14:33:11 2022 +0200
+
+    fixed
+
+[33mcommit 44cf2f457e114a078f29495e52c2198aeb56c31f[m
+Merge: bbe4c69 09543fa
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Aug 17 14:29:02 2022 +0200
+
+    Merge branch 'develop' of https://github.com/Glauciagmm/Front_Proyecto_Pedagogico into develop
+
+[33mcommit bbe4c69cb15c81c5f8413dadca6b51122478fdd8[m
+Merge: cd6f49e c44d3a1
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Aug 17 14:28:48 2022 +0200
+
+    merge react header
+
+[33mcommit 09543fa133757f94775faf8421c1a91d4861862a[m
+Author: aoliverasd <aoliverasdelso@gmail.com>
+Date:   Wed Aug 17 13:54:57 2022 +0200
+
+    footer github href updated
+
+[33mcommit cd6f49ec7c9be0ca2c96a4adc841c95e4284133c[m
+Merge: 9a2947a 1b04310
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Aug 17 13:40:22 2022 +0200
+
+    fix
+
+[33mcommit 1be50b175032cdef6d4ab06759f0741874e7e046[m[33m ([m[1;31morigin/feature/datetimepicker[m[33m, [m[1;32mfeature/datetimepicker[m[33m)[m
+Author: aoliverasd <aoliverasdelso@gmail.com>
+Date:   Wed Aug 17 13:38:02 2022 +0200
+
+    New update. datetimepicker working
+
+[33mcommit 545c09a7fa465580f1ffe69f9153c63257c49730[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Wed Aug 17 13:04:47 2022 +0200
+
+    signup buttons made responsive
+
+[33mcommit 233ac9112eaafbf92fef1702dbfbf7853d3a2962[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Wed Aug 17 12:59:51 2022 +0200
+
+    login buttons made responsive
+
+[33mcommit 0164bbe24f305b38f0fce4f36258f37e8cc58153[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Wed Aug 17 12:47:51 2022 +0200
+
+    cards style error fixed
+
+[33mcommit ddc333b2c0b10ca0935cf14af9cd2787ab5c00e7[m
+Merge: 540cf8c 6662505
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Wed Aug 17 12:02:36 2022 +0200
+
+    conflict services fixed
+
+[33mcommit 1b04310a19207b0ae58878214af1bc2318e1a5c3[m
+Author: aoliverasd <aoliverasdelso@gmail.com>
+Date:   Wed Aug 17 11:54:31 2022 +0200
+
+    facility-card merge + updated footer
+
+[33mcommit 9a2947a521455f4567524cfd14585c758ce687db[m
+Merge: e6ec8fb 6662505
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Aug 17 11:07:11 2022 +0200
+
+    fix-conflicts
+
+[33mcommit 66625052f2b2b15c4f52d437e915e3a72c9a65b4[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Wed Aug 17 10:17:02 2022 +0200
+
+    details merged
+
+[33mcommit c047b80c17cef9e3c40cd47b51cc4546977a5147[m
+Merge: 5e87e83 9f63c70
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Wed Aug 17 10:10:15 2022 +0200
+
+    Merge branch 'feature/detail' into develop
+
+[33mcommit 9f63c707c683b285610dd9260b732c973abc4efd[m[33m ([m[1;31morigin/feature/detail[m[33m)[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 14:04:46 2022 +0200
+
+    cards styled for mobile version
+
+[33mcommit 210f07f7c37cbc9a8dbb22f3b2c2a96616ba0865[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 13:38:39 2022 +0200
+
+    flex shrink added for the mobile version
+
+[33mcommit 5034899ec49b5c28f85e54771c5b167943a13e46[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 13:02:54 2022 +0200
+
+    mobile colors changed
+
+[33mcommit 0cecd01dbdbeb79f517d5d29a31fff94d6e2055f[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 12:46:47 2022 +0200
+
+    minor changes
+
+[33mcommit a58fe78cf624df5f561c8eab3ef66377cc62d024[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 12:42:29 2022 +0200
+
+    button size on mobile version adjusted
+
+[33mcommit 72f8a1910276ed19976f45be23b2e253543244ed[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 12:28:13 2022 +0200
+
+    better view on mobile version
+
+[33mcommit df66bbddb54f3a1e2b7950564345312c33b6e3a8[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 12:17:15 2022 +0200
+
+    facility detail dtop done, calendar missing
+
+[33mcommit 0d90f50e723776a4e20c0457701c7929f556d212[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 11:53:02 2022 +0200
+
+    parent div styled
+
+[33mcommit cd7f433c5e83b1a6ef1ccc48895a65e9c96ec7fc[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 11:38:38 2022 +0200
+
+    facilities cards styled
+
+[33mcommit 2e501983e75d628859d5da1861ec699ced6bf3f5[m
+Author: Iris <iris.vilaseca1998@gmail.com>
+Date:   Tue Aug 16 10:48:08 2022 +0200
+
+    card text box done
+
+[33mcommit 00be894a696f6fd6d527353d10c2c4899c1c05db[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Tue Aug 16 09:35:04 2022 +0200
+
+    changes on details
+
+[33mcommit 7ef849538288534302ee4beac452740368a3bf63[m[33m ([m[1;32mfeature/detail[m[33m)[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Mon Aug 1 14:44:51 2022 +0200
+
+    card works
+
+[33mcommit c44d3a1f4f43806fe53a86987ff1cfce634f049e[m[33m ([m[1;31morigin/feature/header-react[m[33m)[m
+Merge: 174154e d839b3f
+Author: unknown <flaquere@yahoo.es>
+Date:   Fri Jul 29 18:57:43 2022 +0200
+
+    toChange
+
+[33mcommit 540cf8c16d2a72b8616cabbaa43e49375bae9a53[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Fri Jul 29 10:48:20 2022 +0200
+
+    rutes
+
+[33mcommit 10620c3725d33129a74f3e10795daa4a748f4ac4[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Fri Jul 29 10:12:29 2022 +0200
+
+    las changes edit
+
+[33mcommit 2f909b74cbb085d996ba1eaa4e884ccd6ddb62c1[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Thu Jul 28 15:32:35 2022 +0200
+
+    Add form
+
+[33mcommit e6ec8fbc50c260b13fe2a2b96932e066fc981635[m
+Author: unknown <flaquere@yahoo.es>
+Date:   Thu Jul 28 14:52:26 2022 +0200
+
+    keep_Going
+
+[33mcommit a4a54d5ae17802abd6ffab18d1543c91f455e19a[m
+Merge: ef6a907 5e87e83
+Author: unknown <flaquere@yahoo.es>
+Date:   Thu Jul 28 14:50:50 2022 +0200
+
+    Merge branch 'develop' of https://github.com/Glauciagmm/Front_Proyecto_Pedagogico into develop
+
+[33mcommit 5e87e83a60b643b431d4be29f2a89a67f6860970[m
+Author: aoliverasd <aoliverasdelso@gmail.com>
+Date:   Wed Jul 27 13:18:24 2022 +0200
+
+    category-icons img route fixed
+
+[33mcommit ef6a907c751a651f166f5fc69c0aba768a003c3a[m
+Merge: d405aea 8a4b682
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Jul 27 13:00:38 2022 +0200
+
+    fixing develop
+
+[33mcommit 174154eb0c3fc34279f4face71b552b3dc127ecf[m
+Author: unknown <flaquere@yahoo.es>
+Date:   Wed Jul 27 12:39:53 2022 +0200
+
+    came_on
+
+[33mcommit 8a4b6825afe9cc5286fd2e95711828f18f9fcb81[m
+Author: Glauciagmm <glauciamesquitagmm@hotmail.com>
+Date:   Wed Jul 27 12:29:40 2022 +0200
+
+    card Dawid
+
+[33mcommit cbd4956dabc50119cdd241c096794ef98e32a504[m
+Author: Yo231s <dawid.lempicki.1@gmail.com>
+Date:   Wed Jul 27 10:28:57 2022 +0200
+
+    frontends
+
+[33mcommit 7fb5383d24a016fd5380757b621ff49ff7f34f5e[m
+Merge: 57bc0ac cf6bbc6
+Author: Yo231s <
