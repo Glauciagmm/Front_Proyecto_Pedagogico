@@ -1,3 +1,4 @@
+import { Statement } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Contract } from 'src/app/models/contract';
@@ -7,10 +8,9 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css']
+  styleUrls: ['./client.component.css'],
 })
 export class ClientComponent implements OnInit {
-
   public contract: Contract[] = [];
 
   public clientGetRequest: any;
@@ -21,8 +21,9 @@ export class ClientComponent implements OnInit {
   }
 
   constructor(
-    public contractService: ContractService, private router: Router
-  ) { }
+    public contractService: ContractService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getContract();
@@ -62,6 +63,4 @@ export class ClientComponent implements OnInit {
   //     console.log(err);
   //   });
   // }
-
-
 }
