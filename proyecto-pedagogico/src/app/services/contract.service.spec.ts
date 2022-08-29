@@ -8,44 +8,36 @@ import { ContractService } from './contract.service';
 
 //Testing of EmployeeService
 describe('ContractService', () => {
-  // let httpSpy: Spy<HttpClient>;
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
   let contractService: ContractService;
 
   beforeEach( () => {
-    //Configures testing app module
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
         ContractService,
-       // { provide: HttpClient, useValue: createSpyFromClass(HttpClient) }
       ]
     });
-
-    //Instantiates HttpClient, HttpTestingController and ContractService
     httpClient = TestBed.inject(HttpClient);
     httpTestingController = TestBed.inject(HttpTestingController);
     contractService = TestBed.inject(ContractService);
-    // httpSpy = TestBed.inject<any>(HttpClient);
   });
 
   afterEach( () => {
-    httpTestingController.verify(); //Verifies that no requests are outstanding.
+    httpTestingController.verify(); 
   });
 
   describe('#getContracts', () => {
     let expectedContracts: Contract[];
 
     beforeEach(() => {
-      //Dummy data to be returned by request.
       expectedContracts = [
         { id: 101, start: 'Krishna' , finish: 'tomorrow'},
         { id: 102, start: 'Arjun' , finish: 'wednesday'},
       ] as Contract[];
     });
     
-    //Test case 1
     it('should return expected contracts by calling once', () => {
       contractService.getContracts().subscribe(
         econtracts => expect(econtracts).toEqual(expectedContracts, 'should return expected contracts'),
@@ -55,10 +47,10 @@ describe('ContractService', () => {
       const req = httpTestingController.expectOne(contractService.apiServerUrl+"/api/contract");
       expect(req.request.method).toEqual('GET');
 
-      req.flush(expectedContracts); //Return expectedEmps
+      req.flush(expectedContracts);
     });
     
-    //Test case 2
+
     it('should be OK returning no contract', () => {
       contractService.getContracts().subscribe(
         econtracts => expect(econtracts.length).toEqual(0, 'should have empty contract array'),
@@ -66,10 +58,9 @@ describe('ContractService', () => {
       );
 
       const req = httpTestingController.expectOne(contractService.apiServerUrl+"/api/contract");
-      req.flush([]); //Return empty data
+      req.flush([]);
     });
     
-    //Test case 3
     it('should return expected contracts when called multiple times', () => {
       contractService.getContracts().subscribe();
       contractService.getContracts().subscribe(
@@ -80,8 +71,8 @@ describe('ContractService', () => {
       const requests = httpTestingController.match(contractService.apiServerUrl+"/api/contract");
       expect(requests.length).toEqual(2, 'calls to getContracts()');
 
-      requests[0].flush([]); //Return Empty body for first call
-      requests[1].flush(expectedContracts); //Return expectedContracts in second call
+      requests[0].flush([]); 
+      requests[1].flush(expectedContracts); 
     });
   });
   describe('#updateContracts', () => {
@@ -114,7 +105,6 @@ describe('ContractService', () => {
       var contract = fakeContract[0];
       contract.start = "Updated Contract";
   
-      // httpSpy.put.and.nextWith(contract);
   
       contractService.updateContract(contract).subscribe(
         contract => {
@@ -126,9 +116,7 @@ describe('ContractService', () => {
       const req = httpTestingController.expectOne(contractService.apiServerUrl+"/api/contract/edit");
       expect(req.request.method).toEqual('PUT');
 
-      req.flush(contract); //Return expectedEmps
-
-      // expect(httpSpy.put.calls.count()).toBe(1);
+      req.flush(contract); 
     });
   });
 
