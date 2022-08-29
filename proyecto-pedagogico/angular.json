@@ -99,10 +99,7 @@
     }
   },
   "cli": {
-<<<<<<< HEAD
-    "analytics": false
-=======
-    "analytics": "99bf82c5-4c3c-4f0b-8e20-6e9cea65e9d4"
->>>>>>> feature/assitant/listing
+    "analytics": "58c58d30-d9a9-4d36-a265-aa6e43bdd030"
+
   }
 }
