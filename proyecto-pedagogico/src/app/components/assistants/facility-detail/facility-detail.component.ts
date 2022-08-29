@@ -51,7 +51,7 @@ export class FacilityDetailComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.facilityId=(this.Location.path().toString().replace("/facility-details?id=",""))
+    this.facilityId=(this.Location.path().toString().replace("/facility-details/:id=",""))
     this.getFacility(this.facilityId);
   }
 
