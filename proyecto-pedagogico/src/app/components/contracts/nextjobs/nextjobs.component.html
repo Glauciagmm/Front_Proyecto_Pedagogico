@@ -1,0 +1,26 @@
+<h1 style="color:rgb(21, 21, 84); margin-left: 33rem; padding: 3rem;">Mi Agenda de Trabajo</h1>
+<table class="table padding: 4rem; margin-top:5rem table-striped" style="margin-left: 20rem; max-width: 70rem;">
+    <thead>
+        <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Cliente</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Fecha de Inicio</th>
+            <th scope="col">Fecha de Fin</th>
+            <th scope="col">Valor a Cobrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor=" let contract of userGetRequest">
+            <tr *ngIf="contract.state === 'ACCEPTED'">
+                <td>{{contract?.client?.name}}</td>
+                <td>{{contract?.client?.city}}</td>
+                <td>{{contract?.facility?.title}}</td>
+                <td>{{contract?.start}}</td>
+                <td>{{contract?.finish}}</td>
+                <td>{{contract?.totalPrice}}€</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

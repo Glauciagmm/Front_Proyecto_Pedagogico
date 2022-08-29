@@ -1,0 +1,46 @@
+<div class="row mx-auto mt-3 pt-4 mb-3 justify-content-center details padding: 4rem; margin-top:10rem">
+  <div class="col-md-4 mt-4">
+    <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
+  </div>
+  <div class="col-md-5 mt-4 description">
+     <h5 class="card-title grey">{{facility?.title}}</h5>
+    <h5 class="card-title grey">Descripción: {{facility?.description}}</h5>
+    <h5 class="card-title grey">Precio por hora: {{facility?.pricePerHour}}</h5>
+    <h5 class="card-title grey">Nombre: {{facility?.assistant?.name}}</h5>
+    <h5 class="card-title grey">Email: {{facility?.assistant?.email}}</h5>
+    <h5 class="card-title grey">Ciudad: {{facility?.assistant?.city}}</h5>
+    <h5 class="card-title grey">Telefono: {{facility?.assistant?.phone}}</h5>
+    <form class="d-flex flex-column justify-content-center ms-2" style="width: 60rem;">
+      <div class="row form-group ">
+          <label for="date" class="col-sm-1 col-form-label">Fecha inicio</label>
+          <div class="col-sm-4">
+            <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control" />
+              <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+      </div>
+    </form>
+    <form class="d-flex flex-column justify-content-center ms-2" style="width: 60rem;">
+      <div class="row form-group ">
+          <label for="datetime" class="col-sm-1 col-form-label">Fecha fin</label>
+          <div class="col-sm-4">
+            <div class='input-group date' id='datetimepicker2'>
+              <input type='text' class="form-control" />
+              <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+      </div>
+    </form>
+  </div>
+  <div class="btns">
+      <button class="btn btn-lg button"  routerLink="/facility-contract/{{facility.id}}">
+        Enviar solicitud
+      </button> 
+    </div>
+</div>
+

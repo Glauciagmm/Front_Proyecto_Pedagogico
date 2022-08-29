@@ -1,0 +1,58 @@
+<!-- 
+  <h1 class="text-center" style="color:rgb(21, 21, 84); ">Estado de mis solicitudes</h1>
+
+<div *ngFor="let contract of clientGetRequest" class="flex-shrink-1 row justify-content-center">
+  <div class="col-3">
+    <a> <img class="imagencarta " src="{{contract?.facility?.assistant?.photo}}" alt=""></a>
+  </div>
+  <div class="col-8 details">
+    <p class=" fw-bold text-center">{{contract?.facility?.title}}</p>
+    <p class="fw-bold text-center">{{contract?.facility?.assistant?.name}}</p>
+    <p class="fw-bold text-center">Inicio:{{contract?.start}}</p>
+    <p class=" fw-bold text-center">Fin:{{contract?.finish}}</p>
+    <p class="fw-bold text-center">Total a pagar: {{contract?.totalPrice}}€</p>
+    <button type="button" class="btn btn-primary"> Estado: {{contract?.state}}</button>
+  </div>
+</div> -->
+<div class="row mb-3 padding: 4rem; margin-top:5rem">
+  <h1 class="text-center" style="color:rgb(21, 21, 84);padding-top: 3rem;">Estado de mis solicitudes</h1>
+  <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile min-vw-90" *ngFor="let contract of clientGetRequest">
+    <div class="col-md-2">
+    <a> <img class="img-fluid rounded-start" src="{{contract?.facility?.assistant?.photo}}" alt="photo del assistente"
+        class="imagencarta" ></a>
+    </div>
+    <div class="col-md-5 ps-5 pt-4 details">
+    <p class="card-title fw-bold text-left"><strong>{{contract?.facility?.title}}</strong></p>
+    <p class="card-title text-left black"><strong>{{contract?.facility?.assistant?.name}}</strong></p>
+    <p class="card-title text-left black"> <strong>{{contract?.start}}</strong></p>
+    <p class="card-title text-Left black">Fin: <strong>{{contract?.finish}}</strong></p>
+    <p class="card-title text-left black">Estado: <strong>{{contract?.state}}</strong> </p>
+    <div class="text-center">
+      <button type="button" class="card-title text-left btn-primary"> Estado: {{contract?.state}}</button>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="text-center" >
+  <h1 style="color:rgb(21, 21, 84); padding: 3rem;" >Estado de mis solicitudes</h1>
+</div>
+<div class="row  flex-shrink-1">
+  <div *ngFor="let contract of clientGetRequest" class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile">
+    <div class="col-md-3">
+      <a> <img class="imagencarta" src="{{contract?.facility?.assistant?.photo}}" alt=""></a>
+    </div>
+    <div class="col-md-9 ps-5 pt-4 details ">
+      <p class="card-title fw-bold text-center">{{contract?.facility?.title}}</p>
+      <p class="card-title fw-bold text-center">{{contract?.facility?.assistant?.name}}</p>
+      <p class="card-title fw-bold text-center">Inicio:{{contract?.start}}</p>
+      <p class="card-title fw-bold text-center">Fin:{{contract?.finish}}</p>
+      <p class="card-title fw-bold text-center">Total a pagar: {{contract?.totalPrice}}€</p>
+      <button type="button" class="btn btn-primary"> Estado: {{contract?.state}}</button>
+    </div>
+  </div>
+</div> -->

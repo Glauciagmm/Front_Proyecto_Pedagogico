@@ -1,8 +1,8 @@
-import { CardComponent } from './components/card/card.component';
-import { FacilityEditComponent } from './components/facility-edit/facility-edit.component';
-import { FacilityAddComponent } from './components/facility-add/facility-add.component';
+import { CardComponent } from './components/assistants/card/card.component';
+import { FacilityEditComponent } from './components/assistants/facility-edit/facility-edit.component';
+import { FacilityAddComponent } from './components/assistants/facility-add/facility-add.component';
 import { FacilitiesComponent } from './components/facilities/facilities.component';
-import { FacilityDetailComponent } from './components/facility-detail/facility-detail.component';
+import { FacilityDetailComponent } from './components/assistants/facility-detail/facility-detail.component';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -14,16 +14,21 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import { ClientComponent } from './components/client/client.component';
+import { ClientComponent } from './components/clients/client/client.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BoardUserComponent } from './components/board-user-component/board-user-component';
-import { BoardFacilityComponent } from './components/board-facility-component/board-facility-component';
-import { BoardAdminComponent } from './components/board-admin-component/board-admin-component';
+import { BoardFacilityComponent } from './components/assistants/board-facility-component/board-facility-component';
+import { BoardAdminComponent } from './components/admin/board-admin-component/board-admin-component';
 import { authInterceptorProviders } from './helpers/helpers';
-import { NavbarComponent } from './navbar/navbar.component';
 import { GlobalErrorHandler } from './helpers/globlal.error.handling';
 import { ErrorIntercept } from './helpers/error.interceptor';
 import { AdminBoardComponent } from './components/admin-board/admin-board.component';
+import { MycontractsComponent } from './components/contracts/mycontracts/mycontracts.component'; 
+import { ContractAddComponent } from './components/contracts/contract-add/contract-add.component';
+import { NextjobsComponent } from './components/contracts/nextjobs/nextjobs.component';
+import { AllusersComponent } from './components/admin/allusers/allusers.component'; 
+import { AllcontractsComponent } from './components/admin/allcontracts/allcontracts.component'; 
+import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component'; 
 
 @NgModule({
   declarations: [
@@ -44,8 +49,13 @@ import { AdminBoardComponent } from './components/admin-board/admin-board.compon
     BoardUserComponent,
     BoardFacilityComponent,
     BoardAdminComponent,
-    NavbarComponent,
     AdminBoardComponent,
+    MycontractsComponent,
+    ContractAddComponent,
+    NextjobsComponent,
+    AllusersComponent,
+    AllcontractsComponent,
+    AllfacilitiesComponent,
   ],
 
   imports: [

@@ -5,108 +5,100 @@ import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContractService {
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
-    console.error("An error occurred:", error.error.message);
+      console.error('An error occurred:', error.error.message);
     } else {
-    console.error(
+      console.error(
         `Backend returned code ${error.status}, ` + `body was: ${error.error}`
-    );
+      );
     }
-    return throwError("Something bad happened; please try again later.");
-}
+    return throwError('Something bad happened; please try again later.');
+  }
 
-private extractData(res: Response): any {
+  private extractData(res: Response): any {
     const body = res;
     return body || {};
-}
-
-public apiServerUrl = environment.apiBaseUrl;
-
-constructor(private http: HttpClient) {
-    console.log("Oferred Services");
-}
-//Busca la funcionalidad de encontar todos los servicios el backend 
-getContracts(): Observable<Contract[]> {
-  return this.http.get<Contract[]>(
-  `${this.apiServerUrl}/api/contract/list`
-  );
-  
   }
-// getContrac(): Observable<Contract[]> {
-//     return this.http.get<Contract[]>(
-//     `${this.apiServerUrl}/api/contract/list`
-//     );
-    
-// }
 
-//Busca la funcionalidad de encontar un servico por su id en el backend 
-public idContract(id: number): Observable<Contract> {
-return this.http.get<Contract>(
-  `${this.apiServerUrl}/api/contract/${id}`
-);
-}
-//Busca la funcionalidad de encontar un servico por su id en el backend 
-getContract(id: number): Observable<any> {
-  return this.http
-      .get(`${this.apiServerUrl}/api/contract/${id}`)
+  public apiServerUrl = environment.apiBaseUrl;
+
+  constructor(private http: HttpClient) {
+    console.log('Oferred Services');
+  }
+  
+  //Encuentra todos los contractos de la Base de datos
+  getContracts(): Observable<Contract[]> {
+    return this.http.get<Contract[]>(`${this.apiServerUrl}/contract/list`);
+  }
+  
+  //Encuentra un contracto por su Id
+  public idContract(id: number): Observable<Contract> {
+    return this.http.get<Contract>(`${this.apiServerUrl}/contract/${id}`);
+  }
+  
+  //Encuentra un contracto por su Id
+  getContract(id: number): Observable<any> {
+    return this.http
+      .get(`${this.apiServerUrl}/contract/${id}`)
       .pipe(catchError(this.handleError));
   }
 
-//Busca la funcionalidad de actualisar un servicio en el backend 
+  //Encuentra las solicitudes de contracto recibidas por un assistente
+  getUserRequest(): Observable<any> {
+    return this.http
+      .get(`${this.apiServerUrl}/contract/request/`)
+      .pipe(catchError(this.handleError));
+  }
+
+  //Encuentra las solicitudes de contracto enviadas por un cliente
+  getClientRequest(): Observable<any> {
+    return this.http
+      .get(`${this.apiServerUrl}/contract/clientrequest/`)
+      .pipe(catchError(this.handleError));
+  }
+
+  //Permite a un cliente actualizar los datos de una solicitud no contestada por un assistente
   updateContract(Contract: Contract): Observable<any> {
-  console.log(Contract);
-  
-  return this.http.put<Contract>(
-      `${this.apiServerUrl}/api/contract/edit`, Contract
-      )
+    console.log(Contract);
+
+    return this.http
+      .put<Contract>(`${this.apiServerUrl}/contract/edit`, Contract)
       .pipe(catchError(this.handleError));
   }
-  //Busca la funcionalidad de borrar un servicio en el backend 
+
+  //Permite al cliente eliminar un contracto que no haya sido acceptado por un assistente
   deleteContract(id: number): Observable<any> {
     return this.http
-        .delete<Contract>(
-        `${this.apiServerUrl}/api/contract/delete/${id}`
-        )
-        .pipe(catchError(this.handleError));
-    }
+      .delete<Contract>(`${this.apiServerUrl}/contract/delete/${id}`)
+      .pipe(catchError(this.handleError));
+  }
 
-    //Busca la funcionalidad de añadir un nuevo servicio en el backend 
-    public addContract(Contract: any): Observable<any> {
-    console.log(Contract)
+  //Permite que se pueda enviar una solicitud de contracto
+  addContract(Contract: any): Observable<any> {
+    console.log(Contract);
     return this.http
-        .post<Contract>(
-        `${this.apiServerUrl}/api/requestcontract`,
-        Contract
-        )
-        .pipe(catchError(this.handleError));
-    }
+      .post<Contract>(`${this.apiServerUrl}/requestcontract`, Contract)
+      .pipe(catchError(this.handleError));
+  }
 
-    acceptContract(id: number): Observable<any> {
-      console.log(id);
-      return this.http
-           .put<Contract>(
-          `${this.apiServerUrl}/api/acceptcontract/${id}`, id)
-          .pipe(catchError(this.handleError));
-      }
+  //Campia el estado de una solicitud de Abierta a Acceptada
+  acceptContract(id: number): Observable<any> {
+    console.log(id);
+    return this.http
+      .put<Contract>(`${this.apiServerUrl}/acceptcontract/${id}`, id)
+      .pipe(catchError(this.handleError));
+  }
 
-    declineContract(id: number): Observable<any> {
-      console.log(id);
-      return this.http
-        .put<Contract>(
-        `${this.apiServerUrl}/api/acceptcontract/${id}`, id)
-       .pipe(catchError(this.handleError));
-    } 
-      // acceptContract(Contract: Contract): Observable<Contract> {
-      //   console.log(Contract);
-      //   return this.http
-      //        .put<Contract>(
-      //       `${this.apiServerUrl}/api/acceptcontract/${id}`, Contract)
-      //       .pipe(catchError(this.handleError));
-      //   }
-
-
+  //Campia el estado de una solicitud de Abierta a Declinada
+  declineContract(id: number): Observable<any> {
+    console.log(id);
+    return this.http
+      .put<Contract>(`${this.apiServerUrl}/acceptcontract/${id}`, id)
+      .pipe(catchError(this.handleError));
+  }
+  
 }

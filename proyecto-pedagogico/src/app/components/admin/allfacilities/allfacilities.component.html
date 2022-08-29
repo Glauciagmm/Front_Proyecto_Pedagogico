@@ -1,0 +1,37 @@
+<h1 style="color:rgb(21, 21, 84); margin-left: 38rem; padding: 3rem;" >Todos los Servicios</h1>
+<table class="table  margin-top:5rem; table-striped " style="margin-left: 8rem; max-width: 90rem;">
+    <thead>
+        <tr>
+            <th scope="col">IdServicio</th>
+            <th scope="col">IdAssistente</th>
+            <th scope="col">Assistente</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio Hora</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor=" let facility of facility">
+            <tr>
+                <!-- <th scope="row">1</th> -->
+                <td class="col-1">{{facility?.id}}</td>
+                <td class="col-1">{{facility?.assistant?.id}}</td>
+                <td class="col-1">{{facility?.assistant?.name}}</td>
+                <td class="col-3">{{facility?.title}}</td>
+                <td class="col-4">{{facility?.description}}</td>
+                <td class="col-1">{{facility?.pricePerHour}}€</td>
+                <td class="col-1">
+                    <button class="btn submit btn-md btn-warning" (click)="updateFacility()"
+                        style="height: 2.5rem; width: 6rem;">Editar
+                    </button></td>
+                <td> 
+                    <button class="btn submit btn-md btn-danger" (click)="deleteFacility(facilityData.id)"
+                        style="height: 2.5rem; width: 6rem;">Borrar
+                    </button>
+                </td> 
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

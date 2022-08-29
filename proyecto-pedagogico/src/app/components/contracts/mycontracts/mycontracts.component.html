@@ -1,0 +1,35 @@
+<h1 style="color:rgb(21, 21, 84); margin-left: 25rem; padding: 3rem;" >Mis Socicitudes Pendientes</h1>
+<table class="table padding: 4rem; margin-top:5rem; table-striped " style="margin-left: 4.5rem">
+    <thead>
+        <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Cliente</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Fecha de Inicio</th>
+            <th scope="col">Fecha de Fin</th>
+            <th scope="col">Valor Total</th>
+            <th scope="col">Aceptar</th>
+            <th scope="col">Rechazar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor=" let contract of userGetRequest">
+            <tr *ngIf="contract.state === 'OPEN'">
+                <!-- <th scope="row">1</th> -->
+                <td>{{contract?.client?.name}}</td>
+                <td>{{contract?.client?.city}}</td>
+                <td>{{contract?.facility?.title}}</td>
+                <td>{{contract?.start}}</td>
+                <td>{{contract?.finish}}</td>
+                <td>{{contract?.totalPrice}}€</td>
+                <td><button class="btn submit btn-md btn-success" (click)="acceptContract(contract.id)"
+                        style="height: 2.5rem; width: 12rem;">Aceptar</button></td>
+                <td>
+                    <button class="btn submit btn-md btn-danger" (click)="declineContract(contract.id)"
+                        style="height: 2.5rem; width: 12rem;">Declinar</button>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+<h1 style="color:rgb(21, 21, 84); margin-left: 38rem; padding: 3rem;" >Todos los Contractos</h1>
+<table class="table padding: 4rem; margin-top:5rem; table-striped " style="margin-left: 7rem">
+    <thead>
+        <tr>
+            <th scope="col">IdCliente</th>
+            <th scope="col">IdAssistante</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Fecha de Inicio</th>
+            <th scope="col">Fecha de Fin</th>
+            <th scope="col">Valor Total</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor=" let contract of contract">
+            <tr>
+                <td class="col-1">{{contract?.client?.id}}</td>
+                <td class="col-1">{{contract?.facility?.assistant?.id}}</td>
+                <td class="col-2">{{contract?.facility?.title}}</td>
+                <td class="col-1">{{contract?.state}}</td>
+                <td class="col-1">{{contract?.start}}</td>
+                <td class="col-1">{{contract?.finish}}</td>
+                <td class="col-1">{{contract?.totalPrice}}€</td>
+                <td class="col-1"><button class="btn submit btn-md btn-warning" (click)="editContract()"
+                        style="height: 2.5rem; width: 8rem;">Editar</button></td>
+                <td class="col-1">
+                    <button class="btn submit btn-md btn-danger" 
+                        style="height: 2.5rem; width: 8rem;">Borrar</button>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+

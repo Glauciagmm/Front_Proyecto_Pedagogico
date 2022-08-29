@@ -1,0 +1,38 @@
+<h1 style="color:rgb(21, 21, 84); margin-left: 38rem; padding: 3rem;" >Todos los Usuarios</h1>
+<table class="table padding: 4rem; margin-top:5rem; table-striped " style="margin-left: 10rem">
+
+    <thead>
+        <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nombre de Usuario</th>
+            <th scope="col">Email</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor=" let user of user">
+            <tr>
+                <!-- <th scope="row">1</th> -->
+                <td class="col-1">{{user?.id}}</td>
+                <td class="col-1">{{user?.name}}</td>
+                <td class="col-1">{{user?.surname}}</td>
+                <td class="col-1">{{user?.username}}</td>
+                <td class="col-2">{{user?.email}}</td>
+                <td class="col-1">{{user?.phone}}</td>
+                <td class="col-1">{{user?.city}}</td>
+                <td class="col-1"><button class="btn submit btn-md btn-warning" (click)="editUser()"
+                        style="height: 2.5rem; width: 12rem;">Editar</button></td>
+                <td class="col-1">
+                    <button class="btn submit btn-md btn-danger" (click)="deleteUser"
+                        style="height: 2.5rem; width: 12rem;">Borrar</button>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

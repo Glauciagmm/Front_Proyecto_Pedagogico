@@ -1,8 +1,5 @@
 import { Facility } from "../models/facility"; 
-
 import { Injectable } from "@angular/core";
-
-// Import HttpClient and add it to constructor
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -91,5 +88,12 @@ export class FacilityService {
         facility
         )
         .pipe(catchError(this.handleError));
+    }
+
+    //Encuentra las solicitudes de contracto recibidas por un assistente
+    getAssitantFacilities(): Observable<any> {
+    return this.http
+      .get(`${this.apiServerUrl}/facility/assistant/`)
+      .pipe(catchError(this.handleError));
     }
 }

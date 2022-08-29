@@ -1,141 +1,82 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark sticky-top " aria-label="Fifth navbar example">
-  <div class="container-fluid mx-4">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #393E46;">
+  <div class="container-fluid">
     <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- 
-      CONDITIONAL AND TERNARYS
-      <div class="row" *ngIf="teamMembers?.length > 0"></div> 
-     <span> {{selectedSport.key === 'walking' ? 'steps' : 'km'}} </span>
-    -->
-    <div class="navbar-collapse collapse" id="navbarsExample03">
-      <ul class="pe-5 navbar-nav me-auto mb-2 mb-sm-0 mx-2">
-        <li class="nav-item me-5">
-          <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="#">Inicio</a>
+    <a class="nav-link active text-white me-md-2 fw-bolder" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="nav-link active text-white me-md-2 fw-bolder" href="facility">Servicios</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
+      routerLink="admin">Admin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a *ngIf="showModeratorBoard" class="nav-link active text-white me-md-2 fw-bolder"
+      routerLink="facility-board">Assistente</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
+      routerLink="user">Client</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+    <a class="nav-link active text-white me-md-2 fw-bolder">
+      <select onchange="doGTranslate(this);">
+        <option value="">Select Language</option>
+        <option value="es|eu">Basque</option>
+        <option value="es|ca">Catalan</option>
+        <option value="es|en">English</option>
+        <option value="es|gl">Galician</option>
+        <option value="es|pt">Portuguese</option>
+        <option value="es|es">Spanish</option>
+      </select>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="d-sm-flex pe-5 mt-3 ">
+      <div class="d-grid pe-5 d-md-flex justify-content-md-end" *ngIf="!isLoggedIn">
+        <li class="nav-item ms-5 text-dark fw-bolder ">
+          <a class="btn btn-lg  button " routerLink="/register">Registro</a>
         </li>
-        <li class="nav-item me-5">
-          <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility">Servicios</a>
+        <li class="nav-item mb-2 text-dark fw-bolder">
+          <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
-        <li class="nav-item me-5">
-          <a href="/facility-add" class="nav-link active text-white me-md-2 fw-bolder" *ngIf="isLoggedIn"
-            routerLink="facility-add">Añadir un
-            Servicio</a>
-        </li>
-        <select onchange="doGTranslate(this);">
-          <option value="">Select Language</option>
-          <option value="es|eu">Basque</option>
-          <option value="es|ca">Catalan</option>
-          <option value="es|en">English</option>
-          <option value="es|gl">Galician</option>
-          <option value="es|pt">Portuguese</option>
-          <option value="es|es">Spanish</option>
-        </select>
-      </ul>
-      <div id="google_translate_element2"></div>
-      <div class="d-sm-flex pe-5 mt-3 ">
-        <li class="nav-item" *ngIf="showAdminBoard">
-          <a href="/admin" class="nav-link active text-white me-md-2 fw-bolder" routerLink="admin">Admin Board</a>
-        </li>
-        <li class="nav-item" *ngIf="showModeratorBoard">
-          <a href="/mod" class="nav-link active text-white me-md-2 fw-bolder" routerLink="facility-board">facility
-            Board</a>
-        </li>
-        <li class="nav-item">
-          <a href="/user" class="nav-link active text-white me-md-2 fw-bolder" *ngIf="isLoggedIn" routerLink="user">User
-            Board</a>
-        </li>
-        <div class="d-grid pe-5 d-md-flex justify-content-md-end" *ngIf="!isLoggedIn">
-          <li class="nav-item ms-5 text-dark fw-bolder ">
-            <a class="btn btn-lg  button " routerLink="/register">Registro</a>
-          </li>
-          <li class="nav-item mb-2 text-dark fw-bolder">
-            <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
-          </li>
-        </div>
-        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-          <li class="nav-item ms-2 text-dark fw-bolder">
-            <a href="/profile" class="btn btn-lg  button" routerLink="profile">{{ username }}</a>
-          </li>
-          <li class="nav-item ms-2 text-dark fw-bolder">
-            <a href class="btn btn-lg  button" (click)="logout()">LogOut</a>
-          </li>
-        </ul>
       </div>
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item ms-2 text-light fw-bolder">
+          <a class="user text-white mt-3" href="/profile" routerLink="profile">{{ username }}</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </li>
+        <li class="nav-item ms-2 text-dark fw-bolder">
+          <a href class="btn btn-lg  button" (click)="logout()">LogOut</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
-
-
-
-
-        
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="categorias" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Categorías
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">
-                  Cuidados</a>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">
-
-
-              Limpeza</a>
-
-        
-
-          </li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">
-
-              Recados</a>
-          </li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">
-
-              Movilidad</a>
-          </li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">
-
-              Recados</a>
-          </li>
-        </ul>
-      </li> -->
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="categorias" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Mi Perfil
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li class="dropdown-item" *ngIf="showAdminBoard">
-            <a href="/admin" class="nav-link active text-white me-md-2 fw-bolder" routerLink="admin">Admin</a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="user-profile">Mi Perfil </a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="listfacilit-assitant">Todos los servicios</a>
-          </li>
-          <li class="dropdown-item" *ngIf="showModeratorBoard">
-            <a href="/mod" class="nav-link active text-white me-md-2 fw-bolder" routerLink="mod">Facility</a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="user-profile">Mi Perfil </a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="facility-add">Añadir un Servicio</a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="listfacilit-assitant">Mis Servicios</a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="list-contract-request_assitant-id">Mis Contractos</a>
-          </li>
-          <li class="dropdown-item">
-            <a href="/user" class="nav-link active text-white me-md-2 fw-bolder" *ngIf="isLoggedIn"
-              routerLink="user">User</a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="user-profile">Mi Perfil </a>
-            <a class="nav-link active text-white me-md-2 fw-bolder" aria-current="page" href="list-contract-request_client-id">Mis Servicios Contractados</a>
-          </li>
-        </ul>
-      </li> -->
       
