@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'facilityfilter', component: FacilitiesComponent },
   { path: 'facility/:categoryId', component: FacilitiesComponent, data: { title: 'Facility List filter by category' },},
   { path: 'facility/:city', component: FacilitiesComponent, data: { title: 'Facility List filter by city' },},
-  { path: 'facility-details/:id', component: FacilityDetailComponent, data: { title: 'Facility Details' },},
+  { path: 'facility-details', component: FacilityDetailComponent, data: { title: 'Facility Details' },},
   { path: 'facility-add',  component: FacilityAddComponent, canActivate: [AuthGuard], data: {role: ['ROLE_ADMIN', 'ROLE_FACILITY']},},
   { path: 'facility-edit/:id', component: FacilityEditComponent,  canActivate: [AuthGuard], data: {role: ['ROLE_ADMIN', 'ROLE_FACILITY']},},
   { path: 'mycontracts', component: MycontractsComponent,  canActivate: [AuthGuard], data: {role: ['ROLE_ADMIN', 'ROLE_FACILITY']},},
