@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #393E46;">
+<nav class="navbar navbar-expand-lg sticky-top align-items-center" style="background-color: #393E46;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
+    <a class="" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,14 +29,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
-      routerLink="user">Client</a>
+      routerLink="user">Cliente</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
+      <input class="form-control me-2 mt-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
+      <button class="btn btn-outline-success btn-lg"  type="submit">Buscar</button>
     </form>
     <a class="nav-link active text-white me-md-2 fw-bolder">
       <select onchange="doGTranslate(this);">
@@ -48,7 +48,12 @@
         <option value="es|pt">Portuguese</option>
         <option value="es|es">Spanish</option>
       </select>
+      <div id="google_translate_element2"></div>
+    
+
+    <div id="google_translate_element2"></div>
     </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -64,16 +69,8 @@
         </li>
       </div>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-        <li class="nav-item ms-2 text-light fw-bolder">
-          <a class="user text-white mt-3" href="/profile" routerLink="profile">{{ username }}</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </li>
         <li class="nav-item ms-2 text-dark fw-bolder">
-          <a href class="btn btn-lg  button" (click)="logout()">LogOut</a>
+          <a href class="btn btn-lg btn-danger p-3 mb-3 ml-3" (click)="logout()">LogOut</a>
         </li>
       </ul>
     </div>
