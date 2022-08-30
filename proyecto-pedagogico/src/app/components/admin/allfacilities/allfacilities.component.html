@@ -1,8 +1,8 @@
 <div class="row">
-    <app-navlateral class="col-3"></app-navlateral>
-  <div class="container d-grid gap-5 col-8 mb-3  margin-top:20rem " style="align-content: center;">
-<h1 style="color:rgb(21, 21, 84); margin-left: 38rem; padding: 3rem;" >Todos los Servicios</h1>
-<table class="table  margin-top:5rem; table-striped " style="margin-left: 8rem; max-width: 90rem;">
+    <app-navlateral class="col-2"></app-navlateral>
+  <div class="container d-grid gap-5 col-7 mb-3  margin-top:10rem " style="align-content: center;  left: -11.5rem;">
+    <h1 style="color:rgb(21, 21, 84); margin-bottom: -3rem; margin-top: 6rem; align-items: center; " >Todos los Servicios</h1>
+<table class="table padding: 4rem; margin-top:5rem; table-striped ">
     <thead>
         <tr>
             <th scope="col">IdServicio</th>
@@ -18,20 +18,19 @@
     <tbody>
         <ng-container *ngFor=" let facility of facility">
             <tr>
-                <!-- <th scope="row">1</th> -->
                 <td class="col-1">{{facility?.id}}</td>
                 <td class="col-1">{{facility?.assistant?.id}}</td>
                 <td class="col-1">{{facility?.assistant?.name}}</td>
-                <td class="col-3">{{facility?.title}}</td>
-                <td class="col-4">{{facility?.description}}</td>
+                <td class="col-2">{{facility?.title}}</td>
+                <td class="col-2">{{facility?.description}}</td>
                 <td class="col-1">{{facility?.pricePerHour}}€</td>
                 <td class="col-1">
                     <button class="btn submit btn-md btn-warning" (click)="updateFacility()"
-                        style="height: 2.5rem; width: 6rem;">Editar
+                        style="height: 2.5rem; width: 8rem; padding: 2px;">Editar
                     </button></td>
-                <td> 
+                <td class="col-1"> 
                     <button class="btn submit btn-md btn-danger" (click)="deleteFacility(facilityData.id)"
-                        style="height: 2.5rem; width: 6rem;">Borrar
+                        style="height: 2.5rem; width: 8rem; padding: 2px;">Borrar
                     </button>
                 </td> 
             </tr>

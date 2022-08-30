@@ -1,7 +1,7 @@
 <div class="row">
-    <app-navlateral class="col-3"></app-navlateral>
-  <div class="container d-grid gap-5 col-8 mb-3  margin-top:20rem " style="align-content: center;">
-<h1 style="color:rgb(21, 21, 84);  padding: 3rem;" >Todos los Contractos</h1>
+    <app-navlateral class="col-2"></app-navlateral>
+  <div class="container d-grid gap-5 col-8 mb-3  margin-top:20rem " style="align-content: center;  left: -11.5rem;">
+<h1 style="color:rgb(21, 21, 84);  " >Todos los Contractos</h1>
 <table class="table padding: 4rem; margin-top:5rem; table-striped " >
     <thead>
         <tr>
@@ -23,14 +23,14 @@
                 <td class="col-1">{{contract?.facility?.assistant?.id}}</td>
                 <td class="col-2">{{contract?.facility?.title}}</td>
                 <td class="col-1">{{contract?.state}}</td>
-                <td class="col-1">{{contract?.start}}</td>
-                <td class="col-1">{{contract?.finish}}</td>
+                <td class="col-2">{{contract?.start}}</td>
+                <td class="col-2">{{contract?.finish}}</td>
                 <td class="col-1">{{contract?.totalPrice}}€</td>
                 <td class="col-1"><button class="btn submit btn-md btn-warning" (click)="editContract()"
-                        style="height: 2.5rem; width: 8rem;">Editar</button></td>
+                        style="height: 2.5rem; width: 8rem; padding: 2px;">Editar</button></td>
                 <td class="col-1">
                     <button class="btn submit btn-md btn-danger" 
-                        style="height: 2.5rem; width: 8rem;">Borrar</button>
+                        style="height: 2.5rem; width: 8rem; padding: 2px;">Borrar</button>
                 </td>
             </tr>
         </ng-container>
