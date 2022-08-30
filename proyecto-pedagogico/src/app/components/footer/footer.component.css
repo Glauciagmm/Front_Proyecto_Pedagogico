@@ -6,6 +6,9 @@
     left:8rem;
     padding-top: 1rem;
 }
+.black-hover:hover{
+    color:#343a40 !important;
+}
 @media (max-width: 575.98px) {
     .left{
         left:0rem;
