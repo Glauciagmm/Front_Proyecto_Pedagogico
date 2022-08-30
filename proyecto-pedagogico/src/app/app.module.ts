@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from '../../register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ClientComponent } from './components/clients/client/client.component';
 import { ProfileComponent } from './components/profile/profile.component';

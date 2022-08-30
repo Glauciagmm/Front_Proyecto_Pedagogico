@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from '../../register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FacilityDetailComponent } from './components/assistants/facility-detail/facility-detail.component';
 import { FacilityAddComponent } from './components/assistants/facility-add/facility-add.component';
