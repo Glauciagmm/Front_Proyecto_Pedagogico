@@ -30,6 +30,7 @@ import { AllusersComponent } from './components/admin/allusers/allusers.componen
 import { AllcontractsComponent } from './components/admin/allcontracts/allcontracts.component'; 
 import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
 import { NavlateralComponent } from './navlateral/navlateral.component';
+import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { NavlateralComponent } from './navlateral/navlateral.component';
     AllcontractsComponent,
     AllfacilitiesComponent,
     NavlateralComponent,
+    FacilitiesByPlaceComponent,
   ],
 
   imports: [

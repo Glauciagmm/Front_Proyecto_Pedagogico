@@ -25,6 +25,10 @@ export class HeaderComponent implements OnInit {
       this.username = user.username;
     }
   }
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
   logout(): void {
     this.tokenStorageService.signOut();
     window.location.reload();
