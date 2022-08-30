@@ -1,22 +1,30 @@
-<div class="row mx-auto mt-3 pt-4 mb-3 justify-content-center details padding: 4rem; margin-top:10rem">
-  <div class="col-md-4 mt-4">
-    <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
+<div class="row">
+  <app-navlateral class="col-6"></app-navlateral>
+  <div class="col-2 ">
+    <div class="row mx-auto mt-3 pt-4 justify-content-center details padding: 1rem; " style="width:60vw;">
+      <div class="col-md-4 mt-4">
+        <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
+        <br>
+        <h5 class="card-title py-1">Nombre:   <strong>{{facility?.assistant?.name}}</strong></h5>
+        <h5 class="card-title py-1">Email:   <strong>{{facility?.assistant?.email}}</strong></h5>
+        <h5 class="card-title py-1">Ciudad:   <strong>{{facility?.assistant?.city}}</strong></h5>
+        <h5 class="card-title py-1">Telefono:   <strong>{{facility?.assistant?.phone}}</strong></h5>
+      </div>
+      <div class="col-md-5 mt-4 description " >
+        <h3 class="card-title py-2"><strong>{{facility?.title}}</strong></h3>
+        <h5 class="card-title py-1">Descripción: <strong>{{facility?.description}}</strong></h5>
+        <h5 class="card-title py-1">Precio por hora: <strong>{{facility?.pricePerHour}} €</strong></h5>
+
+        <app-contract-add></app-contract-add>
+      </div>  
+    </div>
   </div>
-  <div class="col-md-5 mt-4 description ">
-    <h3 class="card-title py-2"><strong>{{facility?.title}}</strong></h3>
-    <h5 class="card-title py-1">Descripción: <strong>{{facility?.description}}</strong></h5>
-    <h5 class="card-title py-1">Precio por hora: <strong>{{facility?.pricePerHour}}</strong></h5>
-    <h5 class="card-title py-1">Nombre: <strong>{{facility?.assistant?.name}}</strong></h5>
-    <h5 class="card-title py-1">Email: <strong>{{facility?.assistant?.email}}</strong></h5>
-    <h5 class="card-title py-1">Ciudad: <strong>{{facility?.assistant?.city}}</strong></h5>
-    <h5 class="card-title py-1">Telefono: <strong>{{facility?.assistant?.phone}}</strong></h5>
-    <app-contract-add></app-contract-add>
-  <!-- <div class="btns">
-    <button class="btn btn-lg button" (click)="addContract()" routerLink="/facility-contract/{{facility.id}}">
-      Enviar solicitud
-    </button>
-  </div> -->
 </div>
 
 
 
+        <!-- <div class="btns">
+    <button class="btn btn-lg button" (click)="addContract()" routerLink="/facility-contract/{{facility.id}}">
+      Enviar solicitud
+    </button>
+  </div> -->

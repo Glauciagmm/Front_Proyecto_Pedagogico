@@ -1,8 +1,9 @@
 .row{
-    width:80vw;
+    width:50vw;
+    height: 70vh;
 }
 .col{
-   margin: 50px; 
+   margin: 20px; 
    align-items: center;
 }
 
@@ -26,10 +27,13 @@
 }
 
 .img{
+    margin-top: 5rem;
+    margin-left: 0%;
+    padding-left: 0%;
     display: flex;
     align-content: flex-start;
-    width: 90%;
-    height: 60%;
+    width:90%;
+    height: 40%;
     border-radius: 10%;
  
 }
@@ -55,9 +59,7 @@
     .img{
         margin:auto;
     }
-    .description{
-        margin-top: 0;
-    }
+    
     .card-title{
         font-size: 16px;
     }

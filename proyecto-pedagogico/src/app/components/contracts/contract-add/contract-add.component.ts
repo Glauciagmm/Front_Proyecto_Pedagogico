@@ -23,10 +23,28 @@ export class ContractAddComponent implements OnInit {
   //   return 'Time left: '+ hrs + 'h, ' + mins + 'm, ';
   // }
 
-  start: Date = new Date();
-  finish: Date = new Date();
+  time: number | any;
+  hours: number | any;
+  days: number | any;
+
+
+  finish: Date | any = new Date(2022-12-22);
+  start: Date | any= new Date(2022-12-20);
+  
   timeInterval = 'start/finish';
 
+  getTime(){
+    
+    this.time = Math.abs(this.finish - this.start)/365;
+    
+  }
+  //(this.finish - this.start)/360000; 
+  
+    // this.days = this.time/(1000 * 3600 * 24);
+
+    //  console.log(this.days);
+
+  //  var hours = Math.abs(this.start - this.finish) / 36e5;
   currentUser: any;
 
   selectedContract?: Contract;
@@ -64,11 +82,14 @@ export class ContractAddComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
 
-    const timeInterval = 'start/finish';
-    console.log(timeInterval);
+   this.getTime();
+   console.log(this.time);
+   
 
-    // const range = moment.range(timeInterval);
   }
+
+    //  var hours = Math.abs(this.start - this.finish) / 36e5;
+    // const range = moment.range(timeInterval);
 
   // createContract(): void {
   //   this.contractService.addContract(this.contract).subscribe(
