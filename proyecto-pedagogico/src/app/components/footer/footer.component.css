@@ -2,3 +2,18 @@
     background-color: beige;
     border-radius: 20%;
 }
+.left{
+    left:8rem;
+    padding-top: 1rem;
+}
+@media (max-width: 575.98px) {
+    .left{
+        left:0rem;
+
+    }
+    .nav-icons{
+        display:flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+}
