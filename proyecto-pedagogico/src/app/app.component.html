@@ -1,30 +1,9 @@
 <div id="app">
-    <app-header></app-header>
-    <div class="flex-shrink-1" style="padding:2rem; padding-top: 5rem;">
-        <div style="display: flex;">
-            <div style="padding-top: 5rem; width:10% ;">
-                <th scope="row" routerLink="/profile">Profile</th>
-                <br>
-                <th scope="row" routerLink="/client">Solicitudes Enviadas</th>
-                <br>
-                <th scope="row" routerLink="/facility-board/facilityA">Mis Servicios</th>
-                <br>
-                <th scope="row" routerLink="/mycontracts">Solicitudes Pendientes</th>
-                <br>
-                <th scope="row" routerLink="/nextjobs">Mi Agenda</th>
-                <br>
-                <th scope="row" routerLink="/mycontracts"></th>
-                <br>
-                <th scope="row" routerLink="/facility-add">Añadir un Servicio</th>
-                <br>
-                <th scope="row" routerLink="/allusers">Todos los Usuarios</th>
-                <br>
-                <th scope="row" routerLink="/allfacilities">Todos los Servicios</th>
-                <br>
-                <th scope="row" routerLink="/allcontracts">Todos los Contractos</th>
-            </div>
-            <router-outlet style="width:10%;"></router-outlet>
+    <app-header class="fixed-top"></app-header>
+    <div class="flex-shrink-1" style="padding-top: 8rem;">
+        <div style="height: 100vh;">
+           <router-outlet ></router-outlet>
         </div>
     </div>
-    <app-footer></app-footer>
+    <app-footer class="fixed-bottom"></app-footer>
 </div>

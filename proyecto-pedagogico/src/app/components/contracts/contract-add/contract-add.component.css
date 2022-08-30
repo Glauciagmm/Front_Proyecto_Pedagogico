@@ -1,0 +1,16 @@
+
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+    margin-right: 80px;
+    margin-left: 80px;
+    cursor: pointer;
+    border-radius: 10px;  
+}
+
+.btn{
+    background-color: #76EAD7;
+}

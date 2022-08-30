@@ -28,7 +28,9 @@ import { ContractAddComponent } from './components/contracts/contract-add/contra
 import { NextjobsComponent } from './components/contracts/nextjobs/nextjobs.component';
 import { AllusersComponent } from './components/admin/allusers/allusers.component'; 
 import { AllcontractsComponent } from './components/admin/allcontracts/allcontracts.component'; 
-import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component'; 
+import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
+import { NavlateralComponent } from './navlateral/navlateral.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { AllfacilitiesComponent } from './components/admin/allfacilities/allfaci
     AllusersComponent,
     AllcontractsComponent,
     AllfacilitiesComponent,
+    NavlateralComponent,
   ],
 
   imports: [
