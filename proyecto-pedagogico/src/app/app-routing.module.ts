@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { RegisterComponent } from '../../register/register.component';
+import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FacilityDetailComponent } from './components/assistants/facility-detail/facility-detail.component';
 import { FacilityAddComponent } from './components/assistants/facility-add/facility-add.component';
@@ -22,6 +22,7 @@ import { ChildAComponent } from './child-a.component';
 import { ChildBComponent } from './child-b.component';
 import { MycontractsComponent } from './components/contracts/mycontracts/mycontracts.component';
 import { AuthGuard } from './helpers/AuthGuard'; 
+import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,7 +32,7 @@ const routes: Routes = [
   { path: 'facility', component: CardComponent, data: { title: 'Facility List' },},
   { path: 'facilityfilter', component: FacilitiesComponent },
   { path: 'facility/:categoryId', component: FacilitiesComponent, data: { title: 'Facility List filter by category' },},
-  { path: 'facility/:city', component: FacilitiesComponent, data: { title: 'Facility List filter by city' },},
+  { path: 'facility-city', component: FacilitiesByPlaceComponent,},
   { path: 'facility-details', component: FacilityDetailComponent, data: { title: 'Facility Details' },},
   { path: 'facility-add',  component: FacilityAddComponent, canActivate: [AuthGuard], data: {role: ['ROLE_ADMIN', 'ROLE_FACILITY']},},
   { path: 'facility-edit/:id', component: FacilityEditComponent,  canActivate: [AuthGuard], data: {role: ['ROLE_ADMIN', 'ROLE_FACILITY']},},

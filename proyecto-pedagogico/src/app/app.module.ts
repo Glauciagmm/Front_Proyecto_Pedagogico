@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from '../../register/register.component';
+import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ClientComponent } from './components/clients/client/client.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -22,7 +22,6 @@ import { BoardAdminComponent } from './components/admin/board-admin-component/bo
 import { authInterceptorProviders } from './helpers/helpers';
 import { GlobalErrorHandler } from './helpers/globlal.error.handling';
 import { ErrorIntercept } from './helpers/error.interceptor';
-import { AdminBoardComponent } from './components/admin-board/admin-board.component';
 import { MycontractsComponent } from './components/contracts/mycontracts/mycontracts.component'; 
 import { ContractAddComponent } from './components/contracts/contract-add/contract-add.component';
 import { NextjobsComponent } from './components/contracts/nextjobs/nextjobs.component';
@@ -52,7 +51,6 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     BoardUserComponent,
     BoardFacilityComponent,
     BoardAdminComponent,
-    AdminBoardComponent,
     MycontractsComponent,
     ContractAddComponent,
     NextjobsComponent,

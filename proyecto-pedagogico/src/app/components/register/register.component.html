@@ -94,17 +94,21 @@
           maxlength="20"
           #phone="ngModel"
         />
-     
-        <p>
-          Upload a file:
-          <input type="text" 
-          name="picture" 
-          value="https://thispersondoesnotexist.com/image"
-          name="picture"
-          [(ngModel)]="form.picture">
+      <!-- value="https://thispersondoesnotexist.com/image" -->
+       
+      <label class="mt-2" for="photo">sube tu foto</label>
+          <input 
+          type="text" 
+          class="form-control"
+          name="photo" 
+          [(ngModel)]="form.photo"
+          #photo="ngModel"
+          placeholder="Upload a file"
+          
+          />
 
           <!-- <input type="submit" value="Send data"> -->
-        </p>
+     
      
        
        

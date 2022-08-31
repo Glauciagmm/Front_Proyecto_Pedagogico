@@ -14,7 +14,8 @@ export class FacilitiesByPlaceComponent implements OnInit {
   public facility: Facility[] = [];
   private facility_assistant=Facility;
   private user? : User;
-  city?:String;
+/*  cityNoRoute:string = new Facility.assistant.city;
+ city2:any = this.cityNoRoute; */
   
   selectedFacility?: Facility;
   onSelect(facility: Facility): void {
@@ -25,16 +26,24 @@ export class FacilitiesByPlaceComponent implements OnInit {
   
   ngOnInit(): void {
     const city= history.state.city;
-   this.getFacilitiesByCity(this.city);
+    // const city2= this.cityNoRoute;
+   this.getFacilitiesByCity(city);
  
   
  }
 
   getFacilitiesByCity(city:any): void {
-    this.facilityService.getFacilitiesByUbication(city).subscribe((resp: any) => {
+   /*  if(!city){
+      this.facilityService.getFacilitiesByUbication(city2).subscribe((resp: any) => {
       this.facility = resp;
       console.log(this.facility);
-    });
+    }); 
+    }else{ } */
+      this.facilityService.getFacilitiesByUbication(city).subscribe((resp: any) => {
+        this.facility = resp;
+        console.log(this.facility);
+      }); 
+
   }
 
 
