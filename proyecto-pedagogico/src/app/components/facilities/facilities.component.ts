@@ -15,12 +15,16 @@ export class FacilitiesComponent implements OnInit {
   public facility: Facility[] = [];
   private facility_assistant=Facility;
   private user? : User;
-/*   city?:String;
-  categoryId?:Number; */
+  city?:String;
+  categoryId?:Number; 
 
   selectedFacility?: Facility;
   onSelect(facility: Facility): void {
   this.selectedFacility = facility;
+  }
+
+  findMe() {
+    console.log('it does nothing',this.city);
   }
 
   constructor(public facilityService: FacilityService,private router: Router, public userService:UserService) {} 

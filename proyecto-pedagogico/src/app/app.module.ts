@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './components/register/register.component';
+
 import { LoginComponent } from './components/login/login.component';
 import { ClientComponent } from './components/clients/client/client.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -29,7 +29,9 @@ import { AllusersComponent } from './components/admin/allusers/allusers.componen
 import { AllcontractsComponent } from './components/admin/allcontracts/allcontracts.component'; 
 import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
 import { NavlateralComponent } from './navlateral/navlateral.component';
-import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
+import { RegisterComponent } from './components/register/register.component';
+
+
 
 
 @NgModule({
@@ -58,7 +60,7 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     AllcontractsComponent,
     AllfacilitiesComponent,
     NavlateralComponent,
-    FacilitiesByPlaceComponent,
+   
   ],
 
   imports: [
@@ -72,7 +74,7 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
   providers: [
     authInterceptorProviders,
 
-    { provide: ErrorHandler, useClass: GlobalErrorHandler },
+    { provide: ErrorHandler, useClass: GlobalErrorHandler, },
 
     { provide: HTTP_INTERCEPTORS, useClass: ErrorIntercept, multi: true },
   ],
