@@ -1,4 +1,4 @@
-/* .btn{
+.button{
     background-color: #76EAD7;
 }
  */
@@ -7,10 +7,11 @@ font-family: 'Atma', cursive;
 font-family: 'Creepster', cursive;
 font-family: 'Emilys Candy', cursive;
 font-family: 'Montserrat', sans-serif;
+font-size: 1.8rem;
 }
 
 .logo{
-    width: 50%;
+    width: 4rem;
 }
 
 .pe5{
