@@ -30,6 +30,7 @@ import { AllcontractsComponent } from './components/admin/allcontracts/allcontra
 import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
 import { NavlateralComponent } from './navlateral/navlateral.component';
 import { RegisterComponent } from './components/register/register.component';
+import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
 
 
 
@@ -43,6 +44,7 @@ import { RegisterComponent } from './components/register/register.component';
     RegisterComponent,
     LoginComponent,
     FacilitiesComponent,
+    FacilitiesByPlaceComponent,
     FacilityAddComponent,
     FacilityDetailComponent,
     FacilityAddComponent,
