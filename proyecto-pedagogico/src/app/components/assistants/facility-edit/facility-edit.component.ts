@@ -13,6 +13,8 @@ export class FacilityEditComponent implements OnInit {
     id: '',
     title: '',
     description: '',
+    pricePerHour:0,
+    categoryId:0,
     user: [],
   }
 
