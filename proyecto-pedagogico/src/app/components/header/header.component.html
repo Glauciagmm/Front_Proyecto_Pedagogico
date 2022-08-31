@@ -35,9 +35,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex" role="search">
-      <input class="form-control me-2 mt-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
-      <button class="btn btn-outline-success btn-lg"  type="submit">Buscar</button>
-    </form>
+      <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city"placeholder="Filtra por Ciudad">
+      <button class="btn btn-outline-success" [routerLink]="['/facility-city']" [state]="{city}">Buscar</button>
+     </form>
     <a class="nav-link active text-dark me-md-2 fw-bolder">
       <select onchange="doGTranslate(this);">
         <option value="">Select Language</option>
