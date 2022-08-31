@@ -6,18 +6,18 @@
       <div class="col-md-3">
         <a> <img class="img" src="{{contract?.facility?.assistant?.photo}}" alt="photo del assistente"></a>
       </div>
-      <div class="col-6 details mx-5">
-        <p class="card-title ">{{contract?.facility?.title}}</p>
-        <p class="card-title ">{{contract?.facility?.assistant?.name}}</p>
-        <p class="card-title "> {{contract?.start}}</p>
-        <p class="card-title ">Fin: {{contract?.finish}}</p>
-        <div class="text-center">
-          <button [ngStyle]="{'background-color': contract.state === 'DECLINED'? 'red' : '#0284c7' }" type="button"
+      <div class="col-6 details mx-5 d-flex p-3">
+        <div>
+          <p class="card-title ">{{contract?.facility?.title}}</p>
+          <p class="card-title ">{{contract?.facility?.assistant?.name}}</p>
+          <p class="card-title ">{{contract?.facility?.description}}</p>
+          <p class="card-title "> {{contract?.start}}</p>
+          <p class="card-title ">Fin: {{contract?.finish}}</p>
+        </div>
+        <div class="text-center align-center">
+          <button [ngStyle]="{'background-color': contract.state === 'DECLINED'? 'red' :contract.state === 'ACCEPTED'?'#10b981':'#0284c7' }" type="button"
             class="btn card-title text-left text-white"> Estado: {{contract?.state}}</button>
         </div>
-        <!-- <div class="col-md-3">
-          <a> <img src="./assets/img/CategoryIcons/channelHome.png"  class="icon" alt="limpieza_icon"></a>
-        </div> -->
       </div>
     </div>
   </div>
