@@ -2,42 +2,20 @@
   <app-navlateral class="col-3"></app-navlateral>
   <div class="col-9 details p-5">
     <h1 style="color:rgb(21, 21, 84);">Estado de mis solicitudes</h1>
-    <div class="row new"  *ngFor="let contract of clientGetRequest">
-    <div class="col-md-3 mx-5 details">
-      <a> <img class="img" src="{{contract?.facility?.assistant?.photo}}"
-        alt="photo del assistente"></a>
-    </div>
-    <div class="col-md-6 mx-5 details">
-      <p class="card-title ">{{contract?.facility?.title}}</p>
-      <p class="card-title ">{{contract?.facility?.assistant?.name}}</p>
-      <p class="card-title "> {{contract?.start}}</p>
-      <p class="card-title ">Fin: {{contract?.finish}}</p>
-      <div class="text-center" >
-
-
-        <button [ngStyle]="{'background-color': contract.state === 'DECLINED'? 'red' : 'blue' }" type="button" class="btn card-title text-left " > Estado: {{contract?.state}}</button>
+    <div class="row new" *ngFor="let contract of clientGetRequest">
+      <div class="col-md-3 mx-5 details">
+        <a> <img class="img" src="{{contract?.facility?.assistant?.photo}}" alt="photo del assistente"></a>
       </div>
-
-    </div>
-  </div>
-    <!-- <div class="row  justify-content-center padding: 1rem; " style="width:40vw; padding-top: 8rem; margin-left:10rem;">
-      <h1 style="color:rgb(21, 21, 84);">Estado de mis solicitudes</h1>
-      <div  *ngFor="let contract of clientGetRequest">
-        <div class="col-md-4 mt-4">
-          <a> <img class="img" src="{{contract?.facility?.assistant?.photo}}"
-              alt="photo del assistente"></a>
-        </div>
-        <div class="col-md-8 mt-5 description details">
-          <p class="card-title "><strong>{{contract?.facility?.title}}</strong></p>
-          <p class="card-title "><strong>{{contract?.facility?.assistant?.name}}</strong></p>
-          <p class="card-title "> <strong>{{contract?.start}}</strong></p>
-          <p class="card-title ">Fin: <strong>{{contract?.finish}}</strong></p>
-          <p class="card-title ">Estado: <strong>{{contract?.state}}</strong> </p>
-          <div class="text-center">
-            <button type="button" class="card-title text-left btn-primary"> Estado: {{contract?.state}}</button>
-          </div>
+      <div class="col-md-6 mx-5 details">
+        <p class="card-title ">{{contract?.facility?.title}}</p>
+        <p class="card-title ">{{contract?.facility?.assistant?.name}}</p>
+        <p class="card-title "> {{contract?.start}}</p>
+        <p class="card-title ">Fin: {{contract?.finish}}</p>
+        <div class="text-center">
+          <button [ngStyle]="{'background-color': contract.state === 'DECLINED'? 'red' : '#0284c7' }" type="button"
+            class="btn card-title text-left text-white"> Estado: {{contract?.state}}</button>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>

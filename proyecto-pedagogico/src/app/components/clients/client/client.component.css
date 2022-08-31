@@ -1,30 +1,26 @@
-.row{
+.row {
     margin-right: 0;
     height: 100vh;
 }
-    .col{
- 
-       align-items: center;
-       margin-right: -5rem;
-       height: 80rem;
-       margin-bottom: -5rem;
-       padding-bottom: 0;
 
-    
-    }
+.col {
+    align-items: center;
+    margin-right: -5rem;
+    height: 80rem;
+    margin-bottom: -5rem;
+    padding-bottom: 0;
+}
 
-    .col-md-6{
-        background: rgba(238, 238, 238, 0.5);
-        /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-        
-       
-    }
+.col-md-6{
+    background: rgba(238, 238, 238, 0.5);
+    height: 28rem;       
+}
 
-    h1{
-        margin-left: 8.5rem;
-        margin-top: 0;
-    }
-    .new {
+h1{
+    margin-left: 8.5rem;
+    margin-top: 0;
+}
+.new {
         border-radius: 10px;
         height: 90%;
         margin-left: 5rem;
@@ -57,10 +53,7 @@
         margin-right: 2rem;
      
     }
-    
- 
-
-
+   
     .card-title{
         font-family: 'Montserrat', sans-serif;
         margin: 1%;
