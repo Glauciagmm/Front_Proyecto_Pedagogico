@@ -9,6 +9,7 @@ import * as moment from 'moment';
 import { Contract } from 'src/app/models/contract';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 
+
 @Component({
   selector: 'app-facility-detail',
   templateUrl: './facility-detail.component.html',
@@ -29,6 +30,19 @@ export class FacilityDetailComponent implements OnInit {
   onSelect(facility: Facility, contract: Contract): void {
     this.selectedFacility = facility;
     this.selectedContract = contract;
+  }
+
+  finish1: Date = new Date();
+  start1: Date = new Date();
+
+  MY_MOMENT_FORMATS = {
+  parseInput: 'DD/MM/YYYY HH:mm:ss',
+  fullPickerInput: 'DD/MM/YYYY HH:mm:ss',
+  datePickerInput: 'DD/MM/YYYY',
+  timePickerInput: 'HH:mm:ss',
+  monthYearLabel: 'MMM YYYY',
+  dateA11yLabel: 'LL',
+  monthYearA11yLabel: 'MMMM YYYY',
   }
 
   @Input() finish: String | any = '';
@@ -65,10 +79,14 @@ export class FacilityDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
-    this.facilityId = this.Location.path()
-      .toString()
-      .replace('/facility-details?id=', '');
+    this.facilityId = this.Location.path().toString().replace('/facility-details?id=', '');
+    // this.facilityService.getFacility(this.route.snapshot.params['id']);
     this.getFacility(this.facilityId);
+  }
+
+  logdate(date: any){
+    console.log(date);
+    
   }
 
   getFacility(facilityId: any): void {
@@ -86,17 +104,23 @@ export class FacilityDetailComponent implements OnInit {
     console.log('Onchange');
 
     let start = moment(this.start);
+    console.log(start);
+    
     let finish = moment(this.finish);
-
+    console.log(finish);
+    
     let duration = moment.duration(finish.diff(start));
     let time = duration.asHours();
-    this.contractData.totalPrice =
-      time * this.contractData.facility.pricePerHour;
+    this.contractData.totalPrice = time * this.contractData.facility.pricePerHour;
     // console.log(this.totalPrice);
     // console.log(this.inicio);
-
     //return this.contractData.totalPrice;
   }
+
+  SendDataonChange(event: any) {
+    console.log(event.target.value);
+  }
+    
 
   sendContractRequest(): void {
     this.contractService.addContract(this.contractData).subscribe(

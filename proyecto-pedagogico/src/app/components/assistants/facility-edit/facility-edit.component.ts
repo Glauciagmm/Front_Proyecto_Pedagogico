@@ -9,29 +9,30 @@ import { FacilityService } from '../../../services/facility.service';
 })
 export class FacilityEditComponent implements OnInit {
 
-  @Input() facilityData: any = {
+  @Input() facilityEdit: any = {
     id: '',
     title: '',
     description: '',
-    user: [],
+    pricePerHour:'',
+    categoryId: '',
   }
 
   constructor(public facilityService: FacilityService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit(): void {
     this.facilityService.getFacility(this.route.snapshot.params['id']).subscribe((data: {})=>{
-      this.facilityData = data;
+      this.facilityEdit = data;
     });
   }
 
   updateFacility(): void {
-    console.log(this.facilityService)
-    this.facilityService.updateFacility(this.facilityData).subscribe((result)=>{
+    console.log(this.facilityEdit)
+    this.facilityService.updateFacility(this.facilityEdit).subscribe((result)=>{
       this.router.navigate(['/facility-detail/',result._id]);
     }, (err)=>{
-      console.log(err);
     });
   }
+
 
   deleteFacility(id: number): void {
     this.facilityService.deleteFacility(id).subscribe(

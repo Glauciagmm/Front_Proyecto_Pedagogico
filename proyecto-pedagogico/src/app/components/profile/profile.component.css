@@ -1,0 +1,88 @@
+.row {
+    margin-right: 0;
+    height: 100vh;
+}
+
+.col {
+    margin: 20px;
+    align-items: center;
+}
+
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5em 1em;
+    margin-right: 80px;
+    margin-left: 80px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button-addon2 {
+    display: flex;
+    position: relative;
+    background-color: #D2BAFF;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 1px;
+}
+
+.img {
+    margin-top: 5rem;
+    margin-left: 0%;
+    padding-left: 0%;
+    display: flex;
+    align-content: flex-start;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 10%;
+
+}
+
+.btn {
+    background-color: #76EAD7;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1%;
+    font-size: 20px;
+}
+
+.grey {
+    color: rgba(39, 39, 39, 0.54);
+    line-height: 1.6;
+}
+
+.details {
+    background: rgba(238, 238, 238, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    height: 70%;
+    margin-top: 5rem;
+    margin-left: -20rem;
+}
+
+@media (max-width: 575.98px) {
+    .img {
+        margin: auto;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .grey {
+        margin-left: 2rem;
+    }
+
+    .btns {
+        padding: 2em 1em 2em;
+    }
+
+    .btn {
+        font-size: 17px;
+    }
+}

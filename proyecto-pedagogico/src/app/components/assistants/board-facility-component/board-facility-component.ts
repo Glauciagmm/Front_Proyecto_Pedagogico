@@ -73,36 +73,19 @@ getFacilitiesByAssistant(): void {
 });
 }
 
-// getFacilities(): void {
-//   this.facilityService.getFacilities().subscribe((resp: any) => {
-//     this.facility = resp;
-//     console.log(this.facility);
-//   });
-// }
-
 addFacility(): void {
   this.router.navigate(["/facility-add"]);
 }
 
 deleteFacility(id: number): void {
   this.facilityService.deleteFacility(id).subscribe({
-    next: response => {
-      console.log(`Deleted Facility with ID: ${id}`)
+    next: response => { 
     },
     error: (error: HttpErrorResponse) => {
       alert(error.message);
     }
   });
 }
- 
-/* getFacilitiesByCategory(categoryId:any): void {
- 
-  this.facilityService.getFacilitiesByCategory(categoryId).subscribe((facil) => {
-    this.facil.push(...facil.filter(facilit=>facilit.category===categoryId)); 
-   this.facil=facil;
-  });
-}*/
-
 }
 
 

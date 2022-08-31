@@ -30,7 +30,7 @@ import { AllcontractsComponent } from './components/admin/allcontracts/allcontra
 import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
 import { NavlateralComponent } from './navlateral/navlateral.component';
 import { RegisterComponent } from './components/register/register.component';
-
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
 
 
 
@@ -60,7 +60,6 @@ import { RegisterComponent } from './components/register/register.component';
     AllcontractsComponent,
     AllfacilitiesComponent,
     NavlateralComponent,
-   
   ],
 
   imports: [
@@ -69,6 +68,10 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule, 
+    
+
   ],
 
   providers: [
@@ -77,6 +80,7 @@ import { RegisterComponent } from './components/register/register.component';
     { provide: ErrorHandler, useClass: GlobalErrorHandler, },
 
     { provide: HTTP_INTERCEPTORS, useClass: ErrorIntercept, multi: true },
+    
   ],
 
   bootstrap: [AppComponent],
