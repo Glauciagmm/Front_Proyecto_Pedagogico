@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { FacilityService } from '../../../services/facility.service';  
 
 @Component({
@@ -8,19 +9,23 @@ import { FacilityService } from '../../../services/facility.service';
   styleUrls: ['./facility-edit.component.css']
 })
 export class FacilityEditComponent implements OnInit {
-
+  currentUser: any;
   @Input() facilityData: any = {
     id: '',
     title: '',
     description: '',
-    pricePerHour:0,
-    categoryId:0,
+    pricePerHour:'',
+    categoryId:'',
     user: [],
   }
 
-  constructor(public facilityService: FacilityService, private route: ActivatedRoute, private router: Router ) { }
+  constructor(public facilityService: FacilityService, 
+              private route: ActivatedRoute, 
+              private router: Router,
+             private token : TokenStorageService,) { }
 
   ngOnInit(): void {
+    this.currentUser = this.token.getUser();
     this.facilityService.getFacility(this.route.snapshot.params['id']).subscribe((data: {})=>{
       this.facilityData = data;
     });
