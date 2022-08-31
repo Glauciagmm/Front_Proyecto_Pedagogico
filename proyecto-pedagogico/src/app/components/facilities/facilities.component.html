@@ -1,4 +1,8 @@
 <div class="row mb-3">
+  <form class="d-flex" role="search">
+    <!-- <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city" placeholder="Filtra por Ciudad"> -->
+    <button class="btn btn-outline-success">Buscar</button>
+   </form>
   <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile" *ngFor="let facilities of facility">
     <div class="col-md-2">
     <a href="/facility-details?id={{facilities.id}}"> <img class="img-fluid rounded-start" src="https://thispersondoesnotexist.com/image"alt="photo del assistente"

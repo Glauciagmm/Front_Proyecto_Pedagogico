@@ -1,3 +1,4 @@
+
 .navlateral{
    padding-top: 9rem; 
     width:auto ; 
@@ -17,5 +18,9 @@
 
 .nav:hover{
     color:rgb(240, 248, 247); 
-    
+}   
+
+th{
+    cursor: pointer;
+
 }

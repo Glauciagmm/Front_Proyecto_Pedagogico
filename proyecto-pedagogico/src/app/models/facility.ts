@@ -17,4 +17,5 @@ export class Facility {
       city?: string,
       phone?: string,
     };
+  static assistant: any;
 }

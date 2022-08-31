@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #393E46;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
+    <button (click)="toggleDarkTheme()">Toggle dark theme</button>
+    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Logo.png"></a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,8 +36,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
+     <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city"placeholder="Filtra por Ciudad">
+     <button class="btn btn-outline-success" [routerLink]="['/facility-city']" [state]="{city}">Buscar</button>
     </form>
     <a class="nav-link active text-white me-md-2 fw-bolder">
       <select onchange="doGTranslate(this);">

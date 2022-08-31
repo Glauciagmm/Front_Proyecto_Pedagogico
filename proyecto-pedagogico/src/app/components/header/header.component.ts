@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string;
+
+  city:String="";
+  
   constructor(private tokenStorageService: TokenStorageService, private http: HttpClient) { }
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
@@ -25,6 +28,10 @@ export class HeaderComponent implements OnInit {
       this.username = user.username;
     }
   }
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
   logout(): void {
     this.tokenStorageService.signOut();
     window.location.reload();

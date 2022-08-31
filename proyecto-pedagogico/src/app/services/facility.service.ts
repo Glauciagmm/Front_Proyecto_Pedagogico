@@ -42,7 +42,7 @@ export class FacilityService {
     }
 
     getFacilitiesByUbication(city:String):Observable<Facility[]>{
-        return this.http.get<Facility[]>(`${this.apiServerUrl}/facility/${city}`)
+        return this.http.get<Facility[]>(`${this.apiServerUrl}/facility/ubication/${city}`)
     }
     getFacilitiesByAssistantId(assistantId:Number):Observable<Facility[]>{
         return this.http.get<Facility[]>(`${this.apiServerUrl}/facility/${assistantId}`)
