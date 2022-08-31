@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { TokenStorageService } from '../../services/token-storage.service';
 @Component({
@@ -16,8 +17,8 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   public serverErrorMessage:String|undefined=undefined;
   roles: string[] = [];
-  router: any;
-  constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
+ 
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router:Router) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
@@ -33,23 +34,29 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
+        this.reloadPage();
        
         if (this.roles == ["ROLE_ADMIN"]){
           this.router.navigate(['/admin']);
         } else {
-            this.router.navigate(['/userdashboard']);
+          this.router.navigate(['/'])
+  .then(() => {
+    window.location.reload();
+  });
+          
         }
-       this.reloadPage();  
+    
       },
       error:(error) => {
-      /*  
-        this.isLoginFailed = true; */
-        this.serverErrorMessage = error;
+      
+        this.isLoginFailed = true; 
+        this.serverErrorMessage = error.errorMessage;
         console.log(error);
       }
     });
   }
   reloadPage(): void {
     window.location.reload();
+     // this.router.navigate(['/home']);
+   }
   }
-}
