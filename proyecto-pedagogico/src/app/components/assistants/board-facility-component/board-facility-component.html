@@ -20,10 +20,12 @@
         <td>{{facility?.pricePerHour}}€</td>
         <td><button class="btn btn-lg text-center btn-primary" routerLink="/facility-edit/{{facility.id}}"
             style="height: auto; width: auto; justify-content: left; font-size: 1.5rem;">Editar</button></td>
-        <!-- <td>
-        <button class= "btn submit btn-md btn-danger" 
-        style="height: 2.5rem; width: 12rem;" (click)="deleteFacility(facility.id)">Borrar</button>
-        </td>  -->
+        <td>
+        <button class= "btn submit btn-lg btn-danger" 
+        style="height: auto; width: auto; font-size: 1.5rem;">Borrar</button>
+        <!--<button class= "btn submit btn-md btn-danger" 
+        style="height: 2.5rem; width: 12rem;" (click)="deleteFacility(facility.id)">Borrar</button>-->
+        </td>
       </tr>
     </ng-container>
   </tbody>
