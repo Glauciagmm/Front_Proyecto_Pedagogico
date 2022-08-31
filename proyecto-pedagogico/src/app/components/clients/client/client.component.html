@@ -3,10 +3,10 @@
   <div class="col-9 details p-5">
     <h1 style="color:rgb(21, 21, 84);">Estado de mis solicitudes</h1>
     <div class="row new" *ngFor="let contract of clientGetRequest">
-      <div class="col-md-3 mx-5 details">
+      <div class="col-md-3">
         <a> <img class="img" src="{{contract?.facility?.assistant?.photo}}" alt="photo del assistente"></a>
       </div>
-      <div class="col-md-6 mx-5 details">
+      <div class="col-6 details mx-5">
         <p class="card-title ">{{contract?.facility?.title}}</p>
         <p class="card-title ">{{contract?.facility?.assistant?.name}}</p>
         <p class="card-title "> {{contract?.start}}</p>
@@ -15,7 +15,11 @@
           <button [ngStyle]="{'background-color': contract.state === 'DECLINED'? 'red' : '#0284c7' }" type="button"
             class="btn card-title text-left text-white"> Estado: {{contract?.state}}</button>
         </div>
+        <!-- <div class="col-md-3">
+          <a> <img src="./assets/img/CategoryIcons/channelHome.png"  class="icon" alt="limpieza_icon"></a>
+        </div> -->
       </div>
     </div>
   </div>
+
 </div>
