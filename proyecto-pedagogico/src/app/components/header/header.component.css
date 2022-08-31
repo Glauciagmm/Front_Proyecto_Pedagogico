@@ -1,7 +1,7 @@
 .button{
     background-color: #76EAD7;
 }
- */
+
 .navbar{
 font-family: 'Atma', cursive;
 font-family: 'Creepster', cursive;
@@ -11,7 +11,8 @@ font-size: 1.8rem;
 }
 
 .logo{
-    width: 4rem;
+    width: 8rem;
+    
 }
 
 .pe5{

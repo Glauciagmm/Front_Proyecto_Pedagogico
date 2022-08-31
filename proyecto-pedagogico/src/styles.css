@@ -6,7 +6,7 @@ body {
   --bkg-color: #93bcae;
   /* --btn-txt-color: white; */
   --btn-bg-color: rgb(11, 88, 160);
-  --li-bg-color: #76EAD7;
+  /* --li-bg-color: #76EAD7; */
 }
 body.dark-theme {
   /* --text-color: #eee; */

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg sticky-top align-items-center" style="background-color: #393E46;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/LogoMainLogoUnique.png"></a>
+    <a class="" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,8 +35,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex" role="search">
-      <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city"placeholder="Filtra por Ciudad">
-      <button class="btn btn-outline-success" [routerLink]="['/facility-city']" [state]="{city}">Buscar</button>
+      <input class="form-control me-2 mt-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
+      <button class="btn btn-outline-success btn-lg"  type="submit">Buscar</button>
     </form>
     <a class="nav-link active text-dark me-md-2 fw-bolder">
       <select onchange="doGTranslate(this);">
@@ -68,9 +68,9 @@
           <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
       </div>
-      <button (click)="toggleDarkTheme()">Toggle dark theme</button>
+      <button (click)="toggleDarkTheme()" class="text-white">Toggle dark theme</button>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-        <li class="nav-item ms-2 text-dark fw-bolder">
+        <li class="nav-item ms-2 text-white fw-bolder">
           <a href class="btn btn-lg btn-danger p-3 mb-3 ml-3" (click)="logout()">LogOut</a>
         </li>
       </ul>
