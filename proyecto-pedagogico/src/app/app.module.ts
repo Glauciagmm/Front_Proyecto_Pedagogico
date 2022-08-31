@@ -31,8 +31,7 @@ import { AllfacilitiesComponent } from './components/admin/allfacilities/allfaci
 import { NavlateralComponent } from './navlateral/navlateral.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
-
-
+import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +59,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angul
     AllcontractsComponent,
     AllfacilitiesComponent,
     NavlateralComponent,
+    FacilitiesByPlaceComponent,
   ],
 
   imports: [

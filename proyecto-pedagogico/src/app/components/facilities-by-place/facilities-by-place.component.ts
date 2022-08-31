@@ -33,12 +33,7 @@ export class FacilitiesByPlaceComponent implements OnInit {
  }
 
   getFacilitiesByCity(city:any): void {
-   /*  if(!city){
-      this.facilityService.getFacilitiesByUbication(city2).subscribe((resp: any) => {
-      this.facility = resp;
-      console.log(this.facility);
-    }); 
-    }else{ } */
+   
       this.facilityService.getFacilitiesByUbication(city).subscribe((resp: any) => {
         this.facility = resp;
         console.log(this.facility);
