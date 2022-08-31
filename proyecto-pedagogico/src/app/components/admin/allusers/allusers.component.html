@@ -1,8 +1,8 @@
 <div class="row">
-    <app-navlateral class="col-3"></app-navlateral>
-  <div class="container d-grid gap-5 col-8 mb-3  margin-top:20rem " style="align-content: center;">
-<h1 style="color:rgb(21, 21, 84); margin-left: 38rem; padding: 3rem;" >Todos los Usuarios</h1>
-<table class="table padding: 4rem; margin-top:5rem; table-striped " style="margin-left: 10rem">
+    <app-navlateral class="col-2"></app-navlateral>
+  <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center; left: -8.5rem;">
+<h1 style="color:rgb(21, 21, 84);" >Todos los Usuarios</h1>
+<table class="table padding: 4rem; margin-top:5rem; table-striped ">
 
     <thead>
         <tr>
@@ -29,7 +29,7 @@
                 <td class="col-2">{{user?.email}}</td>
                 <td class="col-1">{{user?.phone}}</td>
                 <td class="col-1">{{user?.city}}</td>
-                <td class="col-1"><button class="btn submit btn-md btn-warning" (click)="editUser()"
+                <td class="col-1"><button class="btn submit btn-md btn-primary" (click)="editUser()"
                         style="height: 2.5rem; width: 12rem;">Editar</button></td>
                 <td class="col-1">
                     <button class="btn submit btn-md btn-danger" (click)="deleteUser"

@@ -94,6 +94,10 @@ width: 100px;
         color: rgba(39, 39, 39, 0.54);
         line-height: 1.6;
     }
+
+    .row{
+        margin: 0;
+      }
 @media (max-width: 575.98px){
     .card-mobile{
     background: rgba(238, 238, 238, 0.5);

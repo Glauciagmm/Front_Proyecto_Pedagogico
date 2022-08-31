@@ -1,27 +1,129 @@
 <div class="row">
-  <app-navlateral class="col-6"></app-navlateral>
-  <div class="col-2 ">
-    <div class="row mx-auto mt-3 pt-4 justify-content-center details padding: 1rem; " style="width:60vw;">
-      <div class="col-md-4 mt-4">
-        <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
-        <br>
-        <h5 class="card-title py-1">Nombre:   <strong>{{facility?.assistant?.name}}</strong></h5>
-        <h5 class="card-title py-1">Email:   <strong>{{facility?.assistant?.email}}</strong></h5>
-        <h5 class="card-title py-1">Ciudad:   <strong>{{facility?.assistant?.city}}</strong></h5>
-        <h5 class="card-title py-1">Telefono:   <strong>{{facility?.assistant?.phone}}</strong></h5>
-      </div>
-      <div class="col-md-5 mt-4 description " >
-        <h3 class="card-title py-2"><strong>{{facility?.title}}</strong></h3>
-        <h5 class="card-title py-1">Descripción: <strong>{{facility?.description}}</strong></h5>
-        <h5 class="card-title py-1">Precio por hora: <strong>{{facility?.pricePerHour}} €</strong></h5>
-
-        <app-contract-add></app-contract-add>
-      </div>  
+  <app-navlateral class="col-4"></app-navlateral>
+  <div class="col-7 details">
+    <div class="col-md-4 mt-4">
+      <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
+      <br>
+      <h5 class="card-title ">Nombre: <strong>{{facility?.assistant?.name}}</strong></h5>
+      <h5 class="card-title ">Email: <strong>{{facility?.assistant?.email}}</strong></h5>
+      <h5 class="card-title ">Ciudad: <strong>{{facility?.assistant?.city}}</strong></h5>
+      <h5 class="card-title ">Telefono: <strong>{{facility?.assistant?.phone}}</strong></h5>
     </div>
+    <div class="col-md-8 mt-5 description ">
+      <h3 class="card-title "><strong>{{facility?.title}}</strong></h3>
+      <h5 class="card-title ">Descripción: <strong>{{facility?.description}}</strong></h5>
+      <h5 class="card-title ">Precio por hora: <strong>{{facility?.pricePerHour}} €</strong></h5>
+      
+      <form class="d-flex flex-column justify-content-center ms-2" style="width: 25rem;">
+        <div>
+          <label for="datetime" class="row-sm-1 row-form-label">Fecha inicio</label>
+          <div class="col form-group ">
+            <input [(ngModel)]="start" type='text' class="form-control" />
+            <div class='input-group date' id='datetimepicker1'>
+              <span class="input-group-addon">
+                <i class="bi bi-calendar"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+        <label for="datetime" class="row-sm-1 row-form-label">Fecha fin</label>
+          <div class="col form-group ">
+            <input [(ngModel)]="start" type='text' class="form-control" />
+            <div class='input-group date' id='datetimepicker1'>
+              <span class="input-group-addon">
+                <i class="bi bi-calendar"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>start date: {{start}}</p>
+          <p>finish date: {{finish}}</p>
+        </div>
+        <div class="row form-group ">
+          <label for="datetime" class="col-sm-1 col-form-label">Total price:</label>
+          <div class="col-sm-6">
+            <p>{{contractData.totalPrice}}$</p>
+          </div>
+        </div>
+        <button (click)="getTotalPrice()">Calculate</button>
+        <div class="btns">
+          <button class="btn btn-lg button" (click)="sendContractRequest()">
+            Enviar solicitud
+          </button>
+        </div>
+      </form>
   </div>
 </div>
 
+<!-- <div class="row">
+  <app-navlateral class="col-6"></app-navlateral>
+  <div class="col-2 pt-5">
+    <div class="content mx-auto mt-5 pt-5 justify-content-center details padding: 1rem; " style="width:70vw;">
+      <div class="col-md-4 mt-4">
+        <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
+        <br>
+        <h5 class="card-title ">Nombre: <strong>{{facility?.assistant?.name}}</strong></h5>
+        <h5 class="card-title ">Email: <strong>{{facility?.assistant?.email}}</strong></h5>
+        <h5 class="card-title ">Ciudad: <strong>{{facility?.assistant?.city}}</strong></h5>
+        <h5 class="card-title ">Telefono: <strong>{{facility?.assistant?.phone}}</strong></h5>
+      </div>
+      <div class="col-md-5 mt-5 description ">
+        <h3 class="card-title "><strong>{{facility?.title}}</strong></h3>
+        <h5 class="card-title ">Descripción: <strong>{{facility?.description}}</strong></h5>
+        <h5 class="card-title ">Precio por hora: <strong>{{facility?.pricePerHour}} €</strong></h5>
+        
+        <form class="d-flex flex-column justify-content-center ms-2" style="width: 25rem;">
+          <div>
+            <label for="datetime" class="row-sm-1 row-form-label">Fecha inicio</label>
+            <div class="col form-group ">
+              <input [(ngModel)]="start" type='text' class="form-control" />
+              <div class='input-group date' id='datetimepicker1'>
+                <span class="input-group-addon">
+                  <i class="bi bi-calendar"></i>
+                </span>
+              </div>
+            </div>
+          </div>
 
+          <div>
+          <label for="datetime" class="row-sm-1 row-form-label">Fecha fin</label>
+            <div class="col form-group ">
+              <input [(ngModel)]="start" type='text' class="form-control" />
+              <div class='input-group date' id='datetimepicker1'>
+                <span class="input-group-addon">
+                  <i class="bi bi-calendar"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>start date: {{start}}</p>
+            <p>finish date: {{finish}}</p>
+          </div>
+          <div class="row form-group ">
+            <label for="datetime" class="col-sm-1 col-form-label">Total price:</label>
+            <div class="col-sm-6">
+              <p>{{contractData.totalPrice}}$</p>
+            </div>
+          </div>
+          <button (click)="getTotalPrice()">Calculate</button>
+          <div class="btns">
+            <button class="btn btn-lg button" (click)="sendContractRequest()">
+              Enviar solicitud
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+<!-- <input type="text" class="text-gray-900" placeholder="Your name" [(ngModel)]="name"> -->
+        <!-- <p>¡Hello {{name}}!</p> -->
 
         <!-- <div class="btns">
     <button class="btn btn-lg button" (click)="addContract()" routerLink="/facility-contract/{{facility.id}}">

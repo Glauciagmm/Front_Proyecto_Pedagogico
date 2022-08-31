@@ -1,8 +1,8 @@
 <div class="row">
     <app-navlateral class="col-2"></app-navlateral>
-  <div class="container d-grid gap-5 col-7 mb-3  margin-top:10rem " style="align-content: center;  left: -11.5rem;">
-    <h1 style="color:rgb(21, 21, 84); margin-bottom: -3rem; margin-top: 6rem; align-items: center; " >Todos los Servicios</h1>
-<table class="table padding: 4rem; margin-top:5rem; table-striped ">
+  <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
+<h1 style="color:rgb(21, 21, 84);  " >Todos los Servicios</h1>
+<table class="table padding: 4rem; margin-top:5rem; table-striped " >
     <thead>
         <tr>
             <th scope="col">IdServicio</th>
@@ -24,9 +24,9 @@
                 <td class="col-2">{{facility?.title}}</td>
                 <td class="col-2">{{facility?.description}}</td>
                 <td class="col-1">{{facility?.pricePerHour}}€</td>
-                <td class="col-1">
-                    <button class="btn submit btn-md btn-warning" (click)="updateFacility()"
-                        style="height: 2.5rem; width: 8rem; padding: 2px;">Editar
+                <td class="col-1 my-auto" >
+                    <button class="btn submit btn-md btn-primary" (click)="updateFacility()"
+                        style="height: 2.5rem; width: 8rem; padding: 2px; ">Editar
                     </button></td>
                 <td class="col-1"> 
                     <button class="btn submit btn-md btn-danger" (click)="deleteFacility(facilityData.id)"

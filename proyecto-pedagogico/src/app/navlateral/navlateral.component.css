@@ -1,0 +1,21 @@
+.navlateral{
+   padding-top: 9rem; 
+    width:auto ; 
+    margin-left: 3rem; 
+    font-family: sans-serif; 
+    font-size: 20px;
+    color:rgb(21, 21, 84); 
+
+   
+}
+
+.nav{
+    color:rgb(21, 21, 84); 
+    cursor: pointer;
+    
+}
+
+.nav:hover{
+    color:rgb(240, 248, 247); 
+    
+}

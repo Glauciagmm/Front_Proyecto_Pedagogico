@@ -1,27 +1,22 @@
-h1{
-    font-size: px;
-    font-family: 'Montserrat';
-}
-
 .form-control{
     background-color: #ffffff;
     border: 1px;
+    font-size: 20px;
 }
 
 .btn.submit.btn-md {
     background-color: #f8f6fa;
-    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
 }
 
-
-#addForm{
-  font-family: 'Montserrat', sans-serif;
-}
-
-.form-group{
-  padding: 0.2em;
-}
 .btn{
-    background-color: #76EAD7;
+    background-color: #76EAD7;  
 }
+.row{
+  margin: 0;
+}
+
+.mb-3{
+  font-size: 20px;
+}
+

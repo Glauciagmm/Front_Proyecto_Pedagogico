@@ -1,4 +1,8 @@
+.row{
+    margin: 0;
+  }
 
+/* 
 .clientcell{
     background-color:rgba(238, 238, 238, 0.5) ;
 }
@@ -117,4 +121,4 @@ width: 100px;
     box-shadow: none;
     border-radius: 10px;
     }
-}
+} */

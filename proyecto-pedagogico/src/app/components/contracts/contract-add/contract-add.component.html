@@ -1,39 +1,67 @@
 <div>
+
+  <!-- <input matInput [ngxMatDatetimePicker]="picker" placeholder="Elige un fecha y hora"
+  [(ngModel)]="newInterviewDate">
+<mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+<ngx-mat-datetime-picker #picker>
+  <ng-template>
+      <div class="flexMe">
+          <mat-icon>check_circle_outline</mat-icon>
+          <span>&nbsp;Aceptar</span>
+      </div>
+  </ng-template>
+</ngx-mat-datetime-picker>
+</mat-form-field> -->
+
   <form class="d-flex flex-column justify-content-center ms-2" style="width: 60rem;">
     <div class="row form-group ">
       <label for="datetime" class="col-sm-1 col-form-label">Fecha inicio</label>
       <div class="col-sm-4">
-        <div class='input-group date' id='datetimepicker1'>
-          <input [(ngModel)]="contractData.start" type='text' class="form-control" />
+        <input [(ngModel)]="start" type='text' class="form-control" />
+        <!-- <div class='input-group date' id='datetimepicker1'>
+          <input [(ngModel)]="start" type='text' class="form-control" />
           <span class="input-group-addon">
             <i class="bi bi-calendar"></i>
           </span>
-        </div>
+        </div> -->
       </div>
     </div>
-  </form>
-  <form class="d-flex flex-column justify-content-center ms-2" style="width: 60rem;">
     <div class="row form-group ">
       <label for="datetime" class="col-sm-1 col-form-label">Fecha fin</label>
       <div class="col-sm-4">
-        <div class='input-group date' id='datetimepicker2'>
-          <input [(ngModel)]="contractData.finish" type='text' class="form-control" />
-          <!-- <span class="input-group-addon">
+        <input [(ngModel)]="finish" type='text' class="form-control" />
+        <!-- <div class='input-group date' id='datetimepicker2'>
+          <input [(ngModel)]="finish" type='text' class="form-control" />
+          <span class="input-group-addon">
             <span><i class="bi bi-calendar"></i></span>
-          </span> -->
-        </div>
+          </span>
+        </div> -->
       </div>
     </div>
+   
+    
 
+    <div>
+      <p>start date: {{start}}</p>
+      <p>finish date: {{finish}}</p>
+    </div>
+    <div class="row form-group ">
+      <label for="datetime" class="col-sm-1 col-form-label">Total price:</label>
+      <div class="col-sm-6">
+        <p>{{contractData.totalPrice}}$</p>
+      </div>
+    </div>
+    <button (click)="getTotalPrice()">Calculate</button>
+    <div class="btns">
+      <button class="btn btn-lg button" (click)="sendContractRequest()">
+        Enviar solicitud
+      </button>
+    </div>
   </form>
-  <div class="mb-3"> Total a pagar:
-    <p [(ngModel)]="contractData.totalPrice" class="form-control" placeholder="Título"></p>
-  </div>
-  <div class="btns">
-    <button class="btn btn-lg button" (click)="sendContractRequest()">
-      Enviar solicitud
-    </button>
-  </div>
+
+  <!-- <div class="mb-3"> Total a pagar:
+    <p  class="form-control" placeholder="Título">{{totalPrice}}</p>
+  </div> -->
 </div>
 
 <!-- <div class="button">

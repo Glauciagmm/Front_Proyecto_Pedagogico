@@ -1,25 +1,15 @@
-h1{
-    font-size: px;
-}
-
 .form-control{
     background-color: #ffffff;
     border: 1px;
+    font-size: 20px;
 }
 
-.btn.submit.btn-md {
-    background-color: #f8f6fa;
-    font-family: 'Oswald', sans-serif;
-    cursor: pointer;
+
+
+.row{
+  margin: 0;
 }
 
-#addForm{
-    font-family: 'Oswald', sans-serif;
-}
-
-.form-group{
-  padding: 0.6em;
-}
-.btn{
-    background-color: #76EAD7;
+.mb-3{
+  font-size: 20px;
 }
