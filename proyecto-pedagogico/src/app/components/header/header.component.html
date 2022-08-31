@@ -29,7 +29,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
-      routerLink="user">Cliente</a>
+      routerLink="client">Cliente</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@
           <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
       </div>
-      <button (click)="toggleDarkTheme()" class="text-white">Toggle dark theme</button>
+      <button (click)="toggleDarkTheme()" class="text-white">Modo Oscuro</button>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
         <li class="nav-item ms-2 text-white fw-bolder">
           <a href class="btn btn-lg btn-danger p-3 mb-3 ml-3" (click)="logout()">LogOut</a>
