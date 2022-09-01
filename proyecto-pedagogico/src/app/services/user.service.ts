@@ -42,7 +42,8 @@ export class UserService {
    public idUser(): Observable<User> {
     return this.http.get<User>(`${API_URL}/user/`);
   }
-  getuser(id: number): Observable<any> {
+  
+  getUser(id: number): Observable<any> {
     return this.http
       .get(`${API_URL}/user/${id}`)
       .pipe(catchError(this.handleError));

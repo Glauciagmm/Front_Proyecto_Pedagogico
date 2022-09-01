@@ -65,7 +65,7 @@ export class FacilityService {
     updateFacility(facility: Facility): Observable<any> {
     console.log(facility);
     return this.http.put<Facility>(
-        `${this.apiServerUrl}/api/facility/edit`, facility
+        `${this.apiServerUrl}/facility/edit`, facility
         )
         .pipe(catchError(this.handleError));
     }
@@ -74,7 +74,7 @@ export class FacilityService {
     deleteFacility(id: number): Observable<any> {
     return this.http
         .delete<Facility>(
-        `${this.apiServerUrl}/api/facility/delete/${id}`
+        `${this.apiServerUrl}/facility/delete/${id}`
         )
         .pipe(catchError(this.handleError));
     }

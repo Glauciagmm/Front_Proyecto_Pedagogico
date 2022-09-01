@@ -1,3 +1,5 @@
+@import "~@danielmoncada/angular-datetime-picker/assets/style/picker.min.css";
+
 body { font-family:Montserrat; 
     background-color: #64aa95;} 
 
