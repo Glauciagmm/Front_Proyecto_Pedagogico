@@ -49,18 +49,18 @@ export class FacilityDetailComponent implements OnInit {
   @Input() start: String | any = '';
 
   @Input() contractData = {
-    id: 0,
+    id: '',
     start: '',
     finish: '',
     totalPrice: 0,
 
     facility: {
-      id: 0,
+      id: '',
       title: '',
       description: '',
       pricePerHour: 0,
       assistant: {
-        id: 0,
+        id: '',
         photo: '',
         name: '',
         city: '',
