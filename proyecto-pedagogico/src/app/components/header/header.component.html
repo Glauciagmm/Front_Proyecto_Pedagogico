@@ -1,8 +1,6 @@
 <nav class="navbar navbar-expand-lg sticky-top align-items-center" style="background-color: #393E46;">
-  <a class="logo_container" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
-  <div id="navigator">
-    
   <div class="container-fluid">
+    <a class="" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,8 +16,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" 
-      routerLink="profile">Admin</a>
+    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
+      routerLink="admin">Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,16 +28,16 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" 
-      routerLink="client">Cliente</a>
+    <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
+      routerLink="user">Cliente</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex" role="search">
-      <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city"placeholder="Filtra por Ciudad">
-      <button class="btn btn-outline-success" [routerLink]="['/facility-city']" [state]="{city}">Buscar</button>
-     </form>
+      <input class="form-control me-2 mt-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
+      <button class="btn btn-outline-success btn-lg"  type="submit">Buscar</button>
+    </form>
     <a class="nav-link active text-dark me-md-2 fw-bolder">
       <select onchange="doGTranslate(this);">
         <option value="">Select Language</option>
@@ -62,7 +60,7 @@
     </button>
 
     <div class="d-sm-flex pe-5 mt-3 ">
-      <div class="d-grid pe-5 d-md-flex justify-content-md-end gap-4 mr-5" *ngIf="!isLoggedIn">
+      <div class="d-grid pe-5 d-md-flex justify-content-md-end" *ngIf="!isLoggedIn">
         <li class="nav-item ms-5 text-dark fw-bolder ">
           <a class="btn btn-lg  button " routerLink="/register">Registro</a>
         </li>
@@ -72,12 +70,12 @@
       </div>
       <button (click)="toggleDarkTheme()" class="rounded-3 text-white p-3 mr-5" style="height: 4.25rem; background:rgb(11, 88, 160);">Modo Oscuro</button>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-        <li class="nav-item ms-2 text-white fw-bolder">
-          <a href class="btn btn-lg btn-danger p-3 mb-3 ml-3" (click)="logout()">LogOut</a>
+        <li class="nav-item ms-2  fw-bolder">
+          <a href class="btn btn-lg btn-danger text-white p-3 mb-3 ml-3" (click)="logout()">LogOut</a>
         </li>
       </ul>
     </div>
-    </div>
   </div>
 </nav>
+      
       
