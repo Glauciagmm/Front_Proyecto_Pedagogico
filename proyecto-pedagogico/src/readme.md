@@ -1,8 +1,8 @@
-# Título del Proyecto
+# Uniquecare
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Un sitio web donde encontrar a alguien que te eche una mano o donde poder ofrecer tus servicios_
 
-## Comenzando 🚀
+## Starting 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
@@ -14,7 +14,13 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Da un ejemplo
+npm install ANGULAR
+
+npm install boostrap5.2
+
+npm install @material/snackbar
+
+npm install karma-jasmine
 ```
 
 ### Instalación 🔧
@@ -39,10 +45,12 @@ _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para 
 
 _Explica como ejecutar las pruebas automatizadas para este sistema_
 
+KARMA AQUI
+
 ### Analice las pruebas end-to-end 🔩
 
 _Explica que verifican estas pruebas y por qué_
-
+nw
 ```
 Da un ejemplo
 ```
@@ -63,9 +71,9 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [Springboot](https://spring.io/projects/spring-boot/) - El framework web usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Angular](https://angular.io/guide/testing) - Usado para generar RSS
 
 ## Contribuyendo 🖇️
 
