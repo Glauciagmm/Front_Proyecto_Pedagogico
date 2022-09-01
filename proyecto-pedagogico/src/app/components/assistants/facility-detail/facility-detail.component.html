@@ -26,11 +26,11 @@
           </div>
         </div>
         <div>
-          <input [ngModel]="start1" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time">
+          <!-- <input [ngModel]="start1" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time">
           <owl-date-time #dt1></owl-date-time>
           <input [ngModel]="finish1"[owlDateTime]="dt2" placeholder="Date Time" >
           <span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
-          <owl-date-time #dt2></owl-date-time>
+          <owl-date-time #dt2></owl-date-time> -->
         </div>
         <h2>{{start1 | json}}</h2>
         <h2>{{finish1 | json}}</h2>
@@ -67,58 +67,3 @@
     </div>
   </div>
 </div>
-<!-- 
-<div class="input-group mr-2">
-	<input
-    [ngClass]="ngControl?.valid ? 'ng-valid' : 'ng-invalid'"
-    class="form-control"
-    (blur)="inputBlur($event)"
-    [ngModel]="dateString | date:inputDatetimeFormat"
-    (change)="onInputChange($event)"
-    [disabled]="disabled"
-  />
-
-	<div class="input-group-append">
-		<button
-      class="btn btn-outline-secondary"
-      [ngbPopover]="calendarContent"
-      [disabled]="disabled"
-      type="button"
-    >
-      <fa-icon [icon]="['far', 'calendar']"></fa-icon>
-    </button>
-	</div>
-</div>
-
-<ng-template #calendarContent>
-	<div>
-		<div *ngIf="!showTimePickerToggle">
-			<ngb-datepicker id="dp" #dp name="datepicker" [ngModel]="datetime"
-				(ngModelChange)="onDateChange($event, dp)"></ngb-datepicker>
-			<button
-        class="btn btn-block btn-outline-secondary"
-        [disabled]="!datetime?.day"
-        [ngbPopover]="timePickerContent"
-        type="button"
-        (click)="toggleDateTimeState($event)"
-      >
-        <fa-icon [icon]="['far', 'clock']"></fa-icon>
-      </button>
-		</div>
-		<div *ngIf="showTimePickerToggle">
-			<button
-        class="btn btn-block btn-outline-secondary"
-        [ngbPopover]="calendarContent"
-        type="button"
-        (click)="toggleDateTimeState($event)"
-      >
-        <fa-icon [icon]="['far', 'calendar']"></fa-icon>
-      </button>
-			<div class="mt-auto">
-				<ngb-timepicker #tp name="timepicker" [ngModel]="datetime" (ngModelChange)="onTimeChange($event)"
-					[seconds]="seconds" [hourStep]="hourStep" [minuteStep]="minuteStep" [secondStep]="secondStep">
-				</ngb-timepicker>
-			</div>
-		</div>
-	</div>
-</ng-template> -->

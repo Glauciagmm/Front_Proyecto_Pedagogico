@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg sticky-top align-items-center" style="background-color: #393E46;">
+  <a class="logo_container" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
+  <div id="navigator">
+    
   <div class="container-fluid">
-    <a class="" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
       aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -68,12 +70,13 @@
           <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
       </div>
-      <button (click)="toggleDarkTheme()" class="rounded-3 text-white p-3 mr-5" style="height: 4.25rem;">Modo Oscuro</button>
+      <button (click)="toggleDarkTheme()" class="rounded-3 text-white p-3 mr-5" style="height: 4.25rem; background:rgb(11, 88, 160);">Modo Oscuro</button>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
         <li class="nav-item ms-2 text-white fw-bolder">
           <a href class="btn btn-lg btn-danger p-3 mb-3 ml-3" (click)="logout()">LogOut</a>
         </li>
       </ul>
+    </div>
     </div>
   </div>
 </nav>

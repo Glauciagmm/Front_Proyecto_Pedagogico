@@ -15,38 +15,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class BoardFacilityComponent implements OnInit {
 
-  // public facility: Facility[] = [];
-  // private facility_assistant=Facility;
-  // private user? : User;
-  // public userId?:Number;
-/*   city?:String;
-  categoryId?:Number; */
-
-//   selectedFacility?: Facility;
-//   onSelect(facility: Facility): void {
-//   this.selectedFacility = facility;
-//   }
-//   constructor(
-//     public facilityService: FacilityService,
-//     private router: Router, 
-//     public userService:UserService,
-//     private token: TokenStorageService
-//   ){} 
-
-//   ngOnInit(): void {
-//     this.user = this.token.getUser();
-//     console.log(this.user);
-//     const assistantId=this.user?.id;
-//    this.getFacilitiesByAssistantId(assistantId);
-//   }
- 
-// getFacilitiesByAssistantId(assistantId:any): void {
-//   this.facilityService.getFacilitiesByAssistantId(assistantId).subscribe((resp: any) => {
-//     this.facility = resp;
-//     console.log(this.facility);
-//   });
-// }
-
 currentUser: any;
 public facility: Facility[] = [];
 selectedFacility?: Facility;
@@ -79,13 +47,21 @@ addFacility(): void {
 
 deleteFacility(id: number): void {
   this.facilityService.deleteFacility(id).subscribe({
-    next: response => { 
+
+    next: response => {
+      console.log(`Deleted Facility with ID: ${id}`)
+      this.refresh();
     },
     error: (error: HttpErrorResponse) => {
       alert(error.message);
     }
   });
 }
+
+refresh(): void {
+  window.location.reload();
+ }
+
 }
 
 
