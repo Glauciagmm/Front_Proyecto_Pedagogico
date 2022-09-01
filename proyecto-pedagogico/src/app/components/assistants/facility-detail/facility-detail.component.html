@@ -4,32 +4,32 @@
     <div class="col-md-4 mt-4">
       <img class="img" src="{{facility?.assistant?.photo}}" alt="...">
       <br>
-      <h5 class="card-title ">Nombre: {{facility?.assistant?.name}}</h5>
-      <h5 class="card-title ">Email: {{facility?.assistant?.email}}</h5>
-      <h5 class="card-title ">Ciudad: {{facility?.assistant?.city}} </h5>
-      <h5 class="card-title ">Teléfono: {{facility?.assistant?.phone}}</h5>
+      <h5 class="card-title "><strong>Nombre:</strong> {{facility?.assistant?.name}}</h5>
+      <h5 class="card-title "><strong>Correo:</strong> {{facility?.assistant?.email}}</h5>
+      <h5 class="card-title "><strong>Ciudad:</strong> {{facility?.assistant?.city}} </h5>
+      <h5 class="card-title "><strong>Teléfono:</strong> {{facility?.assistant?.phone}}</h5>
     </div>
     <div class="col-md-8 mt-5 description ">
-      <h3 class="card-title mt-5">{{facility?.title}}</h3>
-      <h5 class="card-title ">Descripción: {{facility?.description}}</h5>
-      <h5 class="card-title ">Precio por hora: {{facility?.pricePerHour}} €</h5>
+      <h3 class="card-title mt-5"><strong>{{facility?.title}}</strong></h3>
+      <h5 class="card-title "><strong>Descripción:</strong> {{facility?.description}}</h5>
+      <h5 class="card-title "><strong>Precio por hora:</strong> {{facility?.pricePerHour}} €</h5>
       <form class="d-flex flex-column justify-content-center " style="width: 40rem;">
         <div class=" form-group ">
-          <label for="datetime" class="col-sm-1 col-form-label">Inicio</label>
+          <label for="datetime" class="col-sm-1 col-form-label">Inicio:</label>
           <div class="col form-group">
             <div class='input-group date' id='datetimepicker1'>
-              <input [(ngModel)]="start" type='text' class="form-control" />
+              <input [(ngModel)]="start" type='text' class="form-control ms-3" />
               <span class="input-group-addon"><i class="bi bi-calendar"></i></span>
             </div>
           </div>
         </div>
         <div>
         </div>
-        <div class=" ">
-          <label for="datetime" class="col-sm-1 col-form-label">Fin</label>
+        <div class="form-group  ">
+          <label for="datetime" class="col-sm-1 col-form-label">Fin:</label>
           <div class="col form-group">
             <div class='input-group date' id='datetimepicker2'>
-              <input (change)="SendDataonChange($event)" [(ngModel)]="finish" type='submit' class="form-control" />
+              <input (change)="SendDataonChange($event)" [(ngModel)]="finish" type='submit' class="form-control ms-3" />
               <span class="input-group-addon">
                 <span><i class="bi bi-calendar"></i></span>
               </span>
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="btns">
-          <button class="btn btn-lg button" (click)="sendContractRequest()">
+          <button class="btn btn-lg button btn-primary" (click)="sendContractRequest()">
             Enviar solicitud
           </button>
         </div>

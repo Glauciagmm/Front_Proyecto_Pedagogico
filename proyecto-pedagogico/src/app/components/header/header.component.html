@@ -1,39 +1,18 @@
 <nav class="navbar navbar-expand-lg sticky-top align-items-center" style="background-color: #393E46;">
   <div class="container-fluid">
     <a class="" href="#"><img class="logo p-0 my-2" src="assets/img/LogoMainLogoUnique.png"></a>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
-      aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
     <a class="nav-link active text-white me-md-2 fw-bolder" href="#">Inicio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
     <a class="nav-link active text-white me-md-2 fw-bolder" href="facility">Servicios</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
-      routerLink="admin">Admin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" 
+      routerLink="profile">Admin</a>
+    
     <a *ngIf="showModeratorBoard" class="nav-link active text-white me-md-2 fw-bolder"
-      routerLink="facility-board">Assistente</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
-      routerLink="user">Cliente</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      routerLink="profile">Mi cuenta</a>
+
     <form class="d-flex" role="search">
       <input class="form-control me-2 mt-2" type="search" placeholder="Filtra por Ciudad" aria-label="Search">
       <button class="btn btn-outline-success btn-lg"  type="submit">Buscar</button>
@@ -54,14 +33,10 @@
     <div id="google_translate_element2"></div>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="d-sm-flex pe-5 mt-3 ">
       <div class="d-grid pe-5 d-md-flex justify-content-md-end" *ngIf="!isLoggedIn">
-        <li class="nav-item ms-5 text-dark fw-bolder ">
+        <li class="nav-item me-5 text-dark fw-bolder ">
           <a class="btn btn-lg  button " routerLink="/register">Registro</a>
         </li>
         <li class="nav-item mb-2 text-dark fw-bolder">

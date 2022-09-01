@@ -28,7 +28,7 @@
             <td><button class="btn btn-lg text-center btn-primary" routerLink="/facility-edit/{{facility.id}}"
                 style="height: auto; width: auto; justify-content: left; font-size: 1.5rem;">Editar</button></td>
             <td>
-              <button class="btn submit btn-lg btn-danger" id={{facility?.id}} (click)="deleteFacility(facility.id!)"
+              <button *ngIf="(facility?.contract | json) == '[]'" class="btn submit btn-lg btn-danger" id={{facility?.id}} (click)="deleteFacility(facility.id!)"
                 style="height: auto; width: auto; font-size: 1.5rem;">Borrar</button>
             </td>
           </tr>
