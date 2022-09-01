@@ -5,7 +5,7 @@ body {
   --text-color: #222;
   --bkg-color: #93bcae;
   /* --btn-txt-color: white; */
-  --btn-bg-color: rgb(11, 88, 160);
+  --btn-color: rgb(11, 88, 160);
   /* --li-bg-color: #76EAD7; */
 }
 body.dark-theme {
@@ -13,7 +13,6 @@ body.dark-theme {
   --bkg-color: #062115;
   --btn-txt-color: rgb(46, 43, 43);
   --btn-bg-color: rgb(20, 211, 195);
-  --li-bg-color: rgb(11, 88, 160);;
   --text-color: #EEEEEE;
 }
 
