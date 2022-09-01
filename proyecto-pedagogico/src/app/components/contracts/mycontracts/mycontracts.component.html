@@ -1,46 +1,46 @@
 <div class="row">
     <app-navlateral class="col-2"></app-navlateral>
-  <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
-<h1 style="color:rgb(21, 21, 84);">Mis Solicitudes Pendientes</h1>
-<div class="row" *ngIf="userGetRequest.length == 0">
-    <div class="jumbotron">
-    <h3>
-     <strong></strong> No tienes ninguna peticion del cliente,animate!!!
-       </h3>
-     </div>
-     
-     </div>
-<table class="table padding: 4rem; margin-top:5rem; table-striped " >
-    <thead>
-        <tr>
-            <th scope="col">Cliente</th>
-            <th scope="col">Ciudad</th>
-            <th scope="col">Servicio</th>
-            <th scope="col">Fecha de Inicio</th>
-            <th scope="col">Fecha de Fin</th>
-            <th scope="col">Valor Total</th>
-            <th scope="col">Aceptar</th>
-            <th scope="col">Rechazar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngFor=" let contract of userGetRequest">
-            <tr *ngIf="contract.state === 'OPEN'">
-                <td>{{contract?.client?.name}}</td>
-                <td>{{contract?.client?.city}}</td>
-                <td>{{contract?.facility?.title}}</td>
-                <td>{{contract?.start}}</td>
-                <td>{{contract?.finish}}</td>
-                <td>{{contract?.totalPrice}}€</td>
-                <td><button class="btn submit btn-md btn-success" (click)="acceptContract(contract.id)"
-                        style="height: 2.5rem; width: 12rem;">Aceptar</button></td>
-                <td>
-                    <button class="btn submit btn-md btn-danger" (click)="declineContract(contract.id)"
-                        style="height: 2.5rem; width: 12rem;">Declinar</button>
-                </td>
-            </tr>
-        </ng-container>
-    </tbody>
-</table>
-</div>
+    <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
+        <h1 style="color:rgb(21, 21, 84);">Mis Solicitudes Pendientes</h1>
+        <div class="row" *ngIf="userGetRequest.length == 0">
+            <div class="jumbotron">
+                <h3>
+                    No tienes ninguna petición, anímate!!!
+                </h3>
+            </div>
+
+        </div>
+        <table class="table padding: 4rem; margin-top:5rem; table-striped ">
+            <thead>
+                <tr>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Servicio</th>
+                    <th scope="col">Fecha de Inicio</th>
+                    <th scope="col">Fecha de Fin</th>
+                    <th scope="col">Valor Total</th>
+                    <th scope="col">Aceptar</th>
+                    <th scope="col">Rechazar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor=" let contract of userGetRequest">
+                    <tr *ngIf="contract.state === 'OPEN'">
+                        <td>{{contract?.client?.name}}</td>
+                        <td>{{contract?.client?.city}}</td>
+                        <td>{{contract?.facility?.title}}</td>
+                        <td>{{contract?.start}}</td>
+                        <td>{{contract?.finish}}</td>
+                        <td>{{contract?.totalPrice}}€</td>
+                        <td><button class="btn submit btn-md btn-success"
+                                (click)="acceptContract(contract.id)">Aceptar</button></td>
+                        <td>
+                            <button class="btn submit btn-md btn-danger"
+                                (click)="declineContract(contract.id)">Declinar</button>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
 </div>

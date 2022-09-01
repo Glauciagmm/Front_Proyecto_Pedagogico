@@ -2,96 +2,20 @@
   <app-navlateral class="col-3"></app-navlateral>
   <div class="col-2">
     <div *ngIf="currentUser; else loggedOut">
-      <h3>
+      <h3 style="margin-top:8rem; color:rgb(21, 21, 84);">
         <strong>Bienvenido(a) {{user.name}}</strong>
       </h3>
       <div class="half-float-bottom">
          <img src="{{ user.photo }}" alt="Image" class="img-thumbnail img-circle thumb128">
       </div>
-      
       <br>
-      <p><strong>Surname:</strong>{{user.surname }}</p>
-      <p><strong>Email:</strong>{{user.email }}</p>
-      <p><strong>Ciudad:</strong>{{user.city }}</p>
-      <p><strong>Teléfono:</strong>{{ user.phone}}</p>
+      <p style="font-size: 2rem ;"><strong>Nombre: </strong>{{user.name}} {{user.surname }}</p>
+      <p style="font-size: 2rem ;"><strong>Email: </strong>{{user.email }}</p>
+      <p style="font-size: 2rem ;"><strong>Ciudad: </strong>{{user.city }}</p>
+      <p style="font-size: 2rem ;"><strong>Teléfono: </strong>{{ user.phone}}</p>
     </div>
     <ng-template #loggedOut>
       Please login.
     </ng-template>
   </div>
-
 </div>
-
-
-
-
-
-      <!-- START widget-->
-   <!--    <div class="panel widget">
-         <div class="half-float">
-            <img src="https://bootdey.com/img/Content/bg1.jpg" alt="" class="img-responsive">
-            <div class="half-float-bottom">
-               <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Image" class="img-thumbnail img-circle thumb128">
-            </div>
-         </div>
-         <div class="panel-body text-center">
-            <h3 class="m0">Maria Berriut</h3>
-            <p class="text-muted">Lead director</p>
-            <p>Proin metus justo, commodo in ultrices at, lobortis sit amet dui. Fusce dolor purus, adipiscing a tempus at, gravida vel purus.</p>
-         </div>
-         <div class="panel-body text-center bg-gray-dark">
-            <div class="row row-table">
-               <div class="col-xs-4">
-                  <h3 class="m0">400</h3>
-                  <p class="m0">Photos</p>
-               </div>
-               <div class="col-xs-4">
-                  <h3 class="m0">2000</h3>
-                  <p class="m0">Likes</p>
-               </div>
-               <div class="col-xs-4">
-                  <h3 class="m0">500</h3>
-                  <p class="m0">Following</p>
-               </div>
-            </div>
-         </div>
-      </div>
-      END widget-->
-
-    <!--<div class="col-md-4">
-      START widget
-      <div class="panel widget">
-         <div class="half-float">
-            <img src="https://bootdey.com/img/Content/bg1.jpg" alt="" class="img-responsive">
-            <div class="half-float-bottom">
-               <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Image" class="img-thumbnail img-circle thumb128">
-            </div>
-         </div>
-         <div class="panel-body text-center">
-            <h3 class="m0">Mark planty</h3>
-            <p class="text-muted">Lead director</p>
-            <p>Proin metus justo, commodo in ultrices at, lobortis sit amet dui. Fusce dolor purus, adipiscing a tempus at, gravida vel purus.</p>
-         </div>
-         <div class="panel-body text-center bg-gray-dark">
-            <div class="row row-table">
-               <div class="col-xs-4">
-                  <h3 class="m0">400</h3>
-                  <p class="m0">Photos</p>
-               </div>
-               <div class="col-xs-4">
-                  <h3 class="m0">2000</h3>
-                  <p class="m0">Likes</p>
-               </div>
-               <div class="col-xs-4">
-                  <h3 class="m0">500</h3>
-                  <p class="m0">Following</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-</div>-->
-
-
-

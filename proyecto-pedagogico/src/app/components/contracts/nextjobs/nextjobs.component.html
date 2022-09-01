@@ -1,38 +1,38 @@
 <div class="row">
     <app-navlateral class="col-2"></app-navlateral>
-  <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
-<h1 style="color:rgb(21, 21, 84);">Mi Agenda</h1>
-<div class="row" *ngIf="userGetRequest.length == 0">
-    <div class="jumbotron">
-    <h3>
-     <strong></strong> No tienes ninguna peticion enviada,animate!!!
-       </h3>
-     </div>
-     
-     </div>
-<table class="table padding: 4rem; margin-top:5rem; table-striped " >
-    <thead>
-        <tr>
-            <th scope="col">Cliente</th>
-            <th scope="col">Ciudad</th>
-            <th scope="col">Servicio</th>
-            <th scope="col">Fecha de Inicio</th>
-            <th scope="col">Fecha de Fin</th>
-            <th scope="col">Valor a Cobrar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngFor=" let contract of userGetRequest">
-            <tr *ngIf="contract.state === 'ACCEPTED'">
-                <td>{{contract?.client?.name}}</td>
-                <td>{{contract?.client?.city}}</td>
-                <td>{{contract?.facility?.title}}</td>
-                <td>{{contract?.start}}</td>
-                <td>{{contract?.finish}}</td>
-                <td>{{contract?.totalPrice}}€</td>
-            </tr>
-        </ng-container>
-    </tbody>
-</table>
-  </div>
+    <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
+        <h1 style="color:rgb(21, 21, 84);">Mi Agenda</h1>
+        <div class="row" *ngIf="userGetRequest.length == 0">
+            <div class="jumbotron">
+                <h3>
+                    <strong></strong> No tienes servicios en tu agenda.
+                </h3>
+            </div>
+
+        </div>
+        <table class="table padding: 4rem; margin-top:5rem; table-striped ">
+            <thead>
+                <tr>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Servicio</th>
+                    <th scope="col">Fecha de Inicio</th>
+                    <th scope="col">Fecha de Fin</th>
+                    <th scope="col">Valor a Cobrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor=" let contract of userGetRequest">
+                    <tr *ngIf="contract.state === 'ACCEPTED'">
+                        <td>{{contract?.client?.name}}</td>
+                        <td>{{contract?.client?.city}}</td>
+                        <td>{{contract?.facility?.title}}</td>
+                        <td>{{contract?.start}}</td>
+                        <td>{{contract?.finish}}</td>
+                        <td>{{contract?.totalPrice}}€</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
 </div>

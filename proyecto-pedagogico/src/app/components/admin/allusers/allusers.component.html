@@ -9,7 +9,7 @@
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
-            <th scope="col">Nombre de Usuario</th>
+            <th scope="col">Usuario</th>
             <th scope="col">Email</th>
             <th scope="col">Teléfono</th>
             <th scope="col">Ciudad</th>
@@ -30,7 +30,7 @@
                 <td class="col-1"><button class="btn submit btn-lg btn-primary" (click)="editUser()"
                         style="height: auto; width: auto;">Editar</button></td>
                 <td class="col-1">
-                    <button class="btn submit btn-lg btn-danger" (click)="deleteUser"
+                    <button *ngIf="user.id"  class="btn submit btn-lg btn-danger"   (click)="deleteUser(user.id)"
                         style="height: auto; width:auto;">Borrar</button>
                 </td>
             </tr>

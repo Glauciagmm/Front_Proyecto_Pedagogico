@@ -6,10 +6,11 @@
       <h1 style="color:rgb(21, 21, 84);">Añade todos los datos</h1>
       <div>
         <label class="mb-3">Título:
-          <input [(ngModel)]="facilityEdit.title" class="form-control" style="width:40rem ;" placeholder="Título" />
+          <input [(ngModel)]="facilityEdit.title" class="form-control" style="width:60rem ; height: 4rem;"
+            placeholder="Título" />
         </label><br>
         <div class="mb-2">Categoria:
-          <select [(ngModel)]="facilityEdit.categoryId" class="form-control" style="width:40rem ;"
+          <select [(ngModel)]="facilityEdit.categoryId" class="form-control" style="width:60rem; height: 4rem;"
             placeholder="Categoria">
             <option value="1">Cuidados</option>
             <option value="2">Limpieza</option>
@@ -19,19 +20,17 @@
           </select>
         </div>
         <label class="mb-3">Descripción:
-          <input [(ngModel)]="facilityEdit.description" class="form-control" style="width:40rem ; height: 10rem;"
+          <input [(ngModel)]="facilityEdit.description" class="form-control" style="width:60rem ; height: 10rem;"
             placeholder="Descripción" />
         </label><br>
         <label class="mb-3">Precio Por Hora:
-          <input [(ngModel)]="facilityEdit.pricePerHour" class="form-control" style="width:40rem ;"
+          <input [(ngModel)]="facilityEdit.pricePerHour" class="form-control" style="width:60rem ; height: 4rem;"
             placeholder="Precio Por Hora" />
         </label><br>
-        <div class="d-flex">
-          <button class="btn justify-content-center submit btn-lg btn-primary p-3 mr-3 my-5"
-            (click)="updateFacility()">Actualizar</button>
+        <div class="d-flex justify-content-center " style="width:60rem">
+          <button class="btn submit btn-lg btn-primary" (click)="updateFacility()">Actualizar</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-    

@@ -7,14 +7,12 @@
       <h5 class="card-title ">Nombre: {{facility?.assistant?.name}}</h5>
       <h5 class="card-title ">Email: {{facility?.assistant?.email}}</h5>
       <h5 class="card-title ">Ciudad: {{facility?.assistant?.city}} </h5>
-      <h5 class="card-title ">Telefono: {{facility?.assistant?.phone}}</h5>
+      <h5 class="card-title ">Teléfono: {{facility?.assistant?.phone}}</h5>
     </div>
     <div class="col-md-8 mt-5 description ">
       <h3 class="card-title mt-5">{{facility?.title}}</h3>
       <h5 class="card-title ">Descripción: {{facility?.description}}</h5>
       <h5 class="card-title ">Precio por hora: {{facility?.pricePerHour}} €</h5>
-
-
       <form class="d-flex flex-column justify-content-center " style="width: 40rem;">
         <div class=" form-group ">
           <label for="datetime" class="col-sm-1 col-form-label">Inicio</label>
@@ -26,38 +24,18 @@
           </div>
         </div>
         <div>
-          <!-- <input [ngModel]="start1" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time">
-          <owl-date-time #dt1></owl-date-time>
-          <input [ngModel]="finish1"[owlDateTime]="dt2" placeholder="Date Time" >
-          <span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
-          <owl-date-time #dt2></owl-date-time> -->
         </div>
-        <!-- <h2>{{start1 | json}}</h2>
-        <h2>{{finish1 | json}}</h2> -->
         <div class=" ">
           <label for="datetime" class="col-sm-1 col-form-label">Fin</label>
           <div class="col form-group">
             <div class='input-group date' id='datetimepicker2'>
-              <!-- <datetime [(ngModel)]="finish"></datetime> -->
-               <input  (change)="SendDataonChange($event)"
-              [(ngModel)]="finish" type='submit' class="form-control" /> 
+              <input (change)="SendDataonChange($event)" [(ngModel)]="finish" type='submit' class="form-control" />
               <span class="input-group-addon">
                 <span><i class="bi bi-calendar"></i></span>
               </span>
             </div>
           </div>
         </div>
-        <!-- <div>
-          <p>start date: {{start}}</p>
-          <p>finish date: {{finish}}</p>
-        </div> -->
-        <!-- <div class=" ">
-          <label for="datetime" class="col-sm-1 col-form-label">Total price:</label>
-          <div class="col-sm-6">
-            <p>{{contractData.totalPrice}}$</p>
-          </div>
-        </div>
-        <button (click)="getTotalPrice()">Calculate</button> -->
         <div class="btns">
           <button class="btn btn-lg button" (click)="sendContractRequest()">
             Enviar solicitud
