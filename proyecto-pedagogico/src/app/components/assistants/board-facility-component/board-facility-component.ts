@@ -88,13 +88,17 @@ deleteFacility(id: number): void {
   this.facilityService.deleteFacility(id).subscribe({
     next: response => {
       console.log(`Deleted Facility with ID: ${id}`)
+      this.refresh();
     },
     error: (error: HttpErrorResponse) => {
       alert(error.message);
     }
   });
 }
- 
+refresh(): void {
+  window.location.reload();
+   // this.router.navigate(['/home']);
+ }
 /* getFacilitiesByCategory(categoryId:any): void {
  
   this.facilityService.getFacilitiesByCategory(categoryId).subscribe((facil) => {

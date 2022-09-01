@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Facility } from 'src/app/models/facility';
+import { FacilityService } from 'src/app/services/facility.service';
 import { TokenStorageService } from '../../services/token-storage.service';
 
 @Component({
@@ -8,7 +11,7 @@ import { TokenStorageService } from '../../services/token-storage.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  public facility: Facility[] = [];
   private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
@@ -16,9 +19,13 @@ export class HeaderComponent implements OnInit {
   username?: string;
 
   city:String="";
-  
-  constructor(private tokenStorageService: TokenStorageService, private http: HttpClient) { }
+
+
+
+
+  constructor(private tokenStorageService: TokenStorageService, private http: HttpClient, public facilityService: FacilityService, private router: Router) { }
   ngOnInit(): void {
+    this.getFacilities();
     this.isLoggedIn = !!this.tokenStorageService.getToken();
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
@@ -27,9 +34,16 @@ export class HeaderComponent implements OnInit {
       this.showModeratorBoard = this.roles.includes('ROLE_FACILITY');
       this.username = user.username;
     }
+    
   }
   toggleDarkTheme(): void {
     document.body.classList.toggle('dark-theme');
+  }
+  getFacilities(): void {
+    this.facilityService.getFacilities().subscribe((resp: any) => {
+      this.facility = resp;
+      console.log(this.facility);
+    });
   }
 
   logout(): void {

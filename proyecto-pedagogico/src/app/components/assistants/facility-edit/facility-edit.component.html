@@ -22,7 +22,8 @@
         <input [(ngModel)]="facilityData.pricePerHour" class="form-control" placeholder="Precio Por Hora" />
       </label><br>
       <div>
-        <button  class="btn submit btn-lg btn-primary p-3 mr-3 my-5"(click)="updateFacility()"  >Actualizar</button>
+        <button  class="btn submit btn-lg btn-primary p-3 mr-3 my-5"(click)="updateFacility()"
+        routerLink="/facility-board/facilityA">Actualizar</button>
     <button class="btn submit btn-lg btn-danger p-3 ml-3 my-5"(click)="deleteFacility(facilityData.id)">Borrar Servicio</button>
       </div>
     </div>     
