@@ -9,14 +9,23 @@ import { FacilityService } from '../../../services/facility.service';
   styleUrls: ['./facility-edit.component.css']
 })
 export class FacilityEditComponent implements OnInit {
+<<<<<<< HEAD
   currentUser: any;
   @Input() facilityData: any = {
+=======
+
+  @Input() facilityEdit: any = {
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120
     id: '',
     title: '',
     description: '',
     pricePerHour:'',
+<<<<<<< HEAD
     categoryId:'',
     user: [],
+=======
+    categoryId: '',
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120
   }
 
   constructor(public facilityService: FacilityService, 
@@ -27,18 +36,18 @@ export class FacilityEditComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
     this.facilityService.getFacility(this.route.snapshot.params['id']).subscribe((data: {})=>{
-      this.facilityData = data;
+      this.facilityEdit = data;
     });
   }
 
   updateFacility(): void {
-    console.log(this.facilityService)
-    this.facilityService.updateFacility(this.facilityData).subscribe((result)=>{
+    console.log(this.facilityEdit)
+    this.facilityService.updateFacility(this.facilityEdit).subscribe((result)=>{
       this.router.navigate(['/facility-detail/',result._id]);
     }, (err)=>{
-      console.log(err);
     });
   }
+
 
   deleteFacility(id: number): void {
     this.facilityService.deleteFacility(id).subscribe(

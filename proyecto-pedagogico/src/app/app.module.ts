@@ -30,10 +30,8 @@ import { AllcontractsComponent } from './components/admin/allcontracts/allcontra
 import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
 import { NavlateralComponent } from './components/navlateral/navlateral.component';
 import { RegisterComponent } from './components/register/register.component';
+// import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
 import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -44,7 +42,6 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     RegisterComponent,
     LoginComponent,
     FacilitiesComponent,
-    FacilitiesByPlaceComponent,
     FacilityAddComponent,
     FacilityDetailComponent,
     FacilityAddComponent,
@@ -62,7 +59,7 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     AllcontractsComponent,
     AllfacilitiesComponent,
     NavlateralComponent,
-   
+    FacilitiesByPlaceComponent,
   ],
 
   imports: [
@@ -71,6 +68,8 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+  
+
   ],
 
   providers: [
@@ -79,6 +78,7 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     { provide: ErrorHandler, useClass: GlobalErrorHandler, },
 
     { provide: HTTP_INTERCEPTORS, useClass: ErrorIntercept, multi: true },
+    
   ],
 
   bootstrap: [AppComponent],

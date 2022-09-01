@@ -18,8 +18,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
-      routerLink="admin">Admin</a>
+    <a *ngIf="showAdminBoard" class="nav-link active text-white me-md-2 fw-bolder" 
+      routerLink="profile">Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" href="/admin"
+    <a *ngIf="isLoggedIn" class="nav-link active text-white me-md-2 fw-bolder" 
       routerLink="client">Cliente</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +70,7 @@
           <a class="btn btn-lg button " routerLink="/login">Iniciar sesión</a>
         </li>
       </div>
-      <button (click)="toggleDarkTheme()" class="rounded-3 text-white p-3 mr-5" style="height: 4.25rem;">Modo Oscuro</button>
+      <button (click)="toggleDarkTheme()" class="rounded-3 text-white p-3 mr-5" style="height: 4.25rem; background:rgb(11, 88, 160);">Modo Oscuro</button>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
         <li class="nav-item ms-2 text-white fw-bolder">
           <a href class="btn btn-lg btn-danger p-3 mb-3 ml-3" (click)="logout()">LogOut</a>

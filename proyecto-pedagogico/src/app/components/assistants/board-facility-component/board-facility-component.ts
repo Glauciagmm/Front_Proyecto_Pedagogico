@@ -73,28 +73,26 @@ getFacilitiesByAssistant(): void {
 });
 }
 
-// getFacilities(): void {
-//   this.facilityService.getFacilities().subscribe((resp: any) => {
-//     this.facility = resp;
-//     console.log(this.facility);
-//   });
-// }
-
 addFacility(): void {
   this.router.navigate(["/facility-add"]);
 }
 
 deleteFacility(id: number): void {
   this.facilityService.deleteFacility(id).subscribe({
+<<<<<<< HEAD
     next: response => {
       console.log(`Deleted Facility with ID: ${id}`)
       this.refresh();
+=======
+    next: response => { 
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120
     },
     error: (error: HttpErrorResponse) => {
       alert(error.message);
     }
   });
 }
+<<<<<<< HEAD
 refresh(): void {
   window.location.reload();
    // this.router.navigate(['/home']);
@@ -107,6 +105,8 @@ refresh(): void {
   });
 }*/
 
+=======
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120
 }
 
 

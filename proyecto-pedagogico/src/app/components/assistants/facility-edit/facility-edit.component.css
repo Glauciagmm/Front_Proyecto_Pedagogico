@@ -1,15 +1,21 @@
 .form-control{
-    background-color: #ffffff;
-    border: 1px;
-    font-size: 20px;
+  background-color: #ffffff;
+  border: 1px;
+  font-size: 20px;
 }
 
+.btn.submit.btn-md {
+  background-color: #f8f6fa;
+  cursor: pointer;
+}
 
-
+.btn{
+  background-color: #76EAD7;  
+}
 .row{
-  margin: 0;
+margin: 0;
 }
 
 .mb-3{
-  font-size: 20px;
+font-size: 20px;
 }
