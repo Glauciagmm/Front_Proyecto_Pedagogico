@@ -79,13 +79,34 @@ addFacility(): void {
 
 deleteFacility(id: number): void {
   this.facilityService.deleteFacility(id).subscribe({
+<<<<<<< HEAD
+    next: response => {
+      console.log(`Deleted Facility with ID: ${id}`)
+      this.refresh();
+=======
     next: response => { 
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120
     },
     error: (error: HttpErrorResponse) => {
       alert(error.message);
     }
   });
 }
+<<<<<<< HEAD
+refresh(): void {
+  window.location.reload();
+   // this.router.navigate(['/home']);
+ }
+/* getFacilitiesByCategory(categoryId:any): void {
+ 
+  this.facilityService.getFacilitiesByCategory(categoryId).subscribe((facil) => {
+    this.facil.push(...facil.filter(facilit=>facilit.category===categoryId)); 
+   this.facil=facil;
+  });
+}*/
+
+=======
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120
 }
 
 

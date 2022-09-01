@@ -28,9 +28,9 @@ import { NextjobsComponent } from './components/contracts/nextjobs/nextjobs.comp
 import { AllusersComponent } from './components/admin/allusers/allusers.component'; 
 import { AllcontractsComponent } from './components/admin/allcontracts/allcontracts.component'; 
 import { AllfacilitiesComponent } from './components/admin/allfacilities/allfacilities.component';
-import { NavlateralComponent } from './navlateral/navlateral.component';
+import { NavlateralComponent } from './components/navlateral/navlateral.component';
 import { RegisterComponent } from './components/register/register.component';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
+// import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
 import { FacilitiesByPlaceComponent } from './components/facilities-by-place/facilities-by-place.component';
 
 @NgModule({
@@ -68,9 +68,7 @@ import { FacilitiesByPlaceComponent } from './components/facilities-by-place/fac
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    OwlDateTimeModule, 
-    OwlNativeDateTimeModule, 
-    
+  
 
   ],
 

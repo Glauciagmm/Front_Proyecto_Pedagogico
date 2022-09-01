@@ -1,5 +1,35 @@
 <div class="row">
   <app-navlateral class="col-3"></app-navlateral>
+<<<<<<< HEAD
+<div class="container d-grid gap-5 col-4 p-3 mb-3 padding: 4rem; margin-top:20rem">
+    <h2>Editar Servicio</h2>
+    <div>
+      <label class="mb-3">Título:
+        <input [(ngModel)]="facilityData.title" class="form-control" placeholder="Título" />
+      </label><br>
+      <div class="mb-2">Categoria:
+        <select [(ngModel)]="facilityData.categoryId" class="form-control" placeholder="Categoria" >
+          <option value="1">Cuidados</option>
+          <option value="2">Limpieza</option>
+          <option value="3">Recados</option>
+          <option value="5">Movilidad</option>
+          <option value="4">Viajes</option>
+        </select>
+      </div>
+      <label class="mb-3">Descripción:
+        <input [(ngModel)]="facilityData.description" class="form-control" placeholder="Descripción" />
+      </label><br>
+      <label class="mb-3">Precio Por Hora:
+        <input [(ngModel)]="facilityData.pricePerHour" class="form-control" placeholder="Precio Por Hora" />
+      </label><br>
+      <div>
+        <button  class="btn submit btn-lg btn-primary p-3 mr-3 my-5"(click)="updateFacility()"
+        routerLink="/facility-board/facilityA">Actualizar</button>
+    <button class="btn submit btn-lg btn-danger p-3 ml-3 my-5"(click)="deleteFacility(facilityData.id)">Borrar Servicio</button>
+      </div>
+    </div>     
+</div>
+=======
   <div class="col-2">
     <div class="row  justify-content-center details padding: 1rem; "
       style="width:40vw; padding-top: 8rem; margin-left:10rem;">
@@ -36,3 +66,4 @@
   </div>
 </div>      
 
+>>>>>>> 62b6b732502bcb1761fa9ea2b63d0fd1a4ba2120

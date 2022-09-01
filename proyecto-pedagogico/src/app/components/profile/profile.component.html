@@ -5,7 +5,10 @@
       <h3>
         <strong>Bienvenido(a) {{user.name}}</strong>
       </h3>
-      <img src="{{ user.photo }}" alt="Foto de Perfil">
+      <div class="half-float-bottom">
+         <img src="{{ user.photo }}" alt="Image" class="img-thumbnail img-circle thumb128">
+      </div>
+      
       <br>
       <p><strong>Surname:</strong>{{user.surname }}</p>
       <p><strong>Email:</strong>{{user.email }}</p>
@@ -16,15 +19,108 @@
       Please login.
     </ng-template>
   </div>
+
 </div>
 
 
-    <!-- 
-<div class="container" *ngIf="currentUser; else loggedOut">
-  <strong>Tienes los siguientes acessos:</strong>
-  <ul>
-    <li *ngFor="let role of currentUser.roles">{{ role }}</li>
-  </ul>
-</div> -->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootdey">
+<div class="row">
+   <div class="col-md-4">
+      <!-- START widget-->
+      <div class="panel widget">
+         <div class="half-float">
+            <img src="https://bootdey.com/img/Content/bg1.jpg" alt="" class="img-responsive">
+            <div class="half-float-bottom">
+               <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Image" class="img-thumbnail img-circle thumb128">
+            </div>
+         </div>
+         <div class="panel-body text-center">
+          <p><strong>Surname:</strong>{{ currentUser.surname }}</p>
+          <p><strong>Email:</strong>{{ currentUser.email }}</p>
+          <p><strong>Ciudad:</strong>{{ currentUser.city }}</p>
+          <p><strong>Teléfono:</strong>{{ currentUser.phone}}</p>
+         </div>
+         <div class="panel-body text-center bg-gray-dark">
+          <div class="container" *ngIf="currentUser ">
+            <strong>Tienes los siguientes acessos:</strong>
+            <ul>
+              <li *ngFor="let role of currentUser.roles">{{ role }}</li>
+            </ul>
+          </div>
+         </div>
+      </div>
+      <!-- END widget-->
+   </div>
+   <div class="col-md-4">
+      <!-- START widget-->
+   <!--    <div class="panel widget">
+         <div class="half-float">
+            <img src="https://bootdey.com/img/Content/bg1.jpg" alt="" class="img-responsive">
+            <div class="half-float-bottom">
+               <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Image" class="img-thumbnail img-circle thumb128">
+            </div>
+         </div>
+         <div class="panel-body text-center">
+            <h3 class="m0">Maria Berriut</h3>
+            <p class="text-muted">Lead director</p>
+            <p>Proin metus justo, commodo in ultrices at, lobortis sit amet dui. Fusce dolor purus, adipiscing a tempus at, gravida vel purus.</p>
+         </div>
+         <div class="panel-body text-center bg-gray-dark">
+            <div class="row row-table">
+               <div class="col-xs-4">
+                  <h3 class="m0">400</h3>
+                  <p class="m0">Photos</p>
+               </div>
+               <div class="col-xs-4">
+                  <h3 class="m0">2000</h3>
+                  <p class="m0">Likes</p>
+               </div>
+               <div class="col-xs-4">
+                  <h3 class="m0">500</h3>
+                  <p class="m0">Following</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      END widget-->
+   </div>
+   <div class="col-md-4">
+      <!-- START widget-->
+      <div class="panel widget">
+         <div class="half-float">
+            <img src="https://bootdey.com/img/Content/bg1.jpg" alt="" class="img-responsive">
+            <div class="half-float-bottom">
+               <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Image" class="img-thumbnail img-circle thumb128">
+            </div>
+         </div>
+         <div class="panel-body text-center">
+            <h3 class="m0">Mark planty</h3>
+            <p class="text-muted">Lead director</p>
+            <p>Proin metus justo, commodo in ultrices at, lobortis sit amet dui. Fusce dolor purus, adipiscing a tempus at, gravida vel purus.</p>
+         </div>
+         <div class="panel-body text-center bg-gray-dark">
+            <div class="row row-table">
+               <div class="col-xs-4">
+                  <h3 class="m0">400</h3>
+                  <p class="m0">Photos</p>
+               </div>
+               <div class="col-xs-4">
+                  <h3 class="m0">2000</h3>
+                  <p class="m0">Likes</p>
+               </div>
+               <div class="col-xs-4">
+                  <h3 class="m0">500</h3>
+                  <p class="m0">Following</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END widget--> -->
+   </div>
+</div>
+</div>
+
 
 

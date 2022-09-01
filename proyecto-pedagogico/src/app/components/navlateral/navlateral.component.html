@@ -11,9 +11,9 @@
     <br>
     <th class="nav" scope="row" routerLink="/facility-add">Añadir un Servicio</th>
     <br>
-    <th class="nav" scope="row" routerLink="/allusers">Todos los Usuarios</th>
+    <th *ngIf="showAdminBoard" class="nav" scope="row" routerLink="/allusers">Todos los Usuarios</th>
     <br>
-    <th class="nav" scope="row" routerLink="/allfacilities">Todos los Servicios</th>
+    <th *ngIf="showAdminBoard"class="nav" scope="row" routerLink="/allfacilities">Todos los Servicios</th>
     <br>
-    <th class="nav" scope="row" routerLink="/allcontracts">Todos los Contractos</th>
+    <th *ngIf="showAdminBoard"class="nav" scope="row" routerLink="/allcontracts">Todos los Contractos</th>
 </div>

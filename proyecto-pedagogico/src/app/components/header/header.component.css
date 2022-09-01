@@ -2,6 +2,22 @@
     background-color: #76EAD7;
 }
 
+.logo_container {
+    position: absolute;
+    z-index: 99999;
+    top: 0px;
+    left: 5rem;
+}
+#navigator{
+    margin-left: 46.5rem;
+}
+.container-fluid {
+    padding-right: 49px!important;
+    padding-left: 14px!important;
+    margin-right: 18rem!important;
+    margin-left: -7rem !important;
+}
+
 .navbar{
 font-family: 'Atma', cursive;
 font-family: 'Creepster', cursive;
@@ -11,7 +27,7 @@ font-size: 1.8rem;
 }
 
 .logo{
-    width: 8rem;
+    width: 41%;
     
 }
 
@@ -28,4 +44,25 @@ font-size: 1.8rem;
 }
 .list-none{
     list-style: none;
+}
+
+
+ @media only screen and (max-width : 768px) {
+   .navbar-header {
+       display: inline-block;
+       float: left;
+    }
+    #navigator{
+        margin-left: 12.5rem;
+    }
+    .container-fluid {
+        padding-right: 49px!important;
+        padding-left: 14px!important;
+        margin-right: 5rem!important;
+        margin-left: 2rem !important;
+    }
+    .logo{
+        width: 21%;
+        
+    }
 }

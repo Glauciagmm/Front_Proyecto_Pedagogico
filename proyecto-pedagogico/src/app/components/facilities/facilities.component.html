@@ -1,19 +1,26 @@
 <div class="row mb-3">
-  <form class="d-flex" role="search">
-    <!-- <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city" placeholder="Filtra por Ciudad"> -->
+<!--   <form class="d-flex" role="search">
+     <input class="form-control me-2"type="search" id="city" name="city" [(ngModel)]="city" placeholder="Filtra por Ciudad"
     <button class="btn btn-outline-success">Buscar</button>
-   </form>
+   </form> -->
+   <div class="row" *ngIf="facility.length == 0">
+    <div class="jumbotron">
+    <h3>
+     <strong></strong> No existen asistencias en esta categoria, esperamos en breve contar con alguien!!!
+       </h3>
+     </div>
+   </div>
   <div class="row justify-content-center g-0 mx-5 my-3 py-5 card-mobile" *ngFor="let facilities of facility">
     <div class="col-md-2">
     <a href="/facility-details?id={{facilities.id}}"> <img class="img-fluid rounded-start" src="https://thispersondoesnotexist.com/image"alt="photo del assistente"
         class="imagencarta" ></a>
     </div>
     <div class="col-md-5 ps-5 pt-4 details">
-    <p class="card-title fw-bold text-center">{{facilities?.title}}</p>
-    <p class="card-title text-center grey">{{facilities?.description}}</p>
-    <p class="card-title text-center grey">{{facilities?.pricePerHour}}€(Precio por hora)</p>
-    <p class="card-title text-center grey">{{facilities?.assistant?.name}}</p>
-    <p class="card-title text-center grey">{{facilities?.assistant?.city}}</p>
+    <p class="card-title fw-bold">{{facilities?.title}}</p>
+    <p class="card-title">{{facilities?.description}}</p>
+    <p class="card-title">{{facilities?.pricePerHour}}€(Precio por hora)</p>
+    <p class="card-title">{{facilities?.assistant?.name}}</p>
+    <p class="card-title">{{facilities?.assistant?.city}}</p>
     </div>
   </div>
   <!-- <div class="button">
