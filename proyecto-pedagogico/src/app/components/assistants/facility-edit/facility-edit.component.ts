@@ -17,7 +17,10 @@ export class FacilityEditComponent implements OnInit {
     categoryId: '',
   }
 
-  constructor(public facilityService: FacilityService, private route: ActivatedRoute, private router: Router ) { }
+  constructor(
+    public facilityService: FacilityService, 
+    private route: ActivatedRoute, 
+    private router: Router ) { }
 
   ngOnInit(): void {
     this.facilityService.getFacility(this.route.snapshot.params['id']).subscribe((data: {})=>{
@@ -31,18 +34,6 @@ export class FacilityEditComponent implements OnInit {
       this.router.navigate(['/facility-detail/',result._id]);
     }, (err)=>{
     });
-  }
-
-
-  deleteFacility(id: number): void {
-    this.facilityService.deleteFacility(id).subscribe(
-      () => {
-        this.getFacility();
-        this.router.navigate(['facility-board/facilityA']);
-      },
-      (err) => {
-      }
-    );
   }
 
   getFacility() {
