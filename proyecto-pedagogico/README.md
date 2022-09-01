@@ -50,12 +50,14 @@ Visual Code <img src="">
 _npm i angular_
 
 **instalamos boostrap:**
+
 _npm install boostrap5.2_
 
 
 _npm install @material/snackbar_
 
 **installamos karma-jasmine para el testing en front-end:**
+
 _npm install karma-jasmine_
 
 **a continuación instalamos otros recursos que necesitaremos para este proyecto:**
