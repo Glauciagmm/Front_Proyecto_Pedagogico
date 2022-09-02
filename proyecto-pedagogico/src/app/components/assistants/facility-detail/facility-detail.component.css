@@ -36,17 +36,17 @@
         width:25rem;
         height: 25rem;
         border-radius: 10%;
+        object-fit:cover;
      
     }
     
-    .btn{
-        background-color: #76EAD7;
-    }
+ 
     
     .card-title{
         font-family: 'Montserrat', sans-serif;
         margin: 1%;
         font-size: 20px;
+        line-height: 1.5;
     }
     .grey{
         color: rgba(39, 39, 39, 0.54);
@@ -77,5 +77,14 @@
         .btn{
             font-size: 17px;
         }
+    }
+
+    .form-group{
+        font-family: 'Montserrat', sans-serif;
+        margin: 2%;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-left: -1rem;
+        
     }
     

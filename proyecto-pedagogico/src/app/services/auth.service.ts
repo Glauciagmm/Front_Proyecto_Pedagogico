@@ -50,27 +50,17 @@ export class AuthService {
     let serverError: string ='';
     if (error.status === 0) {
       serverError=`A server-side or network error occurred:${error.error.status}`;
-      
-      
-      // console.error('An error occurred:', error.error);
     } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong.
-      // console.error(
-      //   `Backend returned code ${error.status}, body was: `, error.error);
+ 
         serverError=  `Backend returned code ${error.status}, body was:${error.error.message}`;
     }
     serverError+='\n The backend returned an unsuccessful response code.';
-    // Return an observable with a user-facing error message.
     return throwError(() => new Error(serverError));
 
       catchError((err) => {
         console.log('error caught in service sign up')
         console.error(err);
-
-        //Handle the error here
-
-        return throwError(err);    //Rethrow it back to component
+        return throwError(err);    
       })
 
   }

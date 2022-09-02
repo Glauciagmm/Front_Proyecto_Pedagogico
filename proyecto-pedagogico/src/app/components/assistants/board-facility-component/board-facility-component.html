@@ -1,42 +1,39 @@
 <div class="row">
   <app-navlateral class="col-2"></app-navlateral>
-<div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
-<h1 style="color:rgb(21, 21, 84);  " >Mis Servicios</h1>
- <div class="row" *ngIf="facility.length == 0">
-   <div class="jumbotron">
-   <h3>
-  <strong>{{ currentUser.username}}</strong> No tienes asistencias creadas, Formate y animate!!!
-  </h3>
+  <div class="container d-grid gap-5 col-8 mb-3" style="align-content: center;  left: -8.5rem;">
+    <h1 style="color:rgb(21, 21, 84);  ">Mis Servicios</h1>
+    <div class="row" *ngIf="facility.length == 0">
+      <div class="jumbotron">
+        <h3>
+          <strong>{{ currentUser.username}}</strong> No tienes asistencias creadas. Fórmate y anímate!!!
+        </h3>
+      </div>
+    </div>
+    <table class="table padding: 4rem; margin-top:5rem; table-striped ">
+      <thead>
+        <tr>
+          <th class="col-2" scope="col">Título</th>
+          <th class="col-2" scope="col">Descripción</th>
+          <th class="col-1" scope="col">Precio Hora</th>
+          <th class="col-1" scope="col">Editar</th>
+          <th class="col-1" scope="col">Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor=" let facility of facility">
+          <tr>
+            <td>{{facility?.title}}</td>
+            <td>{{facility?.description}}</td>
+            <td>{{facility?.pricePerHour}}€</td>
+            <td><button class="btn btn-lg text-center btn-primary" routerLink="/facility-edit/{{facility.id}}"
+                style="height: auto; width: auto; justify-content: left; font-size: 1.5rem;">Editar</button></td>
+            <td>
+              <button *ngIf="(facility?.contract | json) == '[]'" class="btn submit btn-lg btn-danger" id={{facility?.id}} (click)="deleteFacility(facility.id!)"
+                style="height: auto; width: auto; font-size: 1.5rem;">Borrar</button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
   </div>
-  
-  </div>
-<table class="table padding: 4rem; margin-top:5rem; table-striped " >
-  <thead>
-    <tr>
-      <th class="col-2" scope="col">Titulo</th>
-      <th class="col-2" scope="col">Descripción</th>
-      <th class="col-1" scope="col">Precio Hora</th>
-      <th class="col-1" scope="col">Editar</th>
-      <th class="col-1" scope="col">Borrar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngFor=" let facility of facility">
-      <tr>
-        <td>{{facility?.title}}</td>
-        <td>{{facility?.description}}</td>
-        <td>{{facility?.pricePerHour}}€</td>
-        <td><button class="btn btn-lg text-center btn-primary" routerLink="/facility-edit/{{facility.id}}"
-            style="height: auto; width: auto; justify-content: left; font-size: 1.5rem;">Editar</button></td>
-        <td>
-        <button class= "btn submit btn-lg btn-danger" id={{facility?.id}} (click)="deleteFacility(facility.id!)"
-        style="height: auto; width: auto; font-size: 1.5rem;">Borrar</button>
-        <!-- <button class= "btn submit btn-md btn-danger" 
-        style="height: 2.5rem; width: 12rem;" (click)="deleteFacility(facility.id)">Borrar</button> -->
-        </td>
-      </tr>
-    </ng-container>
-  </tbody>
-</table>
-</div>
 </div>
