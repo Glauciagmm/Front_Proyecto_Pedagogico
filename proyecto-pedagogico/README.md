@@ -45,6 +45,8 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 
  ![Node JS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png)
 
+ ![stack Overflow](http://lmsotfy.com/so.png)
+
 ```
 
 ### Instalación 🔧
