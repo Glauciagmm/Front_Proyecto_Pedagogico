@@ -70,7 +70,7 @@ _npm i @angular/material_ **Material**<img src="https://seeklogo.com/images/M/ma
 
 AuthService Testing .... 
 
-<img src="./assets/img/test/AuthTest.png" width="100" height="100">
+<img src="assets/img/AuthTest.png" width="100" height="100">
 
 ## Builded with: 🛠️
 
