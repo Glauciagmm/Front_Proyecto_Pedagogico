@@ -39,8 +39,11 @@ rechazar y asi el cliente tener una respuesta a la necesidad que tiene. ._
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Visual Code <img src="">
+Visual Code <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png">
 
+IntelliJ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.pngg">
+
+Node JS <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png">
 
 ```
 
@@ -67,57 +70,20 @@ _npm i @danielmoncada/angular-datetime-picker_
 _npm i @angular/material_
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-KARMA AQUI
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-nw
-```
-Da un ejemplo
-```
-
 ### Y las pruebas de estilo de codificación ⌨️
 
 _Explica que verifican estas pruebas y por qué_
 
 ```
 Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Springboot](https://spring.io/projects/spring-boot/) - El framework web usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [Angular](https://angular.io/guide/testing) - Usado para generar RSS
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
 ## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Galucia Mesquita** - *Trabajo Inicial* - [Glauciagmm](https://github.com/Glauciagmm)
 * **David Flaquer** - *Documentación* - [Dfcc](https://github.com/Dfcc)
@@ -125,12 +91,6 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Patricia Muiño** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
 * **Abel Oliveras** - *Documentación* - [aoliverasd](https://github.com/aoliverasd)
 * **Iris Vilaseca** - *Documentación* - [irisvilaseca](https://github.com/irisvilaseca)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
