@@ -1,12 +1,12 @@
 # Uniquecare
 
-_Readme UniqueCare (You never alone) 
+**Readme UniqueCare (You never alone)**
 Nuestra principal motivacion a hacer un producto digital en el que principal aprendizaje ha sido el 
 entender y practicar los lenguajes java para el servidor y type script con el framework de angular 
 para el front-end. A traves del briefing del proyecto y nuestra situacion y estado personal el sector 
 en el que hemos desarrollado, nos toca muy de cerca, la ayuda a personas con discapacidad. 
 
-UniqueCare es una red de asistencia a personas con discapacidad, en el que a traves de una 
+**UniqueCare es una red de asistencia a personas con discapacidad**, en el que a traves de una 
 aplicación se ponen en contacto los clientes y los asistentes y con la funcionalidad se llega a 
 contratar el servicio de asistencia. 
 La aplicación tiene la doble dicotomia de poder ser al mismo tiempo cliente y asistente. 
@@ -18,9 +18,9 @@ teniendo las peticiones de los clientes pudiendose organizarse aceptando o recha
 conviene. En el caso del cliente tambien tiene el tablon con las solucitudes que ha enviado al 
 asistente pudiendo ver si ha sido aceptada y rechazada. 
 
-Los requerimientos del proyecto han sido sobre todo el enlace entre el cliente(la persona que 
-demanda el servicio) y el asistente, el modo en el que se autentifican y sus diversas autorizaciones 
-para obtener la funcionalidad de poder contratar el servicio. _
+Los **requerimientos del proyecto han sido sobre todo el enlace entre el cliente**(la persona que 
+demanda el servicio) y **el asistente**, el modo en el que se autentifican y sus diversas autorizaciones 
+para obtener la funcionalidad de poder contratar el servicio. 
 
 ## Starting 🚀
 
@@ -34,52 +34,40 @@ que se especifican los dias y tiempo del contrato pudiendo el asistente tener la
 rechazar y asi el cliente tener una respuesta a la necesidad que tiene. ._
 
 
-### Pre-requisitos 📋
+### Pre-requeriments 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+**Que cosas necesitas para instalar el software y como instalarlas**
 
-```
  ![Visual Code](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png)
 
  ![IntelliJ](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png)
 
  ![Node JS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png)
 
- ![stack Overflow](http://lmsotfy.com/so.png)
 
-```
-
-### Instalación 🔧
+### Installing... 🔧
 
 **primeramente instalaremos angular en nuestro proyecto ejecuntando el siguiente comando en la consola de Git Bash :**
 _npm i angular_
 
 **instalamos boostrap:**
 
-_npm install boostrap5.2_
+_npm install boostrap5.2_ ![Bootstrap](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png)
 
 
-_npm install @material/snackbar_
-
+_npm install @material/snackbar_ 
 **installamos karma-jasmine para el testing en front-end:**
 
-_npm install karma-jasmine_
+_npm install karma-jasmine_ ![Karma-JAsmine](https://miro.medium.com/max/800/1*QrhFj55-J6ATE3uIcczwmw.png)
 
 **a continuación instalamos otros recursos que necesitaremos para este proyecto:**
 
 _npm i @danielmoncada/angular-datetime-picker_
 
-_npm i @angular/material_
-```
+_npm i @angular/material_ ![Material](https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png)
 
-### Y las pruebas de estilo de codificación ⌨️
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-
-## Construido con 🛠️
+## Builded with: 🛠️
 
 * [Springboot](https://spring.io/projects/spring-boot/) - El framework web usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
