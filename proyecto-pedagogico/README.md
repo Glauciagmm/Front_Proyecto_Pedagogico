@@ -42,7 +42,7 @@ rechazar y asi el cliente tener una respuesta a la necesidad que tiene. ._
 
 **IntelliJ**<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png" width="100" height="100"> 
 
-**Node JS**<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" width="100" height="100"> 
+**Node JS**<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" width="150" height="100"> 
 
 
 ### Installing... 🔧
