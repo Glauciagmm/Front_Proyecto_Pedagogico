@@ -52,7 +52,7 @@ _npm i angular_
 
 **instalamos boostrap:**
 
-_npm install boostrap5.2_ ![Bootstrap](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png =250x250)
+_npm install boostrap5.2_ ![Bootstrap](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png | width=100)
 
 
 _npm install @material/snackbar_ 
