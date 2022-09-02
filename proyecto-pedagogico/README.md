@@ -37,12 +37,11 @@ rechazar y asi el cliente tener una respuesta a la necesidad que tiene. ._
 ### Pre-requeriments 📋
 
 **Que cosas necesitas para instalar el software y como instalarlas**
+![Visual Code]<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="100" height="100">
 
- ![Visual Code](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png =250x250)
+ ![IntelliJ](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png ) 
 
- ![IntelliJ](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png =250x250) 
-
- ![Node JS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png =250x250)
+ ![Node JS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png )
 
 
 ### Installing... 🔧
@@ -52,19 +51,19 @@ _npm i angular_
 
 **instalamos boostrap:**
 
-_npm install boostrap5.2_ ![Bootstrap](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png | width=100)
+_npm install boostrap5.2_ ![Bootstrap](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png )
 
 
 _npm install @material/snackbar_ 
 **installamos karma-jasmine para el testing en front-end:**
 
-_npm install karma-jasmine_ ![Karma-JAsmine](https://miro.medium.com/max/800/1*QrhFj55-J6ATE3uIcczwmw.png =250x250)
+_npm install karma-jasmine_ ![Karma-JAsmine](https://miro.medium.com/max/800/1*QrhFj55-J6ATE3uIcczwmw.png )
 
 **a continuación instalamos otros recursos que necesitaremos para este proyecto:**
 
 _npm i @danielmoncada/angular-datetime-picker_
 
-_npm i @angular/material_ ![Material](https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png =250x250)
+_npm i @angular/material_ ![Material](https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png )
 
 
 ## Builded with: 🛠️
