@@ -66,6 +66,11 @@ _npm i @danielmoncada/angular-datetime-picker_
 
 _npm i @angular/material_ **Material**<img src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png" width="100" heigth="100">
 
+## Test:
+
+AuthService Testing .... 
+
+<img src=".assets/img/test/AuthTest.png" width="100" height="100">
 
 ## Builded with: 🛠️
 
